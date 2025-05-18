@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: Archivo;
+}
+
+.Onboarding_div1 {
+  display: flex;
+  background-image: url('/public/assets/OnboardingImg.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  text-align: center;
+  padding-top: 10rem; /* Ajusta este valor según el alto real de tu nav */
+}
+
+
+.Onboarding_div2{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3rem;
+align-self: stretch;
+margin-top: -10rem;}
+
+.Onboarding_h1{
+color:  #FFF;
+text-align: center;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; 
+}
+
+.Onboarding_p{
+color:  #FFF;
+text-align: center;
+font-size: 0.95rem;
+
+}
+
+.Onboarding_button{
+display: flex;
+border-color:transparent;
+color: #FFF;
+height: 3rem;
+padding: 0.6rem 3rem;
+justify-content: center;
+border-color: none;
+align-items: center;
+border-radius: 2rem;
+margin-top: 5.56rem;
+background: #F00;
+}
+
+.Power_by {
+  position: fixed;
+  bottom: 2rem;   
+  left: 3.5rem;     
+  color: #666;   
+  font-size: 0.8rem;
+  font-style: normal;
+  z-index: 1000; 
+}
+
