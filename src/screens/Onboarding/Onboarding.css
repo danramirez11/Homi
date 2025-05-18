@@ -3,7 +3,7 @@
 *{
     margin:0;
     padding: 0;
-    font-family: Archivo;
+   
 }
 
 .Onboarding_div1 {
@@ -18,7 +18,8 @@
   align-items: center;
   color: #FFF;
   text-align: center;
-  padding-top: 10rem; /* Ajusta este valor según el alto real de tu nav */
+  padding-top: 10rem; 
+   font-family: Archivo;
 }
 
 

@@ -57,11 +57,11 @@ gap: 0.6rem;
 @media screen and (max-width: 1180px) {
   .Nav_jm {
     padding: 1.25rem 2rem;
-    gap: 10rem; /* reduce el espacio entre elementos */
+    gap: 10rem; 
   }
 
   .Info_container {
-    margin-left: 10rem; /* desplazamiento más moderado */
+    margin-left: 10rem;
   }
 }
 
