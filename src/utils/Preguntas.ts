@@ -22,9 +22,9 @@ const preguntasFormulario = [
     pregunta: "¿Cuál es el rango de inversión que estás dispuesta/o a realizar en una vivienda?",
     descripcion: "Todos soñamos con un hogar propio. Aquí empieza el tuyo.",
     opciones: [
-      { texto: "Viviendas desde $60 a $90 millones",  icono: FaWallet  },
-      { texto: "Viviendas entre $90 y $160 millones", icono: FaMoneyBillWave },
-      { texto: "Viviendas desde $160 millones en adelante.", icono: FaGem },
+      { texto: "Viviendas igual o menor a $130 millones",  icono: FaWallet  },
+      { texto: "Viviendas entre $130 y $290 millones", icono: FaMoneyBillWave },
+      { texto: "Viviendas desde $290 millones en adelante", icono: FaGem },
     ]
   },
   {
@@ -32,7 +32,7 @@ const preguntasFormulario = [
     descripcion: "Cada hogar tiene una historia. ¿Te gustaría escribirla desde el primer ladrillo?",
     opciones: [
       { texto: "¡Sí! Quiero estar en cada detalle", icono: FaPaintRoller },
-      { texto: "Estoy abiert@ a lo que me recomienden", icono: FaHandshake },
+      { texto: "Me gustaría recibir algunas recomendaciones", icono: FaHandshake },
       { texto: "No tanto, prefiero algo listo para vivir", icono: FaHome },
     ]
   },
@@ -43,7 +43,7 @@ const preguntasFormulario = [
     opciones: [
       { texto:"Viviendo con mi pareja", imagen: Enpareja },
       { texto:"Con mi familia y/o mascotas", imagen: Enfamilia },
-      { texto:"Solo/a pero feliz", imagen: Sola },
+      { texto:"Disfrutando de mi independencia", imagen: Sola },
       { texto:"Con amigos y/o roomies", imagen: Conamigos },
     ]
   },
@@ -84,7 +84,7 @@ const preguntasFormulario = [
       { texto: "Ver árboles, plantas o naturaleza", icono: FaMountainSun},
       { texto: "Ver movimiento, ciudad y actividad", icono: FaCity },
       { texto: "Ver un parque, vecindario tranquilo", icono: FaTree },
-      { texto: "No me interesa, mientras esté cómod@", icono: FaBed },
+      { texto: "No me interesa, mientras me sienta a gusto", icono: FaBed },
     ]
   },
   {
