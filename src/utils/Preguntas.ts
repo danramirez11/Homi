@@ -25,9 +25,9 @@ export const preguntasFormulario:  PreguntaFormulario[] = [
     descripcion: "Todos soñamos con un hogar propio. Aquí empieza el tuyo.",
     esMultiple: false,
     opciones: [
-      { texto: "Viviendas desde $60 a $90 millones",  icono: FaWallet, viviendas: [ht.COMPACTO, ht.BASICO]  },
-      { texto: "Viviendas entre $90 y $160 millones", icono: FaMoneyBillWave, viviendas: [ht.FUNCIONAL, ht.ESPACIOSO] },
-      { texto: "Viviendas desde $160 millones en adelante.", icono: FaGem, viviendas: [ht.PREMIUM] },
+      { texto: "Viviendas igual o menor a $130 millones",  icono: FaWallet, viviendas: [ht.COMPACTO, ht.BASICO]  },
+      { texto: "Viviendas entre $130 y $290 millones", icono: FaMoneyBillWave, viviendas: [ht.FUNCIONAL, ht.ESPACIOSO] },
+      { texto: "Viviendas desde $290 millones en adelante", icono: FaGem, viviendas: [ht.PREMIUM] },
     ]
   },
   {
@@ -36,7 +36,7 @@ export const preguntasFormulario:  PreguntaFormulario[] = [
     esMultiple: false,
     opciones: [
       { texto: "¡Sí! Quiero estar en cada detalle", icono: FaPaintRoller, viviendas: [ht.ESPACIOSO, ht.PREMIUM] },
-      { texto: "Estoy abiert@ a lo que me recomienden", icono: FaHandshake, viviendas: [ ht.FUNCIONAL] },
+      { texto: "Me gustaría recibir algunas recomendaciones", icono: FaHandshake, viviendas: [ ht.FUNCIONAL] },
       { texto: "No tanto, prefiero algo listo para vivir", icono: FaHome, viviendas: [ht.COMPACTO, ht.BASICO]},
     ]
   },
@@ -48,7 +48,7 @@ export const preguntasFormulario:  PreguntaFormulario[] = [
     opciones: [
       { texto:"Viviendo con mi pareja", imagen: Enpareja, viviendas: [ht.COMPACTO] },
       { texto:"Con mi familia y/o mascotas", imagen: Enfamilia, viviendas: [ht.BASICO, ht.FUNCIONAL, ht.ESPACIOSO] },
-      { texto:"Solo/a pero feliz", imagen: Sola, viviendas: [ht.COMPACTO] },
+      { texto:"Disfrutando de mi independencia", imagen: Sola, viviendas: [ht.COMPACTO] },
       { texto:"Con amigos y/o roomies", imagen: Conamigos, viviendas: [ht.FUNCIONAL, ht.ESPACIOSO] },
     ]
   },
@@ -93,7 +93,7 @@ export const preguntasFormulario:  PreguntaFormulario[] = [
       { texto: "Ver árboles, plantas o naturaleza", icono: FaMountainSun, viviendas: [ht.PREMIUM, ht.ESPACIOSO] },
       { texto: "Ver movimiento, ciudad y actividad", icono: FaCity, viviendas: [ht.COMPACTO] },
       { texto: "Ver un parque, vecindario tranquilo", icono: FaTree, viviendas: [ht.BASICO, ht.FUNCIONAL] },
-      { texto: "No me interesa, mientras esté cómod@", icono: FaBed, viviendas: [ht.COMPACTO] },
+      { texto: "No me interesa, mientras me sienta a gusto", icono: FaBed, viviendas: [ht.COMPACTO] },
     ]
   },
   {
