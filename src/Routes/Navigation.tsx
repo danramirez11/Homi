@@ -1,4 +1,6 @@
 import { createHashRouter } from "react-router-dom";
+import Form from "../pages/Form/Form";
+import Results from "../pages/Results/Results";
 
 const routes = createHashRouter([
     {
@@ -7,11 +9,11 @@ const routes = createHashRouter([
     },
     {
         path: "/form",
-        element: <div>form</div>,
+        element: <Form/>,
         },
     {
         path: "/results",
-        element: <div>results</div>,
+        element: <Results/>,
     },
     {
      path: "simulation ",   

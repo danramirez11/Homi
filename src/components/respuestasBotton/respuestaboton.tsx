@@ -9,7 +9,6 @@ interface BotonRespuestaProps {
 }
 
 const BotonRespuesta: React.FC<BotonRespuestaProps> = ({ opcion, onClick }) => {
-  console.log("Renderizando opción:", opcion.texto, "icono:", opcion.icono);
   const IconComponent = opcion.icono;
 
 
