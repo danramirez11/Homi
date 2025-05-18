@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
-import './Simul.css'
+import supabase from '../../Services/Supabase';
 const Simul = ()=> {
+    const [Proyectos, setProyectos] = useState<any[]>([]);
     const [ProyectSelected, setProyectSelected] = useState("");
+    const [cesantias, setCesantias] = useState(0);
     const [ProyectoSim, setProyectoSim] = useState({
         nombre: "",
         cuotainicial: 0,
@@ -9,31 +11,36 @@ const Simul = ()=> {
         cuotaMensual: 0,
         añosHastaEntrega: 0,
     })
-    const proyectos = [{
-        id: 1,
-        nombre: "origen",
-        descripcion: "proyecto de origen",
-        fechaentrega: "2026-01-01",
-        precio: 1120000000,
-        estado: "en curso",
-    },
-    {
-        id: 2,
-        nombre: "violet",
-        descripcion: "proyecto violet", 
-        fechaentrega: "2027-01-01",
-        precio: 900000000,
-        estado: "en curso",
-    },]
+    useEffect(() => {
+        const fetchProyectos = async () => {
+            let { data, error } = await supabase.from('proyectos').select('*');
+            setProyectos(data ?? []);
+            console.log(data);
+            if (error) {
+                console.error('Error fetching proyectos:', error);
+            }       
+            
+        };
+        fetchProyectos();
+    }, []);
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedValue = event.target.value;
         setProyectSelected(selectedValue);
+        console.log(selectedValue);    
     };
+    const handlecesantias = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const selectedValue = event.target.value;
+        setCesantias(Number(selectedValue));
+        console.log(selectedValue);  
+    }  
     useEffect(() => {
-        const selectedOption = proyectos.find((proyecto) => proyecto.id === parseInt(ProyectSelected));
+        const selectedOption = Proyectos.find((proyecto) => String(proyecto.id) === ProyectSelected);      
         if (selectedOption) {
+            console.log(selectedOption);
+            
             const cuotaInicial = selectedOption.precio * 0.2;
-            const fechaEntregaParts = selectedOption.fechaentrega.split("-");
+            const cuotainicialcesantia = cuotaInicial - cesantias;
+            const fechaEntregaParts = selectedOption.fecha_entrega.split("-");
             const fechaEntrega = new Date(
                 Number(fechaEntregaParts[0]),
                 Number(fechaEntregaParts[1]) - 1,
@@ -42,7 +49,7 @@ const Simul = ()=> {
             const fechaActual = new Date();
             const diferenciaMs = fechaEntrega.getTime() - fechaActual.getTime();
             const mesesHastaEntrega = Math.ceil(diferenciaMs / (1000 * 3600 * 24 * 30)); // Prevent division by zero
-            const cuotaMensual = cuotaInicial / mesesHastaEntrega;
+            const cuotaMensual = cuotainicialcesantia / mesesHastaEntrega;
             const añosHastaEntrega = Math.floor(mesesHastaEntrega / 12);
             console.log(cuotaInicial);
             console.log(mesesHastaEntrega);
@@ -50,11 +57,13 @@ const Simul = ()=> {
             console.log(añosHastaEntrega);
             setProyectoSim({
                 nombre: selectedOption.nombre,
-                cuotainicial: cuotaInicial,
+                cuotainicial: cuotainicialcesantia,
                 mesesHastaEntrega: mesesHastaEntrega,
                 cuotaMensual: cuotaMensual,
                 añosHastaEntrega: añosHastaEntrega,
             });
+            console.log("Proyecto seleccionado:", selectedOption);
+            
             
         } else {
             console.log("No se seleccionó ningún proyecto.");
@@ -70,8 +79,8 @@ const Simul = ()=> {
             <h2>Cual de nuestros proyectos crees que es el indicado para ti?</h2>
             <select id='proyecto' name='proyecto' onChange={handleChange}>
                 <option value="">Selecciona un proyecto</option>
-                {proyectos.map((proyecto) => (
-                    <option key={proyecto.id} value={proyecto.id}>
+                {Proyectos.map((proyecto: any, index: number) => (
+                    <option key={index} value={proyecto.id}>
                         {proyecto.nombre}
                     </option>
                 ))}
@@ -81,7 +90,7 @@ const Simul = ()=> {
                 <h2>¿Cuáles son tus gastos mensuales aproximados?</h2>
                 <input type="number" name="" id="" />
                 <h2>¿Tienes cesantías u otros ahorros que puedas abonar de inmediato? ¿cuánto tienes ahorrado actualmente?</h2>
-                <input type="number" name="" id="" />
+                <input type="number" name="" id="" onChange={handlecesantias}/>
 
                 </div>
                 <div className='resultados de la simulacion'> 
