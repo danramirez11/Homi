@@ -21,7 +21,7 @@ import { ht } from '../types/homes';
 
 export const preguntasFormulario:  PreguntaFormulario[] = [
   {
-    pregunta: "¿Cuál es el rango de inversión que estás dispuesta/o a realizar en una vivienda?",
+    pregunta: "¿Cuál es el rango de inversión que realizarías en una vivienda?",
     descripcion: "Todos soñamos con un hogar propio. Aquí empieza el tuyo.",
     esMultiple: false,
     opciones: [

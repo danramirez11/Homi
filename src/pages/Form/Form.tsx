@@ -21,25 +21,32 @@ const Form = () => {
 
       <div className="FormArrow">
         <button>ñaos</button>
-        <p>{page + 1} de {preguntasFormulario.length + 1}</p>
+        <p>{page + 1} de {preguntasFormulario.length}</p>
       </div>
 
       <h2>{preguntasFormulario[page].pregunta}</h2>
       <p>{preguntasFormulario[page].descripcion}</p>
 
-      <div>
+      <div className="formAnswers">
+
+      <section>
         {preguntasFormulario[page].opciones.map((o) => (
-            <div key={o.texto}>
             <BotonRespuesta
+              key={o.texto}
               opcion={o}
               onClick={() => selectOption(o)}
               isSelected={selectedOptions.some(op => op === o.texto)}
             />
-            </div>
         ))}
-        </div>
+        </section>
 
       <button onClick={() => goNextQuestion()}>{ page === 9 ? 'Finalizar' : 'Continuar'}</button>
+
+      </div>
+
+      <p>Powered by Homi</p>
+
+      <p>esperando los estilos globales pa poner las tipografías y botones jeje</p>
 
     </section>
   );
