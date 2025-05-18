@@ -1,4 +1,5 @@
 import { createHashRouter } from "react-router-dom";
+import Simul from "../Pages/Simul/Simul";
 
 const routes = createHashRouter([
     {
@@ -14,9 +15,10 @@ const routes = createHashRouter([
         element: <div>results</div>,
     },
     {
-     path: "simulation ",   
-     element: <div>simulation</div>,
-    }
+     path: "/simulation",   
+     element: <Simul></Simul>,
+    },
+    
     ])
 
 export default routes;
