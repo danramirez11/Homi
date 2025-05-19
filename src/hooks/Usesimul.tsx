@@ -1,4 +1,4 @@
-import { startTransition, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import supabase from "../Services/Supabase";
 import { useSearchParams } from "react-router-dom";
 
