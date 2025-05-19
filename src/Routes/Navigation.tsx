@@ -2,6 +2,7 @@ import { createHashRouter } from "react-router-dom";
 import Onboarding from "../screens/Onboarding/Onboarding";
 import SplashScreen from "../screens/Splash/Splash";
 import Form from "../pages/Form/Form";
+import Simul from "../pages/Simul/Simul";
 
 const routes = createHashRouter([
     {
@@ -21,9 +22,10 @@ const routes = createHashRouter([
         element: <p>results</p>,
     },
     {
-     path: "simulation ",   
-     element: <div>simulation</div>,
-    }
+     path: "/simulation",   
+     element: <Simul></Simul>,
+    },
+    
     ])
 
 export default routes;
