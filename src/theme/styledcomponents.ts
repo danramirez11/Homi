@@ -93,6 +93,91 @@ type TextVariant =
   | 'inputText'
   | 'buttonBold'
   | 'buttonRegular';
+  
+const textVariants = {
+  display: {
+    fontSize: '40px',
+    fontWeight: 400,
+    fontStyle: 'normal',
+  },
+  headlineRegular: {
+    fontSize: '33px',
+    fontWeight: 400,
+    fontStyle: 'normal',
+  },
+  headlineMedium: {
+    fontSize: '33px',
+    fontWeight: 500,
+    fontStyle: 'normal',
+  },
+  headlineBold: {
+    fontSize: '33px',
+    fontWeight: 700,
+    fontStyle: 'normal',
+  },
+  sectionTitle: {
+    fontSize: '28px',
+    fontWeight: 400,
+    fontStyle: 'normal',
+  },
+  cardSubtitle: {
+    fontSize: '23px',
+    fontWeight: 400,
+    fontStyle: 'normal',
+  },
+  subtitle: {
+    fontSize: '19px',
+    fontWeight: 400,
+    fontStyle: 'normal',
+  },
+  bodyRegular: {
+    fontSize: '16px',
+    fontWeight: 400,
+    fontStyle: 'normal',
+  },
+  bodyBold: {
+    fontSize: '16px',
+    fontWeight: 700,
+    fontStyle: 'normal',
+  },
+  captionRegular: {
+    fontSize: '14px',
+    fontWeight: 400,
+    fontStyle: 'normal',
+  },
+  captionItalic: {
+    fontSize: '14px',
+    fontWeight: 400,
+    fontStyle: 'italic',
+  },
+  captionBold: {
+    fontSize: '14px',
+    fontWeight: 600,
+    fontStyle: 'normal',
+  },
+  inputLabel: {
+    fontSize: '14px',
+    fontWeight: 400,
+    fontStyle: 'normal',
+  },
+  inputText: {
+    fontSize: '12px',
+    fontWeight: 400,
+    fontStyle: 'normal',
+  },
+  buttonBold: {
+    fontSize: '14px',
+    fontWeight: 700,
+    fontStyle: 'normal',
+  },
+  buttonRegular: {
+    fontSize: '14px',
+    fontWeight: 400,
+    fontStyle: 'normal',
+  },
+};
+
+
 //Inputs
 //Cards
 //Containers
