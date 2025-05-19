@@ -75,6 +75,7 @@ export const Button = styled.button<{
 `;
 
 //Text
+// SE USA EN EL COMPONENTE DE ESTA MANERA: <Text variant="display">Texto display</Text>
 
 type TextVariant =
   | 'display'
