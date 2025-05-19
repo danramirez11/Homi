@@ -179,5 +179,11 @@ export const Text = styled.p<{ variant: TextVariant }>`
 `;
 
 //Inputs
+
+type InputSize = 'small' | 'medium' | 'large';
+type InputStatus = 'default' | 'success' | 'error';
+
+
+
 //Cards
 //Containers
