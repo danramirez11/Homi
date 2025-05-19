@@ -91,9 +91,7 @@ type TextVariant =
   | 'captionItalic'
   | 'captionBold'
   | 'inputLabel'
-  | 'inputText'
-  | 'buttonBold'
-  | 'buttonRegular';
+  | 'inputText';
 
 const textVariants = {
   display: {
@@ -166,16 +164,7 @@ const textVariants = {
     fontWeight: 400,
     fontStyle: 'normal',
   },
-  buttonBold: {
-    fontSize: '14px',
-    fontWeight: 700,
-    fontStyle: 'normal',
-  },
-  buttonRegular: {
-    fontSize: '14px',
-    fontWeight: 400,
-    fontStyle: 'normal',
-  },
+  
 };
 export const Text = styled.p<{ variant: TextVariant }>`
   font-family: 'Archivo', sans-serif;
