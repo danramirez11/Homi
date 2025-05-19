@@ -204,6 +204,20 @@ const inputSizes = {
   },
 };
 
+const inputStatusColors = {
+  default: {
+    border: '#D4D3D3',
+    boxShadow: 'none',
+  },
+  success: {
+    border: '#D4D3D3',
+    boxShadow: '0 0 0 3px rgba(166, 189, 73, 1)',
+  },
+  error: {
+    border: '#D4D3D3',
+    boxShadow: '0 0 0 3px rgba(235, 82, 71, 0.3)',
+  },
+};
 
 //Cards
 //Containers
