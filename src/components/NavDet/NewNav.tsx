@@ -1,13 +1,13 @@
 import React from 'react';
-import "./Navjs.css";
+import "./NewNav.css";
 
 export interface NavjmProps {
   onLoginClick: () => void;
 }
 
-const Navjm: React.FC<NavjmProps> = ({ onLoginClick }) => {
+const NewNav: React.FC<NavjmProps> = ({ onLoginClick }) => {
   return (
-    <nav className="Nav_jm">
+    <nav className="New_nav">
       <div className="logo-container">
         <img
           src="/assets/LogoJaramilloMora.webp"
@@ -58,4 +58,4 @@ const Navjm: React.FC<NavjmProps> = ({ onLoginClick }) => {
   );
 };
 
-export default Navjm;
+export default NewNav;
