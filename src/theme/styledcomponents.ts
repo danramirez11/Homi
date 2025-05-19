@@ -183,6 +183,26 @@ export const Text = styled.p<{ variant: TextVariant }>`
 type InputSize = 'small' | 'medium' | 'large';
 type InputStatus = 'default' | 'success' | 'error';
 
+const inputSizes = {
+  small: {
+    width: '280px',
+    height: '15px',
+    padding: '10px 18px',
+    gap: '25px',
+  },
+  medium: {
+    width: '350px',
+    height: '15px',
+    padding: '10px 18px',
+    gap: '25px',
+  },
+  large: {
+    width: '420px',
+    height: '15px',
+    padding: '10px 18px',
+    gap: '25px',
+  },
+};
 
 
 //Cards
