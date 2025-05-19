@@ -1,10 +1,108 @@
 #portadaDetalle{
-    width: 100vw;
-    height: 98vh;
+    width: 100%;
+    height: 95vh;
     box-sizing: border-box;
-    padding: 7.5% 5% 5% 5%;
+    padding: 7% 5% 7% 5%;
 }
 
-.circuloIcon{
+.infoDetalle{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.izquierdaInfo{
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.derechaInfo{
+    width: 35vw;
+}
+
+.proyectoInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.proyectoEtiqueta{
+    display: flex;
+    gap: 30px;
+}
+
+.proyectoUbicacion{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.proyectoLogo img{
     width: 10vw;
+}
+
+.buttonProyecto{
+    display: flex;
+    gap: 5px;
+}
+
+.buttonProyecto{
+    width: 10vw;
+    height: 2.5vw;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid #EFEFEF;
+    border-radius: 20px;
+}
+
+.derechaInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.proyectoSlogan{
+    background-color: #efefefe4;
+    width: 100%;
+    height: 15vw;
+    box-sizing: border-box;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.proyectoDispo{
+    display: flex;
+    gap: 20px;
+}
+
+.proyectoFecha{
+    background-color: #efefefe4;
+    width: 100%;
+    height: 14vw;
+    box-sizing: border-box;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.proyectoDisponibilidad{
+    background-color: #efefefe4;
+    width: 100%;
+    height: 14vw;
+    box-sizing: border-box;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
 }
