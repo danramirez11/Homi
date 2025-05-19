@@ -62,8 +62,16 @@ import { useSearchParams } from "react-router-dom";
             gastos: Number(gastos.value),
             cesantias: Number(cesantias.value),
         });
+        if(searchParams === null){
         const inputvalue = (selectinput as HTMLInputElement | HTMLSelectElement | null)?.value;
         setProyectSelected(inputvalue ?? "")
+        } else {
+            const id = searchParams.get("id")
+            setProyectSelected(`${id}`)
+            
+            
+        }
+       
     }  
     useEffect(() => {
         
@@ -99,7 +107,7 @@ import { useSearchParams } from "react-router-dom";
             
         
         }else {
-            console.log("ñaoñao");
+            console.log("proyecto no encontrado");
             
         }
     }, [userinfo]);
