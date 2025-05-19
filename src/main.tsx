@@ -7,6 +7,7 @@ import { GlobalStyle } from './theme/GlobalStyle';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <GlobalStyle />
     <RouterProvider router={routes} />
   </StrictMode>,
 )
