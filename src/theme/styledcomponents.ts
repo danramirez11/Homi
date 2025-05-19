@@ -75,6 +75,24 @@ export const Button = styled.button<{
 `;
 
 //Text
+
+type TextVariant =
+  | 'display'
+  | 'headlineRegular'
+  | 'headlineMedium'
+  | 'headlineBold'
+  | 'sectionTitle'
+  | 'cardSubtitle'
+  | 'subtitle'
+  | 'bodyRegular'
+  | 'bodyBold'
+  | 'captionRegular'
+  | 'captionItalic'
+  | 'captionBold'
+  | 'inputLabel'
+  | 'inputText'
+  | 'buttonBold'
+  | 'buttonRegular';
 //Inputs
 //Cards
 //Containers
