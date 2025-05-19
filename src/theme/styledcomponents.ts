@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 //Buttons
-// SE USA EN EL COMPONENTE DE ESTA MANERA: <Button variant="dark" size="medium">SUBMIT</Button>
+// SE USA EN EL COMPONENTE DE ESTA MANERA: <Button variant="dark" size="medium" weight="bold">SUBMIT</Button>
 type ButtonVariant = 'dark' | 'light';
 type ButtonSize = 'small' | 'medium' | 'large';
 type ButtonWeight = 'regular' | 'bold';
