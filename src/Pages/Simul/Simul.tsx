@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import supabase from '../../Services/Supabase';
+
 const Simul = ()=> {
     const [Proyectos, setProyectos] = useState<any[]>([]);
     const [ProyectSelected, setProyectSelected] = useState("");
@@ -30,7 +31,7 @@ const Simul = ()=> {
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedValue = event.target.value;
         setProyectSelected(selectedValue);
-        console.log(selectedValue);    
+         
     };
     const handleinfo = () => {
         const ingreso = document.getElementById("Value-ingreso") as HTMLInputElement;
@@ -46,7 +47,7 @@ const Simul = ()=> {
     useEffect(() => {
         const selectedOption = Proyectos.find((proyecto) => String(proyecto.id) === ProyectSelected);      
         if (selectedOption) {
-            console.log(selectedOption);
+            
             
             const cuotaInicial = selectedOption.precio * 0.2;
             const cuotainicialcesantia = cuotaInicial - userinfo.cesantias;
@@ -61,18 +62,21 @@ const Simul = ()=> {
             const mesesHastaEntrega = Math.ceil(diferenciaMs / (1000 * 3600 * 24 * 30)); // Prevent division by zero
             const cuotaMensual = cuotainicialcesantia / mesesHastaEntrega;
             const añosHastaEntrega = Math.floor(mesesHastaEntrega / 12);
-            console.log(cuotaInicial);
-            console.log(mesesHastaEntrega);
-            console.log(cuotaMensual);
-            console.log(añosHastaEntrega);
+            const roundedCuotaMensual = Math.round(cuotaMensual);
+            
+          
+            
+           console.log(`Cuota inicial: ${cuotaInicial}`);
+           console.log(`Cuota inicial con cesantías: ${cuotainicialcesantia}`);
+           
+            
             setProyectoSim({
                 nombre: selectedOption.nombre,
                 cuotainicial: cuotainicialcesantia,
                 mesesHastaEntrega: mesesHastaEntrega,
-                cuotaMensual: cuotaMensual,
+                cuotaMensual: roundedCuotaMensual,
                 añosHastaEntrega: añosHastaEntrega,
             });
-            console.log("Proyecto seleccionado:", selectedOption);
             
             
         } else {
@@ -106,9 +110,9 @@ const Simul = ()=> {
                 <div className='resultados de la simulacion'> 
                 <h2>Resultados de la simulación</h2>
                 <p>El proyecto seleccionado es: {ProyectoSim.nombre}</p>
-                <p>La cuota inicial es: {ProyectoSim.cuotainicial}</p>
+                <p>La cuota inicial es: {new Intl.NumberFormat('es-CO', {style: 'currency', currency: 'COP'}).format(ProyectoSim.cuotainicial)}</p>
                 <p>Los meses hasta la entrega son: {ProyectoSim.mesesHastaEntrega}</p>
-                <p>La cuota mensual es: {ProyectoSim.cuotaMensual}</p>
+                <p>La cuota mensual es: {new Intl.NumberFormat('es-CO', {style: 'currency', currency: 'COP'}).format(ProyectoSim.cuotaMensual)}</p>
                 <p>Los años hasta la entrega son: {ProyectoSim.añosHastaEntrega}</p>
 
                 </div>
