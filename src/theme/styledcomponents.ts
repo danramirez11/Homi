@@ -1,10 +1,12 @@
 import styled from 'styled-components';
-//Text
+
 //Buttons
+
+type ButtonVariant = 'dark' | 'light';
+type ButtonSize = 'small' | 'medium' | 'large';
+
+//Text
 //Inputs
 //Cards
 //Containers
-export const Button = styled.button`
-  background-color: purple;
-  color: white;
-`
+
