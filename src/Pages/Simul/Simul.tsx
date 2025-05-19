@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+/*import { useEffect, useState } from 'react';
 import supabase from '../../Services/Supabase';
 const Simul = ()=> {
     const [Proyectos, setProyectos] = useState<any[]>([]);
@@ -107,4 +107,4 @@ const Simul = ()=> {
     );  
 }
 
-export default Simul;
+export default Simul;*/

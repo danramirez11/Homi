@@ -1,5 +1,7 @@
+import { FaCircleChevronLeft } from "react-icons/fa6";
 import BotonRespuesta from "../../components/respuestasBotton/respuestaboton";
 import useForm from "../../hooks/useForm";
+import { Button, Text } from "../../theme/styledcomponents";
 import preguntasFormulario from "../../utils/Preguntas";
 import './Form.css'
 
@@ -20,12 +22,12 @@ const Form = () => {
       </div>
 
       <div className="FormArrow">
-        <button>ñaos</button>
-        <p>{page + 1} de {preguntasFormulario.length}</p>
+        <FaCircleChevronLeft size={32} color="rgba(26, 25, 30, 1)"/>
+        <Text variant='subtitle'>{page + 1} de {preguntasFormulario.length}</Text>
       </div>
 
-      <h2>{preguntasFormulario[page].pregunta}</h2>
-      <p>{preguntasFormulario[page].descripcion}</p>
+      <Text variant='headlineBold'>{preguntasFormulario[page].pregunta}</Text>
+      <Text variant="subtitle">{preguntasFormulario[page].descripcion}</Text>
 
       <div className="formAnswers">
 
@@ -40,13 +42,11 @@ const Form = () => {
         ))}
         </section>
 
-      <button onClick={() => goNextQuestion()}>{ page === 9 ? 'Finalizar' : 'Continuar'}</button>
+      <Button variant='dark' size='large' onClick={() => goNextQuestion()}>{ page === 9 ? 'Finalizar' : 'Continuar'}</Button>
 
       </div>
 
-      <p>Powered by Homi</p>
-
-      <p>esperando los estilos globales pa poner las tipografías y botones jeje</p>
+      <Text variant='captionRegular'>Powered by Homi</Text>
 
     </section>
   );

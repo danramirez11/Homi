@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: 24px;
-    gap: 16px;
+    gap: 24px;
 }
 
 .FormProgressBar{
@@ -30,6 +30,7 @@
 .FormArrow{
     display: flex;
     gap: 8px;
+    align-items: center;
 }
 
 .formAnswers{
@@ -37,6 +38,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .formAnswers section{
