@@ -46,7 +46,11 @@ const Form = () => {
 
       </div>
 
+      <div className="FormFooter">
+
       <Text variant='captionRegular'>Powered by Homi</Text>
+
+      </div>
 
     </section>
   );

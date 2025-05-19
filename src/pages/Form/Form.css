@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
     padding: 24px;
-    gap: 24px;
+    gap: 16px;
+    position: relative;
+    height: 100%;
 }
 
 .FormProgressBar{
@@ -39,10 +41,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 16px;
 }
 
 .formAnswers section{
     display: flex;
     gap: 8px;
     justify-content: center;
+}
+
+.FormFooter{
+    position: absolute;
+    bottom: 8px;
+    left: 24px;
 }
