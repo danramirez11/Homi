@@ -42,6 +42,38 @@ const buttonSizes = {
   },
 };
 
+export const Button = styled.button<{
+  variant: ButtonVariant;
+  size: ButtonSize;
+}>`
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  color: ${({ variant }) => buttonColors[variant].color};
+  background-color: ${({ variant }) => buttonColors[variant].bg};
+  width: ${({ size }) => buttonSizes[size].width};
+  height: ${({ size }) => buttonSizes[size].height};
+  min-width: ${({ size }) => buttonSizes[size].width};
+  padding: ${({ size }) => buttonSizes[size].padding};
+  font-size: ${({ size }) => buttonSizes[size].fontSize};
+  border-radius: 36px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: ${({ size }) => buttonSizes[size].gap};
+
+  &:hover {
+    background-color: ${({ variant }) => buttonColors[variant].hover};
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+`;
+
 //Text
 //Inputs
 //Cards
