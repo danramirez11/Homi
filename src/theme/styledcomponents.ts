@@ -179,6 +179,7 @@ export const Text = styled.p<{ variant: TextVariant }>`
 `;
 
 //Inputs
+// SE USA EN EL COMPONENTE DE ESTA MANERA: <Input size="small" status="default" />
 
 type InputSize = 'small' | 'medium' | 'large';
 type InputStatus = 'default' | 'success' | 'error';
