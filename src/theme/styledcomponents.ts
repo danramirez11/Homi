@@ -219,5 +219,32 @@ const inputStatusColors = {
   },
 };
 
+export const Input = styled.input<{
+  size: InputSize;
+  status?: InputStatus;
+}>`
+  width: ${({ size }) => inputSizes[size].width};
+  height: ${({ size }) => inputSizes[size].height};
+  padding: ${({ size }) => inputSizes[size].padding};
+  border-radius: 30px;
+  border: 1.5px solid ${({ status = 'default' }) => inputStatusColors[status].border};
+  background: #ffffff;
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+
+  box-shadow: ${({ status = 'default' }) => inputStatusColors[status].boxShadow};
+
+  &:hover {
+    border: 1.5px solid #86B7FE;
+    box-shadow: 0px 0px 0px 1.5px rgba(134, 183, 254, 0.3);
+  }
+
+  &:focus {
+    border: 1.5px solid #86B7FE;
+    box-shadow: 0px 0px 0px 3px rgba(134, 183, 254, 0.3);
+  }
+`;
 //Cards
 //Containers
