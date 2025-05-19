@@ -4,17 +4,18 @@ import styled from 'styled-components';
 // SE USA EN EL COMPONENTE DE ESTA MANERA: <Button variant="dark" size="medium">SUBMIT</Button>
 type ButtonVariant = 'dark' | 'light';
 type ButtonSize = 'small' | 'medium' | 'large';
+type ButtonWeight = 'regular' | 'bold';
 
 const buttonColors = {
   dark: {
     bg: 'rgba(26, 25, 30, 1)',
     hover: 'rgba(51, 51, 51, 1)',
-    color: '#FFFFFF',
+    color: 'rgba(255, 255, 255, 1)',
   },
   light: {
     bg: 'rgba(243, 243, 243, 1)',
     hover: 'rgba(221, 221, 221, 1)',
-    color: '#000000',
+    color: 'rgba(44, 43, 43, 1)',
   },
 };
 
@@ -45,9 +46,10 @@ const buttonSizes = {
 export const Button = styled.button<{
   variant: ButtonVariant;
   size: ButtonSize;
+  weight?: ButtonWeight;
 }>`
   font-family: 'Archivo', sans-serif;
-  font-weight: 600;
+  font-weight: ${({ weight }) => (weight === 'bold' ? 700 : 400)};
   color: ${({ variant }) => buttonColors[variant].color};
   background-color: ${({ variant }) => buttonColors[variant].bg};
   width: ${({ size }) => buttonSizes[size].width};
@@ -73,6 +75,7 @@ export const Button = styled.button<{
     cursor: not-allowed;
   }
 `;
+
 
 //Text
 // SE USA EN EL COMPONENTE DE ESTA MANERA: <Text variant="display">Texto display</Text>
