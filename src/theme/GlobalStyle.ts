@@ -1,16 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
 
-//Estilo general body screen
 export const GlobalStyle = createGlobalStyle`
-  body {
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap');
+
+  * {
     margin: 0;
     padding: 0;
-    font-family: 'Sora', sans-serif;
-    background-color: #121212;
-    color: #fff;
+    box-sizing: border-box;
   }
 
-  *, *::before, *::after {
-    box-sizing: border-box;
+  body {
+    font-family: 'Archivo', sans-serif;
+    background-color: #ffff; 
+    color: #000;
   }
 `;
