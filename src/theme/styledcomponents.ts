@@ -93,7 +93,7 @@ type TextVariant =
   | 'inputText'
   | 'buttonBold'
   | 'buttonRegular';
-  
+
 const textVariants = {
   display: {
     fontSize: '40px',
@@ -176,7 +176,14 @@ const textVariants = {
     fontStyle: 'normal',
   },
 };
-
+export const Text = styled.p<{ variant: TextVariant }>`
+  font-family: 'Archivo', sans-serif;
+  font-size: ${({ variant }) => textVariants[variant].fontSize};
+  font-weight: ${({ variant }) => textVariants[variant].fontWeight};
+  font-style: ${({ variant }) => textVariants[variant].fontStyle};
+  margin: 0;
+  color: ${({ color }) => color || 'inherit'};
+`;
 
 //Inputs
 //Cards
