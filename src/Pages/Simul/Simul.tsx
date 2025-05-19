@@ -3,7 +3,11 @@ import supabase from '../../Services/Supabase';
 const Simul = ()=> {
     const [Proyectos, setProyectos] = useState<any[]>([]);
     const [ProyectSelected, setProyectSelected] = useState("");
-    const [cesantias, setCesantias] = useState(0);
+    const [userinfo, setuserinfo] = useState({
+        ingresos: 0,
+        gastos: 0,
+        cesantias: 0,
+    });
     const [ProyectoSim, setProyectoSim] = useState({
         nombre: "",
         cuotainicial: 0,
@@ -28,10 +32,16 @@ const Simul = ()=> {
         setProyectSelected(selectedValue);
         console.log(selectedValue);    
     };
-    const handlecesantias = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const selectedValue = event.target.value;
-        setCesantias(Number(selectedValue));
-        console.log(selectedValue);  
+    const handleinfo = () => {
+        const ingreso = document.getElementById("Value-ingreso") as HTMLInputElement;
+        const gastos = document.getElementById("Value-gastos") as HTMLInputElement;
+        const cesantias = document.getElementById("Value-cesantias") as HTMLInputElement;
+        
+        setuserinfo({
+            ingresos: Number(ingreso.value),
+            gastos: Number(gastos.value),
+            cesantias: Number(cesantias.value),
+        });
     }  
     useEffect(() => {
         const selectedOption = Proyectos.find((proyecto) => String(proyecto.id) === ProyectSelected);      
@@ -39,7 +49,7 @@ const Simul = ()=> {
             console.log(selectedOption);
             
             const cuotaInicial = selectedOption.precio * 0.2;
-            const cuotainicialcesantia = cuotaInicial - cesantias;
+            const cuotainicialcesantia = cuotaInicial - userinfo.cesantias;
             const fechaEntregaParts = selectedOption.fecha_entrega.split("-");
             const fechaEntrega = new Date(
                 Number(fechaEntregaParts[0]),
@@ -68,7 +78,7 @@ const Simul = ()=> {
         } else {
             console.log("No se seleccionó ningún proyecto.");
         }
-    }, [ProyectSelected]);
+    }, [ProyectSelected, userinfo]);
     
 
     return (
@@ -86,12 +96,12 @@ const Simul = ()=> {
                 ))}
             </select>
                 <h2>¿Cuánto ganas al mes aproximadamente? (Incluye tu sueldo, rentas, trabajos extra, etc.)</h2>
-                <input type="number" name="" id="" />
+                <input type="number" name="" id="Value-ingreso" />
                 <h2>¿Cuáles son tus gastos mensuales aproximados?</h2>
-                <input type="number" name="" id="" />
+                <input type="number" name="" id="Value-gastos" />
                 <h2>¿Tienes cesantías u otros ahorros que puedas abonar de inmediato? ¿cuánto tienes ahorrado actualmente?</h2>
-                <input type="number" name="" id="" onChange={handlecesantias}/>
-
+                <input type="number" name="" id="Value-cesantias" />
+                <button onClick={handleinfo}>Simular</button>
                 </div>
                 <div className='resultados de la simulacion'> 
                 <h2>Resultados de la simulación</h2>
