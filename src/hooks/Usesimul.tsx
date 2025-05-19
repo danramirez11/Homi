@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import supabase from "../Services/Supabase";
+import { useSearchParams } from "react-router-dom";
 
  export const Usesimul = ()=>{
-
+    const selectinput = document.getElementById("proyecto")
+    const titloselect = document.getElementById("proyectoAsk")
     const [Proyectos, setProyectos] = useState<any[]>([]);
     const [ProyectSelected, setProyectSelected] = useState("");
     const [userinfo, setuserinfo] = useState({
@@ -17,7 +19,29 @@ import supabase from "../Services/Supabase";
         cuotaMensual: 0,
         añosHastaEntrega: 0,
     })
+    const [searchParams] = useSearchParams()
+   
+
+    useEffect(()=>{
+        const id = searchParams.get("id")
+
+        setProyectSelected(`${id}`)
+       if (id && Number(id)) {
+          if (selectinput) {
+            selectinput.style.display = "none";
+            if (titloselect) {
+                titloselect.style.display = "none";
+            }
+          }
+       }
+        
+        
+        
+    })
     useEffect(() => {
+        
+        
+    
         const fetchProyectos = async () => {
             let { data, error } = await supabase.from('proyectos').select('*');
             setProyectos(data ?? []);
@@ -28,10 +52,18 @@ import supabase from "../Services/Supabase";
             
         };
         fetchProyectos();
-    }, []);
+        
+    }, [])
+
+    
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        
         const selectedValue = event.target.value;
+        console.log(selectedValue);
+        
         setProyectSelected(selectedValue);
+        
+
          
     };
     const handleinfo = () => {
@@ -84,6 +116,9 @@ import supabase from "../Services/Supabase";
             console.log("No se seleccionó ningún proyecto.");
         }
     }, [ProyectSelected, userinfo]);
+
+
+
     return { handleinfo, handleChange, Proyectos, ProyectSelected, userinfo, ProyectoSim };
 }
     

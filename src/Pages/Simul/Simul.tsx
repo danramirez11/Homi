@@ -1,6 +1,7 @@
 
 import Usesimul from '../../hooks/Usesimul';
 import './Simul.css';
+import { Input } from '../../theme/styledcomponents';
 
 const Simul = ()=> {
     const {handleChange, handleinfo, Proyectos, ProyectoSim} = Usesimul();
@@ -21,7 +22,7 @@ const Simul = ()=> {
 
             <section className='Sim_container'>
             <div className="Form">
-            <h2 className='h2title' >Cual de nuestros proyectos crees que es el indicado para ti?</h2>
+            <h2 className='h2title' id='proyectoAsk'>Cual de nuestros proyectos crees que es el indicado para ti?</h2>
             <select id='proyecto' name='proyecto' onChange={handleChange}>
                 <option value="">Selecciona un proyecto</option>
                 {Proyectos.map((proyecto: any, index: number) => (
@@ -31,11 +32,11 @@ const Simul = ()=> {
                 ))}
             </select>
                 <h2 className='h2title'>¿Cuánto ganas al mes aproximadamente? (Incluye tu sueldo, rentas, trabajos extra, etc.)</h2>
-                <input type="number" name="" id="Value-ingreso" />
+                <Input size={'medium'} type="number" name="" id="Value-ingreso" />
                 <h2 className='h2title'>¿Cuáles son tus gastos mensuales aproximados?</h2>
-                <input type="number" name="" id="Value-gastos" />
+                <Input size={'medium'} type="number" name="" id="Value-gastos" />
                 <h2 className='h2title'>¿Tienes cesantías u otros ahorros que puedas abonar de inmediato? ¿cuánto tienes ahorrado actualmente?</h2>
-                <input type="number" name="" id="Value-cesantias" />
+                <Input size={'medium'} type="number" name="" id="Value-cesantias" />
                 <button onClick={handleinfo}>Simular</button>
                 </div>
                 <div className='Results_simulation'> 
