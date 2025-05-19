@@ -4,7 +4,7 @@ import './Simul.css';
 import { Input } from '../../theme/styledcomponents';
 
 const Simul = ()=> {
-    const {handleChange, handleinfo, Proyectos, ProyectoSim} = Usesimul();
+    const { handleinfo, Proyectos, ProyectoSim} = Usesimul();
     return (
         <div>
             <section className='upper_section'>
@@ -23,7 +23,7 @@ const Simul = ()=> {
             <section className='Sim_container'>
             <div className="Form">
             <h2 className='h2title' id='proyectoAsk'>Cual de nuestros proyectos crees que es el indicado para ti?</h2>
-            <select id='proyecto' name='proyecto' onChange={handleChange}>
+           <select id='proyecto' name='proyecto'>
                 <option value="">Selecciona un proyecto</option>
                 {Proyectos.map((proyecto: any, index: number) => (
                     <option key={index} value={proyecto.id}>
