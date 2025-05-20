@@ -53,35 +53,32 @@ import { useSearchParams } from "react-router-dom";
     
       
     const handleinfo = () => {
-        const ingreso = document.getElementById("Value-ingreso") as HTMLInputElement;
-        const gastos = document.getElementById("Value-gastos") as HTMLInputElement;
-        const cesantias = document.getElementById("Value-cesantias") as HTMLInputElement;
+    const ingreso = document.getElementById("Value-ingreso") as HTMLInputElement;
+    const gastos = document.getElementById("Value-gastos") as HTMLInputElement;
+    const cesantias = document.getElementById("Value-cesantias") as HTMLInputElement;
 
-        setuserinfo({
-            ingresos: Number(ingreso.value),
-            gastos: Number(gastos.value),
-            cesantias: Number(cesantias.value),
-        });
-        if(searchParams === null){
+    setuserinfo({
+        ingresos: Number(ingreso.value),
+        gastos: Number(gastos.value),
+        cesantias: Number(cesantias.value),
+    });
+
+    const id = searchParams.get("id");
+    if (id && id !== "null" && id !== "undefined") {
+        setProyectSelected(id);
+    } else {
         const inputvalue = (selectinput as HTMLInputElement | HTMLSelectElement | null)?.value;
-        setProyectSelected(inputvalue ?? "")
-        } else {
-            const id = searchParams.get("id")
-            setProyectSelected(`${id}`)
-            
-            
-        }
-       
-    }  
+        setProyectSelected(inputvalue ?? "");
+    }
+}
     useEffect(() => {
         
         const selectedOption = Proyectos.find((proyecto) => String(proyecto.id) === ProyectSelected); 
-        console.log(selectedOption);
         
         if(selectedOption){
 
             const cuotaInicial = selectedOption.precio * 0.2;
-            const cuotainicialcesantia = cuotaInicial - 9999999;
+            const cuotainicialcesantia = cuotaInicial - userinfo.cesantias;
             const fechaEntregaParts = selectedOption.fecha_entrega.split("-");
             const fechaEntrega = new Date(
                 Number(fechaEntregaParts[0]),
@@ -110,7 +107,7 @@ import { useSearchParams } from "react-router-dom";
             console.log("proyecto no encontrado");
             
         }
-    }, [userinfo]);
+    }, [userinfo, ProyectSelected, Proyectos]);
 
 
 
