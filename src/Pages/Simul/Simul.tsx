@@ -3,21 +3,24 @@ import Usesimul from '../../hooks/Usesimul';
 import Options from './Components/Options/Optionsjm';
 import './Simul.css';
 import { Input, Text } from '../../theme/styledcomponents';
+import { useNavigate } from 'react-router-dom';
 
 
 const Simul = ()=> {
     const { handleinfo, Proyectos, ProyectoSim} = Usesimul();
+    const navigate = useNavigate()
     return (
         <div>
             <section className='upper_section'>
             <div className='Simul_title'>
                 <div className='button_back'>
 
-            <button></button>
+            <button onClick={()=>{navigate("/form",)}}></button>
             <p>back</p>
                 </div>
-            <h1>Valida tu proceso de compra</h1>
+            <Text variant='display'>Valida tu proceso de compra</Text>
             </div>
+            <Text variant='display' color='#A6BD49' className='proyecttitle' id='title'>{ProyectoSim.nombre}</Text>
             <p id='description'>Bienvenido al simulador de planes de pago. Ingresa los siguientes datos para ofrecerte una propuesta personalizada, pensada especialmente para ajustarse a tus necesidades y posibilidades. ¡Para nosotros lo mas importante es que obtengas el hogar de tus sueños!</p>
 
             </section>

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import supabase from "../Services/Supabase";
-import { useSearchParams } from "react-router-dom";
+import supabase from "../Services/supabase";
+import { useLocation, useSearchParams } from "react-router-dom";
 
  export const Usesimul = ()=>{
+    const titleproyect = document.getElementById("title")
     
     const selectinput = document.getElementById("proyecto")
     const titloselect = document.getElementById("proyectoAsk")
@@ -21,13 +22,19 @@ import { useSearchParams } from "react-router-dom";
         añosHastaEntrega: 0,
     })
     const [searchParams] = useSearchParams()
+    const stateloc = useLocation()
    
 
     useEffect(()=>{
+        console.log(stateloc.state.Proyectodata.id);
+        
         const id = searchParams.get("id")
 
-        setProyectSelected(`${id}`)
-       if (id && Number(id)) {
+        setProyectSelected(String(stateloc.state.Proyectodata.id))
+       if (stateloc.state.Proyectodata) {
+        if(titleproyect){
+            titleproyect.style.display= "block"
+        }
           if (selectinput) {
             selectinput.style.display = "none";
             if (titloselect) {

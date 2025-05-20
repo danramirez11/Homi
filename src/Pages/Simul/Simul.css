@@ -5,7 +5,9 @@ body {
   padding: 0;
   color: #333333;
 }
-
+.proyecttitle{
+  display: none;
+}
 .upper_section {
   position: relative;
   display: flex;
