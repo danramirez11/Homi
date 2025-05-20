@@ -42,7 +42,7 @@ const Planos = ({ Proyectodata }: { Proyectodata: Proyecto }) => {
         <div 
         className='SectionPlanosDer'
         style={{
-        backgroundImage: `url(${Proyectodata.img_interior_vista})`,//modificar
+        backgroundImage: `url("${Proyectodata.img_interior_vista}")`,//modificar
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',}}

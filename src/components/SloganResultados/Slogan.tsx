@@ -17,7 +17,7 @@ const Slogan= ({ Proyectodata }: { Proyectodata: Proyecto }) => {
         <div 
         className='SloganPlano'
         style={{
-        backgroundImage: `url(${Proyectodata.img_plano})`,
+        backgroundImage: `url("${Proyectodata.img_plano}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',}}

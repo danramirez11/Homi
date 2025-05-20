@@ -12,7 +12,7 @@ const Vista = ({ Proyectodata }: { Proyectodata: Proyecto }) => {
         <div 
         className='VistaInformacion'
         style={{
-        backgroundImage: `linear-gradient(to bottom,#32352700,#323527bb), url(${Proyectodata.img_informacion})`,
+        backgroundImage: `linear-gradient(to bottom,#32352700,#323527bb), url("${Proyectodata.img_frase}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',}}
@@ -26,7 +26,7 @@ const Vista = ({ Proyectodata }: { Proyectodata: Proyecto }) => {
         <div 
         className='Vista3DLink'
         style={{
-        backgroundImage: `linear-gradient(to bottom,#32352700,#323527bb), url(${Proyectodata.img_vista3D})`,
+        backgroundImage: `linear-gradient(to bottom,#32352700,#323527bb), url("${Proyectodata.img_vista3D}")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',}}

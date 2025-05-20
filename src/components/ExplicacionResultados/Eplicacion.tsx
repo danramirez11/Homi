@@ -15,7 +15,7 @@ const Explicacion = ({ Proyectodata }: { Proyectodata: Proyecto }) => {
           <div
           className='ExpImg1' 
           style={{
-          backgroundImage: `url(${Proyectodata.img_explicacion1})`,
+          backgroundImage: `url("${Proyectodata.img_explicacion1}")`,
           backgroundSize: 'cover',
           backgroundPosition: 'bottom',
           backgroundRepeat: 'no-repeat',}}
@@ -23,7 +23,7 @@ const Explicacion = ({ Proyectodata }: { Proyectodata: Proyecto }) => {
           <div
           className='ExpImg2'  
           style={{
-          backgroundImage: `url(${Proyectodata.img_explicación2})`,
+          backgroundImage: `url("${Proyectodata.img_explicación2}")`,
           backgroundSize: 'cover',
           backgroundPosition: 'bottom',
           backgroundRepeat: 'no-repeat',}}

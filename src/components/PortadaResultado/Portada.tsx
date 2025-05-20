@@ -7,12 +7,13 @@ import type { Proyecto } from "../../types/Proyectos";
 
 const Portada = ({ Proyectodata }: { Proyectodata: Proyecto }) => {
 
+console.log(Proyectodata.img_portada);
 
 return (
     <section
         id="portadaDetalle"
         style={{
-            backgroundImage: `linear-gradient(to bottom,rgba(36, 36, 32, 0),rgba(36, 36, 32, 0.93)), url(${Proyectodata.img_portada})`,
+            backgroundImage: `linear-gradient(to bottom,rgba(36, 36, 32, 0),rgba(36, 36, 32, 0.93)), url("${Proyectodata.img_portada}")`,
             backgroundSize: 'cover',
             backgroundPosition: 'top',
             backgroundRepeat: 'no-repeat',
