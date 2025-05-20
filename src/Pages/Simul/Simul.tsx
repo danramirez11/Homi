@@ -1,4 +1,4 @@
-/*import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import supabase from '../../Services/Supabase';
 const Simul = ()=> {
     const [Proyectos, setProyectos] = useState<any[]>([]);
@@ -13,7 +13,7 @@ const Simul = ()=> {
     })
     useEffect(() => {
         const fetchProyectos = async () => {
-            let { data, error } = await supabase.from('proyectos').select('*');
+            const { data, error } = await supabase.from('proyectos').select('*');
             setProyectos(data ?? []);
             console.log(data);
             if (error) {
@@ -107,4 +107,4 @@ const Simul = ()=> {
     );  
 }
 
-export default Simul;*/
+export default Simul;
