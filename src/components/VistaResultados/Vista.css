@@ -1,0 +1,42 @@
+#SectionVista3D{
+    width: 100%;
+    height: 54vh;
+    box-sizing: border-box;
+    padding: 0% 5% 40px 5%;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+.VistaInformacion{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    justify-content: end;
+}
+
+.Vista3DLink{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    box-sizing: border-box;
+    padding: 3%;
+    border-radius: 20px;
+}
+
+.VistaInforText{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    gap: 20px;
+}

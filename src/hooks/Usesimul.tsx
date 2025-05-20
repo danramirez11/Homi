@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import supabase from "../Services/Supabase";
-import { useSearchParams } from "react-router-dom";
+import supabase from "../Services/supabase";
+import { useLocation, useSearchParams } from "react-router-dom";
 
  export const Usesimul = ()=>{
+    const titleproyect = document.getElementById("title")
     
     const selectinput = document.getElementById("proyecto")
     const titloselect = document.getElementById("proyectoAsk")
@@ -21,22 +22,25 @@ import { useSearchParams } from "react-router-dom";
         añosHastaEntrega: 0,
     })
     const [searchParams] = useSearchParams()
+    const stateloc = useLocation()
    
 
     useEffect(()=>{
-        const id = searchParams.get("id")
-
-        setProyectSelected(`${id}`)
-       if (id && Number(id)) {
-          if (selectinput) {
+    if (stateloc.state && stateloc.state.Proyectodata) {
+        console.log(stateloc.state.Proyectodata.id);
+        setProyectSelected(String(stateloc.state.Proyectodata.id));
+        if (titleproyect) {
+            titleproyect.style.display = "block";
+        }
+        if (selectinput) {
             selectinput.style.display = "none";
             if (titloselect) {
                 titloselect.style.display = "none";
             }
-          }
-       }else {
-        console.log("No hay ninguna id en la url");   
-       }       
+        }
+    } else {
+        console.log("No hay ninguna id en la url");
+    }
     })
     useEffect(() => {
              const fetchProyectos = async () => {
