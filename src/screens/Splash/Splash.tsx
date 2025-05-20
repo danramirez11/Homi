@@ -16,11 +16,11 @@ const SplashScreen: React.FC = () => {
 
   return (
     <div className="splash-container">
-      <img src="/public/assets/Logo2JaramilloMora.webp" alt="Logo JaramilloMora" className="Splash_logoj" />
+      <img src="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/splash//Logo2JaramilloMora.webp" alt="Logo JaramilloMora" className="Splash_logoj" />
       <Spinner />
       <div className='splash-homi'>
         <p className='splash_p'>Power by Homi</p>
-         <img src="/public/assets/LogoHomi.webp" alt="Logo Homi" className="Splash_logoh" />
+         <img src="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/splash//LogoHomi.webp" alt="Logo Homi" className="Splash_logoh" />
       </div>
      
     </div>
