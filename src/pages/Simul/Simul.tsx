@@ -75,7 +75,13 @@ const Simul = ()=> {
                 <a className='aoption' href="">¿Esta opción no es para ti?</a>
                 </div>
             </section>
-            
+            <section>
+                <div>
+                <p>¿Deseas conocer otras opciones?</p>
+                <Options></Options>
+            </div>
+
+        </section>
         </div>
         
     );  
