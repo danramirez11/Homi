@@ -26,24 +26,24 @@ import { useLocation, useSearchParams } from "react-router-dom";
    
 
     useEffect(()=>{
+    if (stateloc.state && stateloc.state.Proyectodata) {
         console.log(stateloc.state.Proyectodata.id);
-        
-        const id = searchParams.get("id")
 
-        setProyectSelected(String(stateloc.state.Proyectodata.id))
-       if (stateloc.state.Proyectodata) {
-        if(titleproyect){
-            titleproyect.style.display= "block"
+        const id = searchParams.get("id");
+
+        setProyectSelected(String(stateloc.state.Proyectodata.id));
+        if (titleproyect) {
+            titleproyect.style.display = "block";
         }
-          if (selectinput) {
+        if (selectinput) {
             selectinput.style.display = "none";
             if (titloselect) {
                 titloselect.style.display = "none";
             }
-          }
-       }else {
-        console.log("No hay ninguna id en la url");   
-       }       
+        }
+    } else {
+        console.log("No hay ninguna id en la url");
+    }
     })
     useEffect(() => {
              const fetchProyectos = async () => {
