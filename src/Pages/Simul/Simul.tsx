@@ -2,7 +2,7 @@
 
 import Usesimul from '../../hooks/Usesimul';
 import './Simul.css';
-import { Input, Text } from '../../theme/styledcomponents';
+import { Button, Input, Text } from '../../theme/styledcomponents';
 import { useNavigate } from 'react-router-dom';
 import Options from '../../Pages/Simul/Components/Options/Optionsjm'
 import Navjm from '../../components/Navjm/Nav';
@@ -45,7 +45,7 @@ const Simul = ()=> {
                 <Input size={'medium'} placeholder='Ej: $1´000.000,00' type="number" name="" id="Value-gastos" />
                 <h2 className='h2title'>¿Tienes cesantías u otros ahorros que puedas abonar de inmediato? ¿cuánto tienes ahorrado actualmente?</h2>
                 <Input size={'medium'} placeholder='Ej: $1´000.000,00' type="number" name="" id="Value-cesantias" />
-                <button onClick={handleinfo}>Simular</button>
+                <Button variant='dark' size='medium' >Simular</Button>
                 </div>
                 <div className='Results_simulation'> 
 
