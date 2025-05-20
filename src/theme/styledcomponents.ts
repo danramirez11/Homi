@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const InvisibleDiv = styled.div`
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+`;
+
 //Buttons
 // SE USA EN EL COMPONENTE DE ESTA MANERA: <Button variant="dark" size="medium" weight="bold">SUBMIT</Button>
 type ButtonVariant = 'dark' | 'light';
