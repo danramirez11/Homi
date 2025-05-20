@@ -2,6 +2,7 @@ import { BsArrowUpRightCircleFill } from 'react-icons/bs';
 import './Planos.css'
 import { Text } from '../../theme/styledcomponents';
 
+
 const Planos: React.FC = () => {
 
   return (
@@ -16,7 +17,7 @@ const Planos: React.FC = () => {
             </div>
             <div className='SectionPlanosIzq2'>
                 <div className='SectionPlanosDetalle'>
-                    <Text variant="cardSubtitle" color="#EFEFEF" className='PlanosTitle'>Tres estilos de vivienda, una misma calidad</Text>
+                    <Text variant="cardSubtitle" color="#EFEFEF" className='PlanosTitle'>Tres estilos de vivienda, una misma calidad</Text> 
                     <a href="linkTipo_proyecto"><BsArrowUpRightCircleFill size={45} color="#EFEFEF"/></a>
                 </div>
                 <div className='SectionPlanosEspacios'>
@@ -40,7 +41,7 @@ const Planos: React.FC = () => {
         <div 
         className='SectionPlanosDer'
         style={{
-        backgroundImage: 'url("img_interior_vista")',
+        backgroundImage: 'url("img_interior_vista")',//modificar
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',}}
