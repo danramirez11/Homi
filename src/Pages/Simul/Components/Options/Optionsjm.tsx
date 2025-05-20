@@ -11,19 +11,19 @@ const Options =() =>{
         </div>
         <div className='flexing'>
             <div className="circlevector">
-                <img src="src\assets\hand-coins.svg" alt="" />
+                <img src="src\assets\arrowdown.svg" alt="" />
             </div>
               <Text variant='bodyRegular'>Elige un proyecto con una cuota inicial más baja</Text>
         </div>
         <div className='flexing'>
             <div className="circlevector">
-                <img src="src\assets\hand-coins.svg" alt="" />
+                <img src="src\assets\wallet.svg" alt="" />
             </div>
              <Text variant='bodyRegular'>Usa más recursos como cesantías, primas o ingresos familiares</Text>
         </div>
         <div className='flexing'>
             <div className="circlevector">
-                <img src="src\assets\hand-coins.svg" alt="" />
+                <img src="src\assets\contatc.svg" alt="" />
             </div>
              <Text variant='bodyRegular'>Agenda una cita con un asesor de Jaramillo Mora</Text>
         </div>
