@@ -2,7 +2,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import './Portada.css'
 import { Text } from "../../theme/styledcomponents";
 import BotonAtras from "../BotonAtras/BotonAtras";
-import Usedetail from "../../hooks/usedetail";
+
 import type { Proyecto } from "../../types/Proyectos";
 
 const Portada = ({ Proyectodata }: { Proyectodata: Proyecto }) => {

@@ -22,7 +22,7 @@ const Detalle = () => {
       <Vista Proyectodata={Proyectoinfo}/>
       <Planos Proyectodata={Proyectoinfo}/>
       <Enlace Proyectodata={Proyectoinfo}/>
-      <Comentarios Proyectodata={Proyectoinfo}/>
+      <Comentarios/>
     </div>
   );
 };

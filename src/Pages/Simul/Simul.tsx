@@ -1,6 +1,5 @@
 
 import Usesimul from '../../hooks/Usesimul';
-import Options from './Components/Options/Optionsjm';
 import './Simul.css';
 import { Input, Text } from '../../theme/styledcomponents';
 import { useNavigate } from 'react-router-dom';

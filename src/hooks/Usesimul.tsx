@@ -28,9 +28,6 @@ import { useLocation, useSearchParams } from "react-router-dom";
     useEffect(()=>{
     if (stateloc.state && stateloc.state.Proyectodata) {
         console.log(stateloc.state.Proyectodata.id);
-
-        const id = searchParams.get("id");
-
         setProyectSelected(String(stateloc.state.Proyectodata.id));
         if (titleproyect) {
             titleproyect.style.display = "block";

@@ -1,4 +1,4 @@
-import Usedetail from '../../hooks/usedetail';
+
 import { Text } from '../../theme/styledcomponents';
 import './Explicacion.css'
 import { RiLeafLine } from "react-icons/ri";

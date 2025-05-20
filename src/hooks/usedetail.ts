@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import supabase from "../services/supabase"
+import supabase from "../Services/supabase"
 type proyecto = {
     nombre: string;
     slogan_1: string;
@@ -69,6 +69,7 @@ const Usedetail = ()=>{
             if (proyectos && proyectos.length > 1) {
                 setproyecto(proyectos[0]);
             }
+            console.log(error);
             
             console.log(proyecto);
         }

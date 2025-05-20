@@ -1,9 +1,10 @@
 import { Text } from '../../theme/styledcomponents';
 import './Comentarios.css'
-import type { Proyecto } from '../../types/Proyectos';
 
-const Comentarios  = ({ Proyectodata }: { Proyectodata: Proyecto }) => {
 
+const Comentarios  = () => {
+  
+  
   return (
     <section id='SectionComentarios'>
         <Text variant="cardSubtitle" color="#2C2B2B">“Nuestra experiencia fue excelente desde el primer contacto hasta la entrega”</Text>
