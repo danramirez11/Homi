@@ -1,11 +1,11 @@
 import { createHashRouter } from "react-router-dom";
-import Simul from "../pages/Simul/Simul";
 import Onboarding from "../screens/Onboarding/Onboarding";
 import SplashScreen from "../screens/Splash/Splash";
 import Form from "../pages/Form/Form";
 import Results from "../pages/Results/Results";
 
 import Detalle from "../pages/Detalle/Detalle";
+import Simul from "../pages/Simul/Simul";
 
 const routes = createHashRouter([
     {

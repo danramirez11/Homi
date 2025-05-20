@@ -1,5 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react"
-import supabase from "../Services/supabase"
+import supabase from "../Services/supabase";
 type proyecto = {
     nombre: string;
     slogan_1: string;

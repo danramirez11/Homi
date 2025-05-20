@@ -1,6 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable prefer-const */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
-import supabase from "../Services/supabase";
 import { useLocation, useSearchParams } from "react-router-dom";
+import supabase from "../Services/supabase";
 
  export const Usesimul = ()=>{
     const titleproyect = document.getElementById("title")
