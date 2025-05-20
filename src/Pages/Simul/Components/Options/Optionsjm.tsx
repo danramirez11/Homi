@@ -1,5 +1,4 @@
 import './Optionscss.css'
-import { Text } from '../../../../theme/styledcomponents'
 
 const Options =() =>{
     return(
