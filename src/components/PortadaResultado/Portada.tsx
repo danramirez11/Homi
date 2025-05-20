@@ -3,15 +3,16 @@ import './Portada.css'
 import { Text } from "../../theme/styledcomponents";
 import BotonAtras from "../BotonAtras/BotonAtras";
 import Usedetail from "../../hooks/usedetail";
+import type { Proyecto } from "../../types/Proyectos";
 
-const Portada: React.FC = () => {
-const {proyecto} = Usedetail();
+const Portada = ({ Proyectodata }: { Proyectodata: Proyecto }) => {
+
 
 return (
     <section
         id="portadaDetalle"
         style={{
-            backgroundImage: `linear-gradient(to bottom,rgba(36, 36, 32, 0),rgba(36, 36, 32, 0.93)), url(${proyecto.img_portada})`,
+            backgroundImage: `linear-gradient(to bottom,rgba(36, 36, 32, 0),rgba(36, 36, 32, 0.93)), url(${Proyectodata.img_portada})`,
             backgroundSize: 'cover',
             backgroundPosition: 'top',
             backgroundRepeat: 'no-repeat',
@@ -24,34 +25,34 @@ return (
                     <div className='proyectoEtiqueta'>
                         <div className="proyectoUbicacion">
                             <FaMapMarkerAlt size={20} color="#EFEFEF" />
-                            <Text variant="bodyRegular" color="#EFEFEF">{proyecto.ubicacion}</Text>
+                            <Text variant="bodyRegular" color="#EFEFEF">{Proyectodata.ubicacion}</Text>
                         </div>
                         <div className="buttonProyecto">
                             <Text variant="bodyBold" color="white">
-                                Vivienda {proyecto.tipo_vivienda}
+                                Vivienda {Proyectodata.tipo_vivienda}
                             </Text>
                         </div>
                     </div>
-                    <Text variant="headlineRegular" color="#EFEFEF">{proyecto.nombre}</Text>
+                    <Text variant="headlineRegular" color="#EFEFEF">{Proyectodata.nombre}</Text>
                     <Text variant="cardSubtitle" color="#EFEFEF">
-                        Precios desde {proyecto.precio}
+                        Precios desde {Proyectodata.precio}
                     </Text>
                 </div>
                 <div className='proyectoLogo'>
-                    <img src={proyecto.img_logo} alt={proyecto.nombre} />
+                    <img src={Proyectodata.img_logo} alt={Proyectodata.nombre} />
                 </div>
             </div>
             <div className='derechaInfo'>
                 <div className='proyectoSlogan'>
-                    <Text variant="sectionTitle" color="#666666">{proyecto.slogan_1}</Text>
-                    <Text variant="bodyRegular" color="#666666">{proyecto.texto_intro}</Text>
+                    <Text variant="sectionTitle" color="#666666">{Proyectodata.slogan_1}</Text>
+                    <Text variant="bodyRegular" color="#666666">{Proyectodata.texto_intro}</Text>
                 </div>
                 <div className='proyectoDispo'>
                     <div className='proyectoFecha'>
                         <Text variant="sectionTitle" color="#666666">Fecha de entrega</Text>
                         <div className="proyectoFechaNum">
-                            <Text variant="subtitle" color="#2C2B2B">{proyecto.fecha_entrega}</Text>
-                            <Text variant="subtitle" color="#2C2B2B">del {proyecto.fecha_entrega}</Text>
+                            <Text variant="subtitle" color="#2C2B2B">{Proyectodata.fecha_entrega}</Text>
+                            <Text variant="subtitle" color="#2C2B2B">del {Proyectodata.fecha_entrega}</Text>
                         </div>
                         <Text variant="captionItalic" color="#666666">
                             *Esta es una fecha aproximada y puede variar según el desarrollo del proyecto.
@@ -60,8 +61,8 @@ return (
                     <div className='proyectoDisponibilidad'>
                         <Text variant="sectionTitle" color="#666666">Apartamentos disponibles</Text>
                         <div className="proyectoDipsText">
-                            <Text variant="subtitle" color="#2C2B2B">{proyecto.inventario_apt} Aptos</Text>
-                            <Text variant="subtitle" color="#2C2B2B">{proyecto.inventario_torres} Torres</Text>
+                            <Text variant="subtitle" color="#2C2B2B">{Proyectodata.inventario_apt} Aptos</Text>
+                            <Text variant="subtitle" color="#2C2B2B">{Proyectodata.inventario_torres} Torres</Text>
                         </div>
                         <Text variant="captionItalic" color="#666666">
                             *Cantidad estimada hasta el mes de mayo del 2025

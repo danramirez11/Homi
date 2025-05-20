@@ -1,8 +1,11 @@
 import { Button, Text } from '../../theme/styledcomponents';
 import './Enlace.css'
+import type { Proyecto } from '../../types/Proyectos';
+import { useNavigate } from 'react-router-dom';
 
-const Enlace: React.FC = () => {
-
+// const Portada = ({ Proyectodata }: { Proyectodata: Proyecto }) => {
+const Enlace = ({ Proyectodata }: { Proyectodata: Proyecto }) => {
+const navigate = useNavigate()
   return (
     <section id='SectionEnlaceSimg'>
         <div 
@@ -16,7 +19,7 @@ const Enlace: React.FC = () => {
             <div className='SectionEnlaceInfo'>
                 <Text variant="sectionTitle" color="#EFEFEF">En Jaramillo Mora, te ayudamos  a hacerlo realidad</Text>
                 <Text variant="subtitle" color="#EFEFEF">Simula tu crédito y descubre lo cerca que estás</Text>
-                <Button variant='light' size='small' >Me interesa</Button>
+                <Button variant='light' size='small' onClick={() => navigate('/Simulation', { state: { Proyectodata } })} >Me interesa</Button>
             </div>
         </div>
         

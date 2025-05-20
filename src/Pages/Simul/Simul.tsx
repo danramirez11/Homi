@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import supabase from '../../Services/Supabase';
+import supabase from '../../services/Supabase';
 const Simul = ()=> {
     const [Proyectos, setProyectos] = useState<any[]>([]);
     const [ProyectSelected, setProyectSelected] = useState("");

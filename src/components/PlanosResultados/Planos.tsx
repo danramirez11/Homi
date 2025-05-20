@@ -2,8 +2,9 @@ import { BsArrowUpRightCircleFill } from 'react-icons/bs';
 import './Planos.css'
 import { Text } from '../../theme/styledcomponents';
 
-
-const Planos: React.FC = () => {
+import type { Proyecto } from '../../types/Proyectos';
+// const Portada = ({ Proyectodata }: { Proyectodata: Proyecto }) => {
+const Planos = ({ Proyectodata }: { Proyectodata: Proyecto }) => {
 
   return (
     <section id='SectionPlanos'>
@@ -11,7 +12,7 @@ const Planos: React.FC = () => {
             <div className='SectionPlanosIzq1'>
                 <Text variant="sectionTitle" color="#2C2B2B" className='PlanosTitle'>Creemos que esta es tu vivienda ideal</Text>
                 <div className='PlanosIzqText'>
-                    <Text variant="cardSubtitle" color="#919191">Apartamento Tipo 1</Text>
+                    <Text variant="cardSubtitle" color="#919191">{Proyectodata.tipo_vivienda}</Text>
                     <Text variant="cardSubtitle" color="#919191">Sin espacio flexible</Text>
                 </div>
             </div>
@@ -41,7 +42,7 @@ const Planos: React.FC = () => {
         <div 
         className='SectionPlanosDer'
         style={{
-        backgroundImage: 'url("img_interior_vista")',//modificar
+        backgroundImage: `url(${Proyectodata.img_interior_vista})`,//modificar
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',}}

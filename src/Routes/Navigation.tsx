@@ -21,7 +21,7 @@ const routes = createHashRouter([
         },
     {
         path: "/results",
-        element: <p>results</p>,
+        element: <Results></Results>,
     },
     {
         path: "/detail",

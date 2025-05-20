@@ -6,18 +6,23 @@ import Vista from "../../components/VistaResultados/Vista";
 import Planos from "../../components/PlanosResultados/Planos";
 import Enlace from "../../components/EnlaceSimulador/Enlace";
 import Comentarios from "../../components/ComentariosResults/Comentarios";
+import { useLocation } from "react-router-dom";
 
 const Detalle = () => {
+  const lolquebien = useLocation()
+  const Proyectoinfo = lolquebien.state.home;
+  console.log("lolquebein", Proyectoinfo);
+  
   return (
     <div>
       <NewNav onLoginClick={() => {}}/>
-      <Portada/>
-      <Explicacion/>
-      <Slogan/>
-      <Vista/>
-      <Planos/>
-      <Enlace/>
-      <Comentarios/>
+      <Portada Proyectodata={Proyectoinfo}/>
+      <Explicacion Proyectodata={Proyectoinfo}/>
+      <Slogan Proyectodata={Proyectoinfo}/>
+      <Vista Proyectodata={Proyectoinfo}/>
+      <Planos Proyectodata={Proyectoinfo}/>
+      <Enlace Proyectodata={Proyectoinfo}/>
+      <Comentarios Proyectodata={Proyectoinfo}/>
     </div>
   );
 };

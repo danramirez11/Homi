@@ -1,7 +1,8 @@
 import { Text } from '../../theme/styledcomponents';
 import './Comentarios.css'
+import type { Proyecto } from '../../types/Proyectos';
 
-const Comentarios: React.FC = () => {
+const Comentarios  = ({ Proyectodata }: { Proyectodata: Proyecto }) => {
 
   return (
     <section id='SectionComentarios'>
