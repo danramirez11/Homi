@@ -179,5 +179,73 @@ export const Text = styled.p<{ variant: TextVariant }>`
 `;
 
 //Inputs
+// SE USA EN EL COMPONENTE DE ESTA MANERA: <Input size="small" status="default" />
+
+type InputSize = 'small' | 'medium' | 'large';
+type InputStatus = 'default' | 'success' | 'error';
+
+const inputSizes = {
+  small: {
+    width: '280px',
+    height: '15px',
+    padding: '10px 18px',
+    gap: '25px',
+  },
+  medium: {
+    width: '350px',
+    height: '15px',
+    padding: '10px 18px',
+    gap: '25px',
+  },
+  large: {
+    width: '420px',
+    height: '15px',
+    padding: '10px 18px',
+    gap: '25px',
+  },
+};
+
+const inputStatusColors = {
+  default: {
+    border: '#D4D3D3',
+    boxShadow: 'none',
+  },
+  success: {
+    border: '#D4D3D3',
+    boxShadow: '0 0 0 3px rgba(166, 189, 73, 1)',
+  },
+  error: {
+    border: '#D4D3D3',
+    boxShadow: '0 0 0 3px rgba(235, 82, 71, 0.3)',
+  },
+};
+
+export const Input = styled.input<{
+  size: InputSize;
+  status?: InputStatus;
+}>`
+  width: ${({ size }) => inputSizes[size].width};
+  height: ${({ size }) => inputSizes[size].height};
+  padding: ${({ size }) => inputSizes[size].padding};
+  border-radius: 30px;
+  border: 1.5px solid ${({ status = 'default' }) => inputStatusColors[status].border};
+  background: #ffffff;
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+
+  box-shadow: ${({ status = 'default' }) => inputStatusColors[status].boxShadow};
+
+  &:hover {
+    border: 1.5px solid #86B7FE;
+    box-shadow: 0px 0px 0px 1.5px rgba(134, 183, 254, 0.3);
+  }
+
+  &:focus {
+    border: 1.5px solid #86B7FE;
+    box-shadow: 0px 0px 0px 3px rgba(134, 183, 254, 0.3);
+  }
+`;
 //Cards
 //Containers

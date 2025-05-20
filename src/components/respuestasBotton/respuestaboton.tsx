@@ -19,7 +19,7 @@ const BotonRespuesta: React.FC<BotonRespuestaProps> = ({ opcion, onClick, isSele
         console.log("Click en:", opcion.texto);
         onClick();
       }}
-      className={`BotonRespuestaForms ${isSelected ? "selected" : ""}`}
+      className={`BotonRespuestaForms ${isSelected ? "selected" : ""} ${opcion.imagen ? "conImagen" : ""}`}
     >
       {opcion.imagen && (
         <img

@@ -12,6 +12,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Archivo', sans-serif;
     background-color: #ffff; 
-    color: #000;
+    color: rgba(75, 75, 75, 1);
   }
 `;
