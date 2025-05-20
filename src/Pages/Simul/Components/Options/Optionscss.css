@@ -1,3 +1,21 @@
 .circlevector{
     background-color:#EB5247 ;
+    width: fit-content;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+    border-radius: 50px;
+}
+.OptionsContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+.flexing{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
