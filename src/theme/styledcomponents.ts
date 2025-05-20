@@ -27,21 +27,21 @@ const buttonColors = {
 
 const buttonSizes = {
   small: {
-    width: '98px',
+    width: '110px',
     height: '31px',
     padding: '0 10px',
     fontSize: '14px',
     gap: '5px',
   },
   medium: {
-    width: '110px',
+    width: '120px',
     height: '38px',
     padding: '10px 16px',
     fontSize: '16px',
     gap: '8px',
   },
   large: {
-    width: '126px',
+    width: '136px',
     height: '48px',
     padding: '15px 24px',
     fontSize: '18px',

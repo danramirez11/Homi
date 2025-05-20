@@ -6,11 +6,12 @@ background: rgba(44, 43, 43, 0.99);
 font-family: Archivo;
 display: flex;
 width: 100%;
-height: 2.5rem;
-padding: 1.25rem 5rem 1.25rem 3.6875rem;
+height: 4.5rem;
+padding: 1.25rem 5% 1.25rem 5%;
 align-items: center;
-gap: 41.25rem;
-flex-shrink: 0;}
+justify-content: space-between;
+flex-shrink: 0;
+}
 
 
 .Logo_nav{
