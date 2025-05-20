@@ -14,7 +14,7 @@ export const organizeResults = async (result: string) => {
             break;
 
         case ht.FUNCIONAL:
-            homeType = 'VIS'
+            homeType = 'VIS';
             break;
 
         case ht.ESPACIOSO:
@@ -29,7 +29,7 @@ export const organizeResults = async (result: string) => {
             break;
     }
 
-    const mainProject = await getProjects(homeType);
+    const mainProject = await getProjects(result);
     const otherResults = await getResults(homeType);
 
     console.log("mainProject", mainProject);

@@ -5,7 +5,7 @@ export const getProjects = async (homeType: string) => {
     const { data, error } = await supabase
         .from('proyectos')
         .select('*')
-        .eq('tipo_vivienda', homeType);
+        .eq('tipo_perfil', homeType);
         if (error) {
             console.error("Error fetching projects:", error);
             return [];
