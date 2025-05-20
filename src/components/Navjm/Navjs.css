@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .Nav_jm{
-position: fixed;
 background: rgba(44, 43, 43, 0.99);
 font-family: Archivo;
 display: flex;
