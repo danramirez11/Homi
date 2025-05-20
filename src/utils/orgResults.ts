@@ -22,7 +22,7 @@ export const organizeResults = async (result: string) => {
             break;
         
         case ht.PREMIUM:
-            homeType = 'No VIS'
+            homeType = 'NO VIS'
             break;
     
         default:
