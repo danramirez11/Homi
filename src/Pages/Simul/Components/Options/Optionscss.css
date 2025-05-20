@@ -13,6 +13,13 @@
     gap: 20px;
     align-items: center;
 }
+.vectorO{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+    margin: auto 0;
+}
 .flexing{
     display: flex;
     flex-direction: row;

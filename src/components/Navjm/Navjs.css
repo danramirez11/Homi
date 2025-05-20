@@ -15,7 +15,8 @@ flex-shrink: 0;}
 
 .Logo_nav{
 width: 15rem;
-height: 4rem;
+height: auto;
+
 
 }
 

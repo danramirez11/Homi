@@ -5,6 +5,7 @@ import './Simul.css';
 import { Input, Text } from '../../theme/styledcomponents';
 import { useNavigate } from 'react-router-dom';
 import Options from '../../Pages/Simul/Components/Options/Optionsjm'
+import Navjm from '../../components/Navjm/Nav';
 
 
 const Simul = ()=> {
@@ -12,6 +13,7 @@ const Simul = ()=> {
     const navigate = useNavigate()
     return (
         <div>
+            <Navjm onLoginClick={() =>{}}></Navjm>
             <section className='upper_section'>
             <div className='Simul_title'>
                 <div className='button_back'>
