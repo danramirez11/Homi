@@ -23,6 +23,10 @@ const routes = createHashRouter([
         element: <Results/>,
     },
     {
+        path: "/detail",
+        element: <p>dedtalle</p>,
+    },
+    {
      path: "/simulation",   
      element: <Simul></Simul>,
     },
