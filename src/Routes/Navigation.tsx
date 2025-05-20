@@ -1,5 +1,5 @@
 import { createHashRouter } from "react-router-dom";
-import Simul from "../Pages/Simul/Simul";
+import Simul from "../pages/Simul/Simul";
 
 const routes = createHashRouter([
     {

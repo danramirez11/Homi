@@ -2,7 +2,8 @@
 import Usesimul from '../../hooks/Usesimul';
 import Options from './Components/Options/Optionsjm';
 import './Simul.css';
-import { Input } from '../../theme/styledcomponents';
+import { Input, Text } from '../../theme/styledcomponents';
+
 
 const Simul = ()=> {
     const { handleinfo, Proyectos, ProyectoSim} = Usesimul();
@@ -41,40 +42,38 @@ const Simul = ()=> {
                 <button onClick={handleinfo}>Simular</button>
                 </div>
                 <div className='Results_simulation'> 
-                <h2 className='h2title'>Resultados de la simulación</h2>
-                <p>El proyecto seleccionado es: {ProyectoSim.nombre}</p>
-                <p>La cuota inicial es: {new Intl.NumberFormat('es-CO', {style: 'currency', currency: 'COP'}).format(ProyectoSim.cuotainicial)}</p>
-                <p>Los meses hasta la entrega son: {ProyectoSim.mesesHastaEntrega}</p>
-                <p>La cuota mensual es: {new Intl.NumberFormat('es-CO', {style: 'currency', currency: 'COP'}).format(ProyectoSim.cuotaMensual)}</p>
-                <p>Los años hasta la entrega son: {ProyectoSim.añosHastaEntrega}</p>
 
+                <Text variant='cardSubtitle'>Resultados de la simulación</Text>
+                <div>
+                <Text variant='captionRegular'>Total estimado a pagar</Text>
+                <Text variant="display">{new Intl.NumberFormat('es-CO', {style: 'currency', currency: 'COP'}).format(ProyectoSim.cuotainicial)}</Text>
+                <Text variant='captionRegular'>Equivalente al 20% del costo de la vivienda</Text>
+                </div>
+                <div>
+                <div className='Results_AM'>
+
+                <Text variant='bodyRegular'>Plazo de pago según el proyecto </Text>
+                <Text variant='bodyRegular'>{ProyectoSim.mesesHastaEntrega}</Text>
+                </div>
+                <div className='Results_bottom'>
+                    <div className='Results_AM'>
+                        <Text variant='bodyRegular'>{ProyectoSim.añosHastaEntrega}  {ProyectoSim.añosHastaEntrega === 1 ? 'año' : 'años'}</Text>
+                        <Text variant='bodyRegular'>Mensuales</Text>
+                    </div>
+                </div>
+                <hr/>
+                <div className='Results_AM'>
+
+                <Text variant='bodyRegular'>Valor por cuota</Text>
+                <Text variant='bodyRegular'>{new Intl.NumberFormat('es-CO', {style: 'currency', currency: 'COP'}).format(ProyectoSim.cuotaMensual)}</Text>
+                </div>
+                <Text variant='subtitle'>Sin interés</Text>
+                </div>
+
+                <a className='aoption' href="">¿Esta opción no es para ti?</a>
                 </div>
             </section>
-            <section>
-                <div>
-                <p>¿Deseas conocer otras opciones?</p>
-                <Options></Options>
-                <div>
-                    <div>
-                        <div>
-                            <p>Aplica al subsidio de vivienda (Mi Casa Ya u otros)</p>
-                        </div>
-                        <div>
-                            <p>Elige un proyecto con una cuota inicial más baja</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <p>Usa más recursos como cesantías, primas o ingresos familiares</p>
-                        </div>
-                        <div>
-                            <p>Agenda una cita con un asesor de Jaramillo Mora</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
+            
         </div>
         
     );  
