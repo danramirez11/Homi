@@ -9,7 +9,7 @@ import Navjm from '../../components/Navjm/Nav';
 
 
 const Simul = ()=> {
-    const { handleinfo, Proyectos, ProyectoSim} = Usesimul();
+    const { Proyectos, ProyectoSim} = Usesimul();
     const navigate = useNavigate()
     return (
         <div>
