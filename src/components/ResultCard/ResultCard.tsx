@@ -1,8 +1,8 @@
 import {  } from "react-icons/fa6";
 import {  Text } from "../../theme/styledcomponents";
-import { FaArrowCircleUp } from "react-icons/fa";
 import './ResultCard.css';
 import { IoLocationOutline } from "react-icons/io5";
+import { BsArrowUpRightCircleFill } from "react-icons/bs";
 
 type ResultCardProps = {
     type: 'big' | 'small';
@@ -33,12 +33,12 @@ const ResultCard = ({type, ubicacion, tipoVivienda, nombre, precio, descripcion,
                 <Text variant='bodyRegular' className="inline">Vivienda {tipoVivienda}</Text>
             </div>
 
-            <Text variant='display'>{nombre}</Text>
+            <Text variant='sectionTitle'>{nombre}</Text>
             <Text variant="subtitle">Precios desde ${precio}</Text>
 
             {type === 'big' && <Text variant="bodyRegular">{descripcion}</Text>}
 
-            <FaArrowCircleUp className="resultRedirect" size={32} style={{transform: 'rotate(45deg)'}} color="white" />
+            <BsArrowUpRightCircleFill className="resultRedirect" size={45} color="white" />
             
         </section>
     );
