@@ -1,6 +1,7 @@
 
 import React from 'react';
 import "./Navjs.css";
+import { Button } from '../../theme/styledcomponents';
 
 export interface NavjmProps {
   onLoginClick: () => void;
@@ -20,9 +21,9 @@ const Navjm: React.FC<NavjmProps> = ({ onLoginClick }) => {
       <div className="Info_container">
         <p className="Nav_text">Línea de servicio al cliente: (602) 3989898</p>
 
-        <button onClick={onLoginClick} className="Login_button">
+        <Button variant='light' size='small' onClick={onLoginClick} className="Login_button">
           Iniciar sesión
-        </button>
+        </Button>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
