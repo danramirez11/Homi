@@ -4,7 +4,7 @@ import Usesimul from '../../hooks/Usesimul';
 import './Simul.css';
 import { Input, Text } from '../../theme/styledcomponents';
 import { useNavigate } from 'react-router-dom';
-import Options from '../../pages/Simul/Components/Options/Optionsjm'
+import Options from '../../Pages/Simul/Components/Options/Optionsjm'
 
 
 const Simul = ()=> {
