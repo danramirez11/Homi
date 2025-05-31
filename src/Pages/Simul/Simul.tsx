@@ -10,7 +10,7 @@ import BotonSim from '../../components/BotonSim/BotonSim';
 
 
 const Simul = ()=> {
-    const { Proyectos, ProyectoSim} = Usesimul();
+    const { handleinfo,Proyectos, ProyectoSim} = Usesimul();
     const navigate = useNavigate()
     return (
         <div>
@@ -44,7 +44,7 @@ const Simul = ()=> {
                 <Input size={'medium'} placeholder='Ej: $1´000.000,00' type="number" name="" id="Value-gastos" />
                 <h2 className='h2title'>¿Tienes cesantías u otros ahorros que puedas abonar de inmediato? ¿cuánto tienes ahorrado actualmente?</h2>
                 <Input size={'medium'} placeholder='Ej: $1´000.000,00' type="number" name="" id="Value-cesantias" />
-                <Button variant='dark' size='medium' >Simular</Button>
+                <Button variant='dark' size='medium' onClick={handleinfo} >Simular</Button>
                 </div>
                 <div className='Results_simulation'> 
 
