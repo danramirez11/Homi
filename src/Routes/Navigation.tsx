@@ -3,7 +3,7 @@ import Onboarding from "../screens/Onboarding/Onboarding";
 import SplashScreen from "../screens/Splash/Splash";
 import Form from "../Pages/Form/Form";
 import Results from "../Pages/Results/Results";
-
+import PostVenta from "../Pages/Postventa/Postventa";
 import Detalle from "../Pages/Detalle/Detalle";
 import Simul from "../Pages/Simul/Simul";
 
@@ -32,6 +32,10 @@ const routes = createHashRouter([
      path: "/simulation",   
      element: <Simul></Simul>,
     },
+    {
+        path: "/postventa",   
+        element: <PostVenta></PostVenta>,
+       },
     
     ])
 
