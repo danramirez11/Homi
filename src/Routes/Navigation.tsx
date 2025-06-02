@@ -13,7 +13,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 const routes = createHashRouter([
     {
         path: "/",
-        element: <Dashboard/>,
+        element: <Form/>,
     },
     {
         path: "/login",
