@@ -43,6 +43,10 @@ const routes = createHashRouter([
      path: "/simulation",   
      element: <Simul></Simul>,
     },
+    {
+    path: "/dashboard",
+    element: <Dashboard/>,
+    }
     
     ])
 
