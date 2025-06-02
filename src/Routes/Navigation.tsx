@@ -6,11 +6,21 @@ import Results from "../Pages/Results/Results";
 
 import Detalle from "../Pages/Detalle/Detalle";
 import Simul from "../Pages/Simul/Simul";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 
 const routes = createHashRouter([
     {
         path: "/",
         element: <SplashScreen/>,
+    },
+    {
+        path: "/login",
+        element: <Login/>,
+    },
+    {
+        path: "/register",
+        element: <Register/>,
     },
     {
         path: "/onboarding",

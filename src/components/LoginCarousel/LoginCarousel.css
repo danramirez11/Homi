@@ -1,0 +1,42 @@
+.LoginCarouselSect {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-track {
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-up 15s linear infinite;
+}
+
+.image-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-group img {
+  width: 20vw;
+  margin: 10px 0;
+}
+
+/* Animación continua */
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}

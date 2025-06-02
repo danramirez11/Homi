@@ -34,15 +34,15 @@ const buttonSizes = {
     gap: '5px',
   },
   medium: {
-    width: '120px',
-    height: '38px',
+    width: '156px',
+    height: '36px',
     padding: '10px 16px',
     fontSize: '16px',
     gap: '8px',
   },
   large: {
-    width: '136px',
-    height: '48px',
+    width: '166px',
+    height: '40px',
     padding: '15px 24px',
     fontSize: '18px',
     gap: '11px',
@@ -92,6 +92,7 @@ type TextVariant =
   | 'headlineMedium'
   | 'headlineBold'
   | 'sectionTitle'
+  | 'sectionTitleMedium'
   | 'cardSubtitle'
   | 'subtitle'
   | 'bodyRegular'
@@ -104,32 +105,37 @@ type TextVariant =
 
 const textVariants = {
   display: {
-    fontSize: '40px',
+    fontSize: '32px',
     fontWeight: 400,
     fontStyle: 'normal',
   },
   headlineRegular: {
-    fontSize: '33px',
+    fontSize: '26.5px',
     fontWeight: 400,
     fontStyle: 'normal',
   },
   headlineMedium: {
-    fontSize: '33px',
+    fontSize: '26.5px',
     fontWeight: 500,
     fontStyle: 'normal',
   },
   headlineBold: {
-    fontSize: '33px',
+    fontSize: '26.5px',
     fontWeight: 700,
     fontStyle: 'normal',
   },
   sectionTitle: {
-    fontSize: '28px',
+    fontSize: '24px',
     fontWeight: 400,
     fontStyle: 'normal',
   },
+  sectionTitleMedium: {
+    fontSize: '24px',
+    fontWeight: 500,
+    fontStyle: 'normal',
+  },
   cardSubtitle: {
-    fontSize: '23px',
+    fontSize: '22px',
     fontWeight: 400,
     fontStyle: 'normal',
   },

@@ -34,7 +34,7 @@ return (
                             </Text>
                         </div>
                     </div>
-                    <Text variant="headlineRegular" color="#EFEFEF">{Proyectodata.nombre}</Text>
+                    <Text variant="display" color="#EFEFEF">{Proyectodata.nombre}</Text>
                     <Text variant="cardSubtitle" color="#EFEFEF">
                         Precios desde {Proyectodata.precio}
                     </Text>
@@ -45,12 +45,12 @@ return (
             </div>
             <div className='derechaInfo'>
                 <div className='proyectoSlogan'>
-                    <Text variant="sectionTitle" color="#666666">{Proyectodata.slogan_1}</Text>
+                    <Text variant="headlineRegular" color="#666666">{Proyectodata.slogan_1}</Text>
                     <Text variant="bodyRegular" color="#666666">{Proyectodata.texto_intro}</Text>
                 </div>
                 <div className='proyectoDispo'>
                     <div className='proyectoFecha'>
-                        <Text variant="sectionTitle" color="#666666">Fecha de entrega</Text>
+                        <Text variant="headlineRegular" color="#666666">Fecha de entrega</Text>
                         <div className="proyectoFechaNum">
                             <Text variant="subtitle" color="#2C2B2B">{Proyectodata.fecha_entrega}</Text>
                             <Text variant="subtitle" color="#2C2B2B">del {Proyectodata.fecha_entrega}</Text>
@@ -60,7 +60,7 @@ return (
                         </Text>
                     </div>
                     <div className='proyectoDisponibilidad'>
-                        <Text variant="sectionTitle" color="#666666">Apartamentos disponibles</Text>
+                        <Text variant="headlineRegular" color="#666666">Apartamentos disponibles</Text>
                         <div className="proyectoDipsText">
                             <Text variant="subtitle" color="#2C2B2B">{Proyectodata.inventario_apt} Aptos</Text>
                             <Text variant="subtitle" color="#2C2B2B">{Proyectodata.inventario_torres} Torres</Text>
