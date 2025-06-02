@@ -37,7 +37,7 @@ const SideBar: React.FC = () => {
     <nav className="sidebar">
       <div className="logo-container">
         <img
-          src="/assets/LogoJaramilloMora.webp"
+          src="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/splash//Logo2JaramilloMora.webp"
           alt="Logo"
           className="logo"
         />
