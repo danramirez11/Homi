@@ -38,15 +38,15 @@
 }
 
 .icon {
-  color: #A3A3A3;
+  color: #B1B1B1;
 }
 
 .nav-item.active .icon {
-  color: #E35252;
+  color: #EB5247;
 }
 
 .nav-item.active .nav-link p {
-  color: #E35252;
+  color: #EB5247;
 }
 
 .footer-text {
