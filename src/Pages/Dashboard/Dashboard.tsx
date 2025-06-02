@@ -16,22 +16,22 @@ const Dashboard: React.FC = () => {
           {/* Aquí van los cards, calendario, recordatorios, etc */}
           <Text variant="sectionTitle">Mis Proyectos</Text>
           <ProjectCard
-  backgroundImage="/assets/origen.webp"
-  logo="/assets/origen-logo.png"
-  location="Pance"
-  stage="Etapa III"
-  name="Apartamentos Campestres"
-  tower="Torre 3 - 201"
-  onClick={() => console.log('Clicked')}
-/>
-<ProjectCard
-  backgroundImage="/assets/guabinas.webp"
-  logo="/assets/mongui-logo.png"
-  location="Yumbo"
-  stage="Etapa I"
-  name="Ciudad Guabinas"
-  tower="Torre 1 - 204"
-/>
+            backgroundImage="/assets/origen.webp"
+            logo="/assets/origen-logo.png"
+            location="Pance"
+            stage="Etapa III"
+            name="Apartamentos Campestres"
+            tower="Torre 3 - 201"
+            onClick={() => console.log('Clicked')}
+            />
+            <ProjectCard
+            backgroundImage="/assets/guabinas.webp"
+            logo="/assets/mongui-logo.png"
+            location="Yumbo"
+            stage="Etapa I"
+            name="Ciudad Guabinas"
+            tower="Torre 1 - 204"
+            />
         </div>
       </div>
     </div>
