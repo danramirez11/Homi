@@ -2,7 +2,7 @@ import React from 'react';
 import SideBar from '../../components/SideBar/SideBar';
 import NavBar from '../../components/NavBar/NavBar';
 import { Text } from '../../theme/styledcomponents'; 
-
+import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import './Dashboard.css';
 const Dashboard: React.FC = () => {
   return (
@@ -15,6 +15,15 @@ const Dashboard: React.FC = () => {
         <div className="page-content">
           {/* Aquí van los cards, calendario, recordatorios, etc */}
           <Text variant="sectionTitle">Mis Proyectos</Text>
+          <ProjectCard
+  backgroundImage="/assets/origen.webp"
+  logo="/assets/origen-logo.png"
+  location="Pance"
+  stage="Etapa III"
+  name="Apartamentos Campestres"
+  tower="Torre 3 - 201"
+  onClick={() => console.log('Clicked')}
+/>
         </div>
       </div>
     </div>
