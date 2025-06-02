@@ -1,11 +1,10 @@
-// src/components/SideBar/SideBar.tsx
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { AiFillHome } from 'react-icons/ai';
 import { FaUserAlt } from 'react-icons/fa';
 import { BiMoney } from 'react-icons/bi';
 import { FaTools } from 'react-icons/fa';
-import { Text } from '../../theme'; // import del styled-component Text
+import { Text } from '../../theme/styledcomponents'; 
 import './SideBar.css';
 
 const SideBar: React.FC = () => {
