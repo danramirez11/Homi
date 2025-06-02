@@ -1,6 +1,7 @@
 import React from 'react';
 import SideBar from '../../components/SideBar/SideBar';
 import NavBar from '../../components/NavBar/NavBar';
+import { Text } from '../../theme/styledcomponents'; 
 
 import './Dashboard.css';
 const Dashboard: React.FC = () => {
@@ -13,7 +14,7 @@ const Dashboard: React.FC = () => {
 
         <div className="page-content">
           {/* Aquí van los cards, calendario, recordatorios, etc */}
-          <h2>Contenido del dashboard aquí</h2>
+          <Text variant="sectionTitle">Mis Proyectos</Text>
         </div>
       </div>
     </div>
