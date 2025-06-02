@@ -51,7 +51,7 @@ const SideBar: React.FC = () => {
             <li key={item.path} className={`nav-item ${isActive ? 'active' : ''}`}>
               <NavLink to={item.path} className="nav-link">
                 <div className="icon">{item.icon}</div>
-                <Text variant="subtitle" color={isActive ? '#E35252' : '#A3A3A3'}>
+                <Text variant="subtitle" color={isActive ? '#EB5247' : '#B1B1B1'}>
                   {item.label}
                 </Text>
               </NavLink>
