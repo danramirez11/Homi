@@ -2,7 +2,7 @@
   width: 230px;
   height: 100vh;
   background-color: #fff;
-  padding: 0px 0px 0px 16px;
+  padding: 0px 0px 0px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -52,4 +52,5 @@
 .footer-text {
   text-align: center;
   margin-top: auto;
+  margin-bottom: 10px;
 }
