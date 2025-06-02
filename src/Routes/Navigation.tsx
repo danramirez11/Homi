@@ -8,6 +8,7 @@ import Detalle from "../Pages/Detalle/Detalle";
 import Simul from "../Pages/Simul/Simul";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import Dashboard from "../Pages/Dashboard/Dashboard";
 
 const routes = createHashRouter([
     {
