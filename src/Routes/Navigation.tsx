@@ -1,6 +1,6 @@
 import { createHashRouter } from "react-router-dom";
 import Onboarding from "../screens/Onboarding/Onboarding";
-import SplashScreen from "../screens/Splash/Splash";
+//import SplashScreen from "../screens/Splash/Splash";
 import Form from "../Pages/Form/Form";
 import Results from "../Pages/Results/Results";
 
@@ -13,7 +13,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 const routes = createHashRouter([
     {
         path: "/",
-        element: <SplashScreen/>,
+        element: <Dashboard/>,
     },
     {
         path: "/login",
