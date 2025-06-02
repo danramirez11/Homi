@@ -1,0 +1,9 @@
+#SectionComentarios{
+    width: 100%;
+    height: 30vh;
+    box-sizing: border-box;
+    padding: 0% 5% 40px 5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}

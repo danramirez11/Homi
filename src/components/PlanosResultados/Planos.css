@@ -1,0 +1,75 @@
+#SectionPlanos{
+    width: 100%;
+    height: 90vh;
+    box-sizing: border-box;
+    padding: 0% 5% 40px 5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.SectionPlanosIzq{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-between;
+
+}
+
+.SectionPlanosDer{
+    width: 100%;
+    height: 100%;
+}
+
+.SectionPlanosIzq1{
+    background-color: #E1DFDE;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.PlanosIzqText{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.PlanosTitle{
+    width: 70%;
+}
+
+.SectionPlanosIzq2{
+    background-color: #46463C;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.SectionPlanosDetalle{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.PlanosEspacio{
+    display: flex;
+    justify-content: space-between;
+}
+
+.SectionPlanosEspacios{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

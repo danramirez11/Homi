@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const InvisibleDiv = styled.div`
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+`;
+
 //Buttons
 // SE USA EN EL COMPONENTE DE ESTA MANERA: <Button variant="dark" size="medium" weight="bold">SUBMIT</Button>
 type ButtonVariant = 'dark' | 'light';
@@ -21,22 +27,22 @@ const buttonColors = {
 
 const buttonSizes = {
   small: {
-    width: '98px',
+    width: '110px',
     height: '31px',
     padding: '0 10px',
     fontSize: '14px',
     gap: '5px',
   },
   medium: {
-    width: '110px',
-    height: '38px',
+    width: '156px',
+    height: '36px',
     padding: '10px 16px',
     fontSize: '16px',
     gap: '8px',
   },
   large: {
-    width: '126px',
-    height: '48px',
+    width: '166px',
+    height: '40px',
     padding: '15px 24px',
     fontSize: '18px',
     gap: '11px',
@@ -86,6 +92,7 @@ type TextVariant =
   | 'headlineMedium'
   | 'headlineBold'
   | 'sectionTitle'
+  | 'sectionTitleMedium'
   | 'cardSubtitle'
   | 'subtitle'
   | 'bodyRegular'
@@ -98,32 +105,37 @@ type TextVariant =
 
 const textVariants = {
   display: {
-    fontSize: '40px',
+    fontSize: '32px',
     fontWeight: 400,
     fontStyle: 'normal',
   },
   headlineRegular: {
-    fontSize: '33px',
+    fontSize: '26.5px',
     fontWeight: 400,
     fontStyle: 'normal',
   },
   headlineMedium: {
-    fontSize: '33px',
+    fontSize: '26.5px',
     fontWeight: 500,
     fontStyle: 'normal',
   },
   headlineBold: {
-    fontSize: '33px',
+    fontSize: '26.5px',
     fontWeight: 700,
     fontStyle: 'normal',
   },
   sectionTitle: {
-    fontSize: '28px',
+    fontSize: '24px',
     fontWeight: 400,
     fontStyle: 'normal',
   },
+  sectionTitleMedium: {
+    fontSize: '24px',
+    fontWeight: 500,
+    fontStyle: 'normal',
+  },
   cardSubtitle: {
-    fontSize: '23px',
+    fontSize: '22px',
     fontWeight: 400,
     fontStyle: 'normal',
   },

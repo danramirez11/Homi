@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.BotonRespuestaForms {
+    display: flex;
+    width: 230px;
+    height: 230px;
+    padding: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 74.82px;
+
+    border: 2px solid #D1D5DB;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+    transition: border-color 0.2s ease;
+    background-color: white;
+    cursor: pointer;
+    margin: 2%
+}
+
+.BotonRespuestaForms:hover {
+    border-color: #333333;
+}
+
+.BotonRespuestaForms.selected {
+    border-color: #333333;
+    background-color: #333333;
+    color: white;
+}
+
+.BotonRespuestaForms .IconoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: #D4D3D3;
+    text-align: left;
+}
+
+.BotonRespuestaForms .IconoContainer svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.BotonRespuestaForms p {
+    text-align: left;
+    font-size: 0.875rem;
+    color: #666666;
+    line-height: 1.25rem;
+    width: 100%;
+   font-family: "Archivo", sans-serif;
+}
+
+.BotonRespuestaForms.selected .IconoContainer p {
+    color: white;
+}
+
+
+.BotonRespuestaForms.selected .IconoContainer svg {
+    color: white;
+}
+
+
+.IconoContainer:hover svg {
+    color: #333333;
+}
+
+.BotonRespuestaForms.conImagen{
+    padding: 0px;
+}
+
+.BotonRespuestaForms.conImagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
