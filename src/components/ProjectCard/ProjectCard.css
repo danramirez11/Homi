@@ -1,7 +1,7 @@
 /* src/components/ProjectCard/ProjectCard.css */
 .project-card {
   position: relative;
-  width: 100%;
+  width: 70%;
   height: 240px;
   background-size: cover;
   background-position: center;
