@@ -61,7 +61,7 @@ const SideBar: React.FC = () => {
       </ul>
 
       <div className="footer-text">
-        <Text variant="captionRegular" color="#8C93A3">Powered by Homi</Text>
+        <Text variant='captionRegular'>Powered by Homi</Text>
       </div>
     </nav>
   );
