@@ -37,7 +37,7 @@ const NavBar: React.FC = () => {
           <FiBell size={20} />
         </div>
         <img
-          src="/assets/user_avatar.webp"
+          src="/assets/user_avatar.jujunohay"
           alt="User"
           className="user-avatar"
         />
