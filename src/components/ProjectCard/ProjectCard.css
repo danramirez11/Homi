@@ -12,7 +12,7 @@
   align-items: flex-end;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
-  margin: 0px 15px;
+  margin: 30px 0px;
 }
 
 .project-card:hover {
