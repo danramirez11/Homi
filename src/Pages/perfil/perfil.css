@@ -1,0 +1,123 @@
+/* Contenedor general */
+#profileWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* altura mínima de toda la pantalla */
+  box-sizing: border-box;
+}
+
+#profileContainer{
+    width: 55%;
+    background: white;
+  padding: 0px 0px 3% 0px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+#imgBanner {
+  width: 100%;
+  height: 150px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-image: url('/ruta-a-tu-imagen.jpg');
+  background-size: cover;
+  background-position: center;
+  margin-bottom: -60px;
+  z-index: 1;
+}
+
+/* Sección superior (foto, nombre, botón) */
+#info {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 8% 0px 1% 0px;
+  border-radius: 15px;
+  width: 80%;
+  gap: 20px;
+  position: relative;
+}
+
+#PerfilPhoto {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white; /* este es el reborde blanco */
+  position: absolute;
+  z-index: 2;
+  background-color: #ccc;
+  margin-top: -5%;
+}
+
+/* Nombre e identificación */
+#info > div {
+  flex-grow: 1;
+}
+
+#nombre[variant="sectionTitle"] {
+  font-size: 18px;
+  padding-left: 120px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+#Identification {
+  font-size: 14px;
+  color: #888;
+  padding-left: 120px;
+}
+
+/* Botón editar */
+#info button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Segunda sección con la info detallada */
+#Info2 {
+  width: 80%;
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Bloques de info individuales */
+#Info2 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Títulos de campo */
+#Info2 #nombre[variant="bodyBold"] {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Valores de campo */
+#Info2 #nombre[variant="bodyRegular"] {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Acción secundaria */
+#Email #nombre[variant="bodyRegular"]:last-child {
+  color: #e8584c;
+  cursor: pointer;
+}
+
+/* Botón cambiar contraseña */
+#ChangePassword button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+}

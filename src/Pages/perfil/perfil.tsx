@@ -1,13 +1,11 @@
-import React from 'react';
 import { Button, Text } from '../../theme/styledcomponents'
+import "./perfil.css"
 
 const Perfil = () => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
+        <div id='profileWrapper'>
+        <div id='profileContainer' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
             <div id="imgBanner" style={{
-                width: '100px',
-                height: '100px',
-                borderRadius: '50%',
                 backgroundColor: '#ccc',
                 backgroundImage: 'url(/ruta-a-tu-imagen.jpg)',
                 backgroundSize: 'cover',
@@ -43,6 +41,7 @@ const Perfil = () => {
                 </div>
             </section>
 
+        </div>
         </div>
     );
 };
