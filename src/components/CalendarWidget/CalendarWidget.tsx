@@ -9,9 +9,15 @@ const CalendarWidget: React.FC = () => {
   return (
     <div className="calendar-widget">
       <Calendar
-        onChange={setValue}
+        onChange={(val) => {
+          if (val instanceof Date) {
+            setValue(val);
+          } else if (Array.isArray(val) && val[0] instanceof Date) {
+            setValue(val[0]);
+          }
+        }}
         value={value}
-        calendarType="ISO 8601"
+        calendarType="iso8601"
         next2Label={null}
         prev2Label={null}
         locale="es-ES"
