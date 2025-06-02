@@ -24,6 +24,14 @@ const Dashboard: React.FC = () => {
   tower="Torre 3 - 201"
   onClick={() => console.log('Clicked')}
 />
+<ProjectCard
+  backgroundImage="/assets/guabinas.webp"
+  logo="/assets/mongui-logo.png"
+  location="Yumbo"
+  stage="Etapa I"
+  name="Ciudad Guabinas"
+  tower="Torre 1 - 204"
+/>
         </div>
       </div>
     </div>
