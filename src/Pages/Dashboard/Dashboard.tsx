@@ -1,10 +1,8 @@
-// src/Pages/Dashboard/Dashboard.tsx
 import React from 'react';
 import SideBar from '../../components/SideBar/SideBar';
 import NavBar from '../../components/NavBar/NavBar';
 
-import './Dashboard.css'; // Opcional: por si querés estilos propios
-
+import './Dashboard.css';
 const Dashboard: React.FC = () => {
   return (
     <div className="dashboard-container">
