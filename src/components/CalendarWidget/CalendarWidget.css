@@ -45,11 +45,16 @@
 }
 
 .react-calendar__tile {
-  border-radius: 8px;
-  padding: 1px 0;
+  border-radius: 50%;
+  padding: 0px;
   font-size: 10px;
-  color: #2C2C2C;
-  transition: all 0.2s ease;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .react-calendar__tile--now {
@@ -89,4 +94,21 @@
   background: #FFF9C4;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.react-calendar__tile,
+.react-calendar__tile--now,
+.react-calendar__tile--active,
+.react-calendar__tile--rangeStart,
+.react-calendar__tile--rangeEnd {
+  width: 28px;
+  height: 28px;
+  font-size: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  box-sizing: border-box;
 }
