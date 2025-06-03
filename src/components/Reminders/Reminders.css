@@ -1,0 +1,35 @@
+.reminders {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reminder-box {
+  display: flex;
+  gap: 15px;
+  background-color: #E9E9E9;
+  padding: 10px;
+  border-radius: 12px;
+  align-items: center;
+}
+
+.reminder-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #FADF63;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.red .reminder-icon {
+  background-color: #EB5247;
+  color: #ffffff;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
