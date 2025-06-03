@@ -6,14 +6,14 @@ import { BsCurrencyDollar, BsBell } from 'react-icons/bs';
 const Reminders: React.FC = () => {
   return (
     <div className="reminders">
-      <Text variant="sectionTitle" color="#2C2C2C">Recordatorios</Text>
+      <Text variant="subtitle" color="#2C2B2B">Recordatorios</Text>
 
       <div className="reminder-box yellow">
   <div className="reminder-icon">
     <BsCurrencyDollar size={22} />
   </div>
         <div className="text">
-          <Text variant="bodyBold" color="#2C2C2C">Tu próximo pago es:</Text>
+          <Text variant="bodyBold" color="#2C2B2B">Tu próximo pago es:</Text>
           <Text variant="captionRegular" color="#888">• En 24 días</Text>
         </div>
       </div>
