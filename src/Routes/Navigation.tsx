@@ -8,6 +8,7 @@ import Detalle from "../Pages/Detalle/Detalle";
 import Simul from "../Pages/Simul/Simul";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import Home from "../Pages/Home/Home";
 
 const routes = createHashRouter([
     {
@@ -41,6 +42,10 @@ const routes = createHashRouter([
     {
      path: "/simulation",   
      element: <Simul></Simul>,
+    },
+    {
+     path: "/home",   
+     element: <Home/>,
     },
     
     ])
