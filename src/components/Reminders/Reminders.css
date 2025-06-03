@@ -14,7 +14,7 @@
   align-items: center;
 }
 
-.icon {
+.reminder-icon {
   width: 40px;
   height: 40px;
   background-color: #FFD54F;
@@ -24,7 +24,7 @@
   border-radius: 12px;
 }
 
-.red .icon {
+.red .reminder-icon {
   background-color: #EF5350;
 }
 
