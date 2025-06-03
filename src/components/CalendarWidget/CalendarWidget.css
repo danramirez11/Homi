@@ -13,8 +13,8 @@
 
 .react-calendar__navigation__label {
   font-family: 'Archivo', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .react-calendar__tile--active {
