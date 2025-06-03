@@ -16,7 +16,6 @@ const Dashboard: React.FC = () => {
         <NavBar />
 
         <div className="page-content">
-          {/* Aquí van los cards, calendario, recordatorios, etc */}
           <Text variant="sectionTitle">Mis Proyectos</Text>
           <ProjectCard
             backgroundImage="/assets/origen.webp"
@@ -36,13 +35,13 @@ const Dashboard: React.FC = () => {
             tower="Torre 1 - 204"
             />
 
-            <div className="dashboard-right">
+            
+
+        </div>
+      </div><div className="dashboard-right">
   <CalendarWidget />
   <Reminders />
 </div>
-
-        </div>
-      </div>
     </div>
   );
 };
