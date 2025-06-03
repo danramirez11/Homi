@@ -4,6 +4,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import { Text } from '../../theme/styledcomponents'; 
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import './Dashboard.css';
+
 const Dashboard: React.FC = () => {
   return (
     <div className="dashboard-container">
@@ -32,6 +33,12 @@ const Dashboard: React.FC = () => {
             name="Ciudad Guabinas"
             tower="Torre 1 - 204"
             />
+
+            <div className="dashboard-right">
+  <CalendarWidget />
+  <Reminders />
+</div>
+
         </div>
       </div>
     </div>
