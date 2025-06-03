@@ -4,6 +4,8 @@ import NavBar from '../../components/NavBar/NavBar';
 import { Text } from '../../theme/styledcomponents'; 
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import './Dashboard.css';
+import CalendarWidget from '../../components/CalendarWidget/CalendarWidget';
+import Reminders from '../../components/Reminders/Reminders';
 
 const Dashboard: React.FC = () => {
   return (
