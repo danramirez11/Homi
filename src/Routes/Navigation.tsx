@@ -9,6 +9,7 @@ import Simul from "../Pages/Simul/Simul";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import ProjectDetail from "../Pages/projectDetail/ProjectDetail";
 
 const routes = createHashRouter([
     {
@@ -46,6 +47,10 @@ const routes = createHashRouter([
     {
     path: "/dashboard",
     element: <Dashboard/>,
+    },
+    {
+    path: "/project",
+    element: <ProjectDetail/>,
     }
     
     ])

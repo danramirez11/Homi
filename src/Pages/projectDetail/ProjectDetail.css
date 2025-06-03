@@ -1,0 +1,27 @@
+.project-content{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 75%;
+    padding: 20px;
+}
+
+.project-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 25%;
+    padding: 20px;
+}
+
+.project-location{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

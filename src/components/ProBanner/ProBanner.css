@@ -1,0 +1,18 @@
+.pro-banner{
+    background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent), url("https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/sign/proyectos/PremiumF(portada).webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzAwNzA2YzcwLWMzOTktNDUwZi04MWM4LWJhYzVmNjhhN2NhNCJ9.eyJ1cmwiOiJwcm95ZWN0b3MvUHJlbWl1bUYocG9ydGFkYSkud2VicCIsImlhdCI6MTc0Nzc1OTYwMCwiZXhwIjoxNzc5Mjk1NjAwfQ.VC_jxq0BzDu_YPkAZKs9l2G85ZQpN7dISlgyHHjk7Qs");
+    background-size: 'cover';
+    background-position: 'center';
+    background-repeat: 'no-repeat';
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.pro-banner img {
+    height: 100%;
+}
+
