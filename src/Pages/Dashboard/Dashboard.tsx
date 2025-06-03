@@ -1,4 +1,3 @@
-// src/Pages/Dashboard/Dashboard.tsx
 import React from 'react';
 import SideBar from '../../components/SideBar/SideBar';
 import NavBar from '../../components/NavBar/NavBar';
