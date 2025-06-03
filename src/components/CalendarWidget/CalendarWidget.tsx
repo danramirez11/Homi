@@ -12,7 +12,7 @@ const CalendarWidget: React.FC = () => {
         onChange={setRange}
         value={range}
         selectRange={true}
-        calendarType="ISO 8601"
+        calendarType="iso8601"
         next2Label={null}
         prev2Label={null}
         locale="es-ES"
