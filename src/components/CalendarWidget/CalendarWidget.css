@@ -1,3 +1,4 @@
+/* 🌐 Contenedor */
 .calendar-widget {
   background-color: #ffffff;
   border-radius: 16px;
@@ -8,6 +9,7 @@
   overflow: hidden;
 }
 
+/* 📅 Calendario base */
 .react-calendar {
   border: none;
   font-family: 'Archivo', sans-serif;
@@ -15,6 +17,7 @@
   width: 100%;
 }
 
+/* 📆 Navegación */
 .react-calendar__navigation {
   display: flex;
   justify-content: space-between;
@@ -35,6 +38,7 @@
   cursor: pointer;
 }
 
+/* 🧠 Días de la semana */
 .react-calendar__month-view__weekdays {
   text-align: center;
   font-weight: 400;
@@ -44,31 +48,35 @@
   margin-bottom: 0px;
 }
 
+/* 🧱 Base de cada día */
 .react-calendar__tile {
   font-size: 10px;
   width: 28px;
   height: 28px;
   padding: 0;
-  border-radius: 50%;
-  line-height: 1;
+  line-height: 28px;
   text-align: center;
   color: #2C2C2C;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
   box-sizing: border-box;
   transition: all 0.2s ease;
 }
 
+/* 🟢 Día actual */
 .react-calendar__tile--now {
   box-shadow: none;
 }
 
+/* 🚫 Anula estilos de selección manual */
 .react-calendar__tile--active {
   background: transparent !important;
   box-shadow: none;
 }
 
+/* 🎯 Día inicial y final del rango */
 .range-start,
 .range-end {
   background: #FADF63 !important;
@@ -77,22 +85,27 @@
   font-weight: 600;
   width: 28px;
   height: 28px;
+  line-height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* 📎 Franja intermedia */
 .range-between {
-  background-color: #B1B1B1 !important;
-  color: #2C2B2B !important; 
-  border-radius: 0px; 
+  background-color: rgba(250, 223, 99, 0.25); /* fondo suave y bonito */
+  color: #2C2C2C;
+  border-radius: 50%; /* 🔥 esto es clave para evitar cuadros feos */
   width: 28px;
   height: 28px;
+  line-height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 400;
 }
 
+/* ✨ Hover */
 .react-calendar__tile:enabled:hover {
   background: #FFF9C4;
   border-radius: 50%;
