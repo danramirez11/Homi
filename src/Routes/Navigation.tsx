@@ -2,7 +2,7 @@ import { createHashRouter } from "react-router-dom";
 import SplashScreen from "../screens/Splash/Splash";
 import Form from "../Pages/Form/Form";
 import Results from "../Pages/Results/Results";
-
+import Simulv2 from "../Pages/Simulv2/Simulv2";
 import Detalle from "../Pages/Detalle/Detalle";
 import Simul from "../Pages/Simul/Simul";
 import Login from "../Pages/Login/Login";
@@ -42,8 +42,12 @@ const routes = createHashRouter([
     {
      path: "/simulation",   
      element: <Simul></Simul>,
-    },
-    {
+    },{
+        path: "/simulv2",
+        element: <Simulv2></Simulv2>,
+    }
+    
+    ,{
      path: "/home",   
      element: <Home/>,
     },
