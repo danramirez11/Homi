@@ -22,8 +22,8 @@
 }
 
 .react-calendar__navigation__label {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
   color: #2C2C2C;
 }
 
@@ -35,7 +35,6 @@
   cursor: pointer;
 }
 
-/* Días de semana */
 .react-calendar__month-view__weekdays {
   text-align: center;
   font-weight: 500;
@@ -45,16 +44,14 @@
   margin-bottom: 8px;
 }
 
-/* Días normales */
 .react-calendar__tile {
   border-radius: 8px;
-  padding: 8px 0;
-  font-size: 14px;
+  padding: 6px 0;
+  font-size: 12px;
   color: #2C2C2C;
   transition: all 0.2s ease;
 }
 
-/* Día actual (hoy) */
 .react-calendar__tile--now {
   background: #fffde7;
   color: #2C2C2C;
@@ -63,7 +60,6 @@
   box-shadow: 0 0 0 2px #FADF63 inset;
 }
 
-/* Día seleccionado (click único) */
 .react-calendar__tile--active {
   background: #FADF63 !important;
   color: black !important;
@@ -72,7 +68,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* Selección de rango */
 .react-calendar__tile--rangeStart,
 .react-calendar__tile--rangeEnd {
   background: #FADF63 !important;
@@ -87,7 +82,6 @@
   border-radius: 0;
 }
 
-/* Hover */
 .react-calendar__tile:enabled:hover {
   background: #FFF9C4;
   border-radius: 50%;
