@@ -8,7 +8,18 @@ const CalendarWidget: React.FC = () => {
 
   return (
     <div className="calendar-widget">
-      
+      <Calendar
+  onChange={setRange}
+  value={range}
+  selectRange={true}
+  calendarType="ISO 8601"
+  next2Label={null}
+  prev2Label={null}
+  locale="es-ES"
+  formatShortWeekday={(locale, date) =>
+    date.toLocaleDateString(locale, { weekday: 'short' }).substring(0, 2)
+  }
+/>
     </div>
   );
 };
