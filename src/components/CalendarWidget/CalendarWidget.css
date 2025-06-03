@@ -15,11 +15,10 @@
   width: 100%;
 }
 
-/* Navegación */
 .react-calendar__navigation {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .react-calendar__navigation__label {
