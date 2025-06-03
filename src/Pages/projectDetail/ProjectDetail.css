@@ -1,13 +1,13 @@
 .project-content{
     display: flex;
-    gap: 20px;
+    gap: 10px;
     padding: 20px;
 }
 
 .project-left{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 28px;
     width: 75%;
     padding: 20px;
 }
@@ -15,7 +15,7 @@
 .project-right{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 28px;
     width: 25%;
     padding: 20px;
 }
@@ -24,4 +24,13 @@
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.project-content-card{
+    background-color: #F5F7FA;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }

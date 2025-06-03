@@ -1,8 +1,9 @@
 .state-graph {
   width: 100%;
-  height: 100%;
+  height: max-content;
   display: flex;
   gap: 20px;
+  margin: 0;
 }
 
 .state-step{

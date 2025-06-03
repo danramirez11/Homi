@@ -6,6 +6,7 @@
     display: flex;
     gap: 20px;
     padding: 0;
+    margin: 0;
 }
 
 .news-img{
@@ -13,8 +14,8 @@
     height: 100%;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
-    background-image: linear-gradient(to right, rgba(0,0,0,0.8), transparent), url("https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/sign/proyectos/PremiumF(portada).webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzAwNzA2YzcwLWMzOTktNDUwZi04MWM4LWJhYzVmNjhhN2NhNCJ9.eyJ1cmwiOiJwcm95ZWN0b3MvUHJlbWl1bUYocG9ydGFkYSkud2VicCIsImlhdCI6MTc0Nzc1OTYwMCwiZXhwIjoxNzc5Mjk1NjAwfQ.VC_jxq0BzDu_YPkAZKs9l2G85ZQpN7dISlgyHHjk7Qs");
-    background-size: 'cover';
+    background-image: linear-gradient(to right, rgba(0,0,0,0.8), transparent), url("https://cdn.sanity.io/images/v48q37k7/production/d09208183125ab47493d5de2f8710b6faa27d7cc-3000x2000.jpg?auto=format&fit=max&q=90&w=1500");
+    background-size:auto;
     background-position: 'center';
     background-repeat: 'no-repeat';
 }
