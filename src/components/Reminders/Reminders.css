@@ -2,14 +2,14 @@
   margin-top: 24px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 
 .reminder-box {
   display: flex;
   gap: 16px;
   background-color: #E9E9E9;
-  padding: 16px;
+  padding: 10px;
   border-radius: 12px;
   align-items: center;
 }
