@@ -1,11 +1,12 @@
-
 import React, { useEffect, useState } from 'react';
 import EstadoObraList from '../../components/EstadoObraList/EstadoObraList';
 import { getEstadoObra } from '../../Services/getPostVenta';
 import type { EstadoObraItem } from '../../components/types';
 import HeaderPostVenta from '../../components/ButtonPostVenta/ButtonPostVenta';
 import { Text } from '../../theme/styledcomponents';
-import "./Postventa.css"
+import AlertaPostVenta from '../../components/AlertaPostVenta/AlertaPostVenta';
+import Actualizaciones from '../../components/Actualizaciones/Actualizaciones';
+import "./Postventa.css";
 
 const PostVenta: React.FC = () => {
   const [data, setData] = useState<EstadoObraItem[]>([]);
@@ -25,11 +26,22 @@ const PostVenta: React.FC = () => {
   if (loading) return <p>Cargando...</p>;
 
   return (
-    <div>
-    <Text variant='sectionTitle' className='titlePostVenta'>Postventa</Text>
-    <HeaderPostVenta></HeaderPostVenta>
-    <EstadoObraList data={data} />
+    <div className="postventa-container">
+      <Text variant='sectionTitle' className='titlePostVenta'>Postventa</Text>
+      <HeaderPostVenta />
       
+      <div className="contenidoPostventa">
+        {/* 📦 Contenido central: bloques grises oscuros */}
+        <div className="bloque-central">
+          <EstadoObraList data={data} />
+          <AlertaPostVenta />
+        </div>
+
+        {/* 📦 Lateral derecho: Actualizaciones */}
+        <div className="bloque-lateral">
+          <Actualizaciones />
+        </div>
+      </div>
     </div>
   );
 };

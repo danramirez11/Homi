@@ -1,5 +1,41 @@
-.titlePostVenta{
-    margin-left: 4.5rem !important;
-    margin-top: 7rem !important;
-    padding: 0 1rem;
+.postventa-container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 80px;
+  background-color: #fff;
+}
+
+.titlePostVenta {
+  margin-bottom: 12px;
+}
+
+/* 🧠 Header con subtítulo y botón */
+.postventa-container > :nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+/* 🧱 Cuerpo principal */
+.contenidoPostventa {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3.5rem;
+}
+
+/* 📦 Columna izquierda */
+.bloque-central {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+/* 📦 Lateral derecho */
+.bloque-lateral {
+  flex: 1;
+  max-width: 380px;
 }

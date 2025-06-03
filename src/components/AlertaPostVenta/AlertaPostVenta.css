@@ -1,0 +1,29 @@
+.alertaPostVenta {
+  background-color: #ffccd3;
+  border-radius: 12px;
+  padding: 16px 20px;
+  border: 1px solid #ffccd3;
+  width: 65%;
+  font-family: 'Inter', sans-serif; /* si aplica */
+}
+
+/* 🔴 Título de la alerta */
+.alertaTitulo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.alertaTitulo span {
+  font-size: 14px;         /* ← menor tamaño */
+  font-weight: 600;
+  color: #D32F2F;          /* Rojo fuerte */
+}
+
+/* 📜 Texto de cuerpo */
+.alertaPostVenta span {
+  font-size: 9px;         /* ← más pequeño */
+  color: #c92e2b;          /* Gris oscuro tirando a vino */
+  line-height: 1.5;
+}
