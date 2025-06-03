@@ -4,14 +4,19 @@ import './CalendarWidget.css';
 import 'react-calendar/dist/Calendar.css';
 
 const CalendarWidget: React.FC = () => {
-  const [range, setRange] = useState<Date | [Date, Date]>(new Date());
+  const [value, setValue] = useState<Date>(new Date());
 
   return (
     <div className="calendar-widget">
       <Calendar
-        onChange={setRange}
-        value={range}
-        selectRange={true}
+        onChange={(val) => {
+          if (val instanceof Date) {
+            setValue(val);
+          } else if (Array.isArray(val) && val[0] instanceof Date) {
+            setValue(val[0]);
+          }
+        }}
+        value={value}
         calendarType="iso8601"
         next2Label={null}
         prev2Label={null}
