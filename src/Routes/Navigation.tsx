@@ -6,11 +6,22 @@ import Results from "../Pages/Results/Results";
 import Simulv2 from "../Pages/Simulv2/Simulv2";
 import Detalle from "../Pages/Detalle/Detalle";
 import Simul from "../Pages/Simul/Simul";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
+import Home from "../Pages/Home/Home";
 
 const routes = createHashRouter([
     {
         path: "/",
         element: <SplashScreen/>,
+    },
+    {
+        path: "/login",
+        element: <Login/>,
+    },
+    {
+        path: "/register",
+        element: <Register/>,
     },
     {
         path: "/onboarding",
@@ -35,6 +46,11 @@ const routes = createHashRouter([
         path: "/simulv2",
         element: <Simulv2></Simulv2>,
     }
+    
+    ,{
+     path: "/home",   
+     element: <Home/>,
+    },
     
     ])
 

@@ -4,7 +4,6 @@ import './Comentarios.css'
 
 const Comentarios  = () => {
   
-  
   return (
     <section id='SectionComentarios'>
         <Text variant="cardSubtitle" color="#2C2B2B">“Nuestra experiencia fue excelente desde el primer contacto hasta la entrega”</Text>

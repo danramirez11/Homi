@@ -11,7 +11,7 @@ const navigate = useNavigate()
         <div 
         className='SectionEnlaceBack'
         style={{
-        backgroundImage: 'url("https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/sign/proyectos/SIM-imagen.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzAwNzA2YzcwLWMzOTktNDUwZi04MWM4LWJhYzVmNjhhN2NhNCJ9.eyJ1cmwiOiJwcm95ZWN0b3MvU0lNLWltYWdlbi5qcGciLCJpYXQiOjE3NDc3MDc2OTYsImV4cCI6MTc3OTI0MzY5Nn0.529uBFg3XVSuO-zl8hpKYUo_htbjR0pnN3Lvk2uzY-A")',
+        backgroundImage: 'url("https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/sign/proyectos/SIM-imagen.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2Q2NzhmZDkzLTg1ZjgtNDEzOS1hMTcyLTFiN2ZiNjQ3ZTYzNyJ9.eyJ1cmwiOiJwcm95ZWN0b3MvU0lNLWltYWdlbi5qcGciLCJpYXQiOjE3NDg3MDM4OTcsImV4cCI6MTc4MDIzOTg5N30.20Lu5q4LWsf8v3E2QzEJdTEUFQSA9_e40FbmTiCnSNg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',}}
@@ -19,7 +19,7 @@ const navigate = useNavigate()
             <div className='SectionEnlaceInfo'>
                 <Text variant="sectionTitle" color="#EFEFEF">En Jaramillo Mora, te ayudamos  a hacerlo realidad</Text>
                 <Text variant="subtitle" color="#EFEFEF">Simula tu crédito y descubre lo cerca que estás</Text>
-                <Button variant='light' size='small' onClick={() => navigate('/Simulation', { state: { Proyectodata } })} >Me interesa</Button>
+                <Button variant='light' size='medium' onClick={() => navigate('/Simulation', { state: { Proyectodata } })} >Me interesa</Button>
             </div>
         </div>
         

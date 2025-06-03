@@ -6,6 +6,7 @@ import { Button, Input, Text } from '../../theme/styledcomponents';
 import { useNavigate } from 'react-router-dom';
 import Options from '../../Pages/Simul/Components/Options/Optionsjm'
 import Navjm from '../../components/Navjm/Nav';
+import BotonSim from '../../components/BotonSim/BotonSim';
 
 
 const Simul = ()=> {
@@ -17,9 +18,7 @@ const Simul = ()=> {
             <section className='upper_section'>
             <div className='Simul_title'>
                 <div className='button_back'>
-
-            <button onClick={()=>{navigate("/form",)}}></button>
-            <p>back</p>
+                    <BotonSim onClick={()=>{navigate("/form",)}}></BotonSim>
                 </div>
             <Text variant='display'>Valida tu proceso de compra</Text>
             </div>

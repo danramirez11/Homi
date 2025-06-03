@@ -1,0 +1,99 @@
+.RegisterSection{
+    width: 40vw;
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 5vw 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.LogoRegister{
+    width: 9vw;
+    margin-bottom: 0.5vw;
+}
+
+.RegisterHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.RegisterForm{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.RegisterFormInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputRegister{
+    width: 100%;
+    height: 2.5vw;
+    border: 2px solid #D4D3D3;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    color: #666666;
+    font-family: 'Archivo', sans-serif;
+    font-size: 15px ;
+    font-weight: 400 ;
+    font-style: normal ;
+}
+
+.inputRegister::placeholder {
+  color: #BEBEBE;
+}
+
+.inputRegister:focus {
+  border-color: #666666;
+  outline: none;
+}
+
+.RegisterEnlaces{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.LoginorRegister{
+    display: flex;
+    gap: 5px;
+}
+
+.RegisterEnlaceText{
+    cursor: pointer;
+}
+
+.inputPasswordWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.inputPasswordWrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.togglePassword {
+  position: absolute;
+  top: 60%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666666;
+  font-size: 1.2rem;
+}
+
+.togglePassword:hover {
+  color: #2C2B2B;
+}

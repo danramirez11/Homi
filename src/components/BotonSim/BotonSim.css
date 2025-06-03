@@ -1,0 +1,7 @@
+.botonAtrasSim{
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
