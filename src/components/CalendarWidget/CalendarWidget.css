@@ -83,8 +83,8 @@
 }
 
 .range-between {
-  background-color: rgba(250, 223, 99, 0.3); 
-  color: #2C2C2C;
+  background-color: #B1B1B1 !important;
+  color: #2C2B2B !important; 
   border-radius: 8px; 
   width: 28px;
   height: 28px;
