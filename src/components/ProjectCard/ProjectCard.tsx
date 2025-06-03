@@ -1,4 +1,3 @@
-// src/components/ProjectCard/ProjectCard.tsx
 import React from 'react';
 import './ProjectCard.css';
 import { Text } from '../../theme/styledcomponents';
