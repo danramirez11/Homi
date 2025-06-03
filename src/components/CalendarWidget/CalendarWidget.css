@@ -1,15 +1,13 @@
-/* 🌐 Contenedor */
 .calendar-widget {
   background-color: #ffffff;
   border-radius: 16px;
-  padding: 6px;
+  padding: 10px 25px; 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   width: 100%;
   max-height: 300px;
   overflow: hidden;
 }
 
-/* 📅 Calendario base */
 .react-calendar {
   border: none;
   font-family: 'Archivo', sans-serif;
@@ -17,7 +15,6 @@
   width: 100%;
 }
 
-/* 📆 Navegación */
 .react-calendar__navigation {
   display: flex;
   justify-content: space-between;
@@ -38,7 +35,6 @@
   cursor: pointer;
 }
 
-/* 🧠 Días de la semana */
 .react-calendar__month-view__weekdays {
   text-align: center;
   font-weight: 400;
@@ -48,64 +44,58 @@
   margin-bottom: 0px;
 }
 
-/* 🧱 Base de cada día */
 .react-calendar__tile {
   font-size: 10px;
+  padding: 16px 0px !important; 
   width: 28px;
   height: 28px;
-  padding: 0;
-  line-height: 28px;
+  border-radius: 50%;
   text-align: center;
   color: #2C2C2C;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
   box-sizing: border-box;
   transition: all 0.2s ease;
 }
 
-/* 🟢 Día actual */
 .react-calendar__tile--now {
   box-shadow: none;
 }
 
-/* 🚫 Anula estilos de selección manual */
 .react-calendar__tile--active {
   background: transparent !important;
   box-shadow: none;
 }
 
-/* 🎯 Día inicial y final del rango */
 .range-start,
 .range-end {
   background: #FADF63 !important;
   color: black !important;
-  border-radius: 50% !important;
   font-weight: 600;
+  border-radius: 50% !important;
+  padding: 2px ;
   width: 28px;
   height: 28px;
-  line-height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
-/* 📎 Franja intermedia */
 .range-between {
-  background-color: rgba(250, 223, 99, 0.25); /* fondo suave y bonito */
-  color: #2C2C2C;
-  border-radius: 50%; /* 🔥 esto es clave para evitar cuadros feos */
+  background-color: #E9E9E9 !important;
+  color: #2C2C2C !important;
+  border-radius: 50%;
+  padding: 2px;
   width: 28px;
   height: 28px;
-  line-height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 400;
+  box-sizing: border-box;
 }
 
-/* ✨ Hover */
 .react-calendar__tile:enabled:hover {
   background: #FFF9C4;
   border-radius: 50%;
