@@ -99,3 +99,6 @@
   cursor: pointer;
 }
 
+.react-calendar__tile.range-between {
+  border-radius: 8px !important;
+}
