@@ -98,7 +98,3 @@
   border-radius: 50%;
   cursor: pointer;
 }
-
-.react-calendar__tile.range-between {
-  border-radius: 0px !important;
-}
