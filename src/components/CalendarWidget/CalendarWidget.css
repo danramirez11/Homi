@@ -1,10 +1,10 @@
 .calendar-widget {
   background-color: #ffffff;
   border-radius: 16px;
-  padding: 6px;
+  padding: 10px 25px; 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   width: 100%;
-  max-height: 300px;
+  max-height: 320px;
   overflow: hidden;
 }
 
@@ -46,11 +46,10 @@
 
 .react-calendar__tile {
   font-size: 10px;
+  padding: 16px 0px !important; 
   width: 28px;
   height: 28px;
-  padding: 0;
   border-radius: 50%;
-  line-height: 1;
   text-align: center;
   color: #2C2C2C;
   display: flex;
@@ -73,24 +72,28 @@
 .range-end {
   background: #FADF63 !important;
   color: black !important;
-  border-radius: 50% !important;
   font-weight: 600;
+  border-radius: 50% !important;
+  padding: 2px ;
   width: 28px;
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .range-between {
-  background-color: #B1B1B1 !important;
-  color: #2C2B2B !important; 
-  border-radius: 0px; 
+  background-color: #E9E9E9 !important;
+  color: #2C2C2C !important;
+  border-radius: 50%;
+  padding: 2px;
   width: 28px;
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .react-calendar__tile:enabled:hover {
