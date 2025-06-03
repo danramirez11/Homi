@@ -1,0 +1,27 @@
+.CardSimulContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    width: fit-content;
+    height: 100%;
+    padding: 12px;
+}
+.Simulcontainerv2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    
+    
+}
+.formSimulv2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 30px;
+    
+}
+.formHeader{
+    background-image: url("https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/proyectos//PremiumF(portada).webp");
+}
