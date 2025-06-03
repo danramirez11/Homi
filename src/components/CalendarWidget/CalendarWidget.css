@@ -83,12 +83,16 @@
 }
 
 .range-between {
-  background-color: rgba(250, 223, 99, 0.3);
+  background-color: rgba(250, 223, 99, 0.3); 
   color: #2C2C2C;
-  border-radius: 0;
+  border-radius: 8px; 
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Hover */
 .react-calendar__tile:enabled:hover {
   background: #FFF9C4;
   border-radius: 50%;
