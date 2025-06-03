@@ -1,0 +1,44 @@
+.calendar-widget {
+  background-color: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+/* Oculta navegación doble */
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+  display: none;
+}
+
+/* Título del mes */
+.react-calendar__navigation__label {
+  font-family: 'Archivo', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Día activo */
+.react-calendar__tile--active {
+  background: #FDD835 !important;
+  color: black !important;
+  border-radius: 50%;
+}
+
+/* Días del calendario */
+.react-calendar__tile {
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  font-weight: bold;
+}
+
+.react-calendar__tile--now {
+  background: #FFE082;
+  border-radius: 50%;
+}
