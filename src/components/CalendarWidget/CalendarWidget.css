@@ -85,7 +85,7 @@
 .range-between {
   background-color: #B1B1B1 !important;
   color: #2C2B2B !important; 
-  border-radius: 8px; 
+  border-radius: 0px; 
   width: 28px;
   height: 28px;
   display: flex;
@@ -100,5 +100,5 @@
 }
 
 .react-calendar__tile.range-between {
-  border-radius: 8px !important;
+  border-radius: 0px !important;
 }
