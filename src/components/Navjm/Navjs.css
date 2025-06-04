@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .Nav_jm{
-background: rgba(44, 43, 43, 0.99);
+background: #2C2B2B;
 font-family: Archivo;
 display: flex;
 width: 100%;
@@ -14,10 +14,8 @@ flex-shrink: 0;
 
 
 .Logo_nav{
-width: 15rem;
+width: 11vw;
 height: auto;
-
-
 }
 
 .Info_container {
@@ -37,22 +35,9 @@ line-height: 120%;
 
 .icon {
 color: #FFF;
-width: 2rem;
-height: 2rem;
+width: 1.8rem;
+height: 1.8rem;
 cursor: pointer;
-}
-.Login_button{
-border-color:transparent;
-color: #FFF;
-border-radius: 2.25rem;
-background: #F00;
-display: flex;
-width: 7rem;
-height: 2rem;
-padding: 0.6rem;
-justify-content: center;
-align-items: center;
-gap: 0.6rem;
 }
 
 @media screen and (max-width: 1180px) {
