@@ -1,43 +1,67 @@
 .state-graph {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 100%;
   height: max-content;
+}
+
+.graph-track {
+  position: absolute;
+  top: 25px; /* half of the circle height if it's 50px */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: lightgray;
+  z-index: 0;
+  left: calc(25px); /* half of circle width */
+  right: calc(25px);
+}
+
+.graph-progress {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  height: 2px;
+  background-color: #A6BD49;
+  z-index: 0;
+  left: calc(25px);
+}
+
+.state-step {
   display: flex;
-  gap: 20px;
-  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  text-align: center;
 }
 
-.state-step{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    gap: 4px;
-}
-
-.step-circle{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    border: solid 2px lightgray;
+.step-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border: solid 2px lightgray;
+  background-color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .step-circle.active {
-    background-color: #A6BD49;
-    border: solid 2px #A6BD49;
-    color: white;
+  background-color: #A6BD49;
+  border-color: #A6BD49;
+  color: white;
 }
 
 .step-circle.current {
-    border: solid 2px #A6BD49;
+  border-color: #A6BD49;
 }
 
-.step-line {
-    width: 2px;
-    background-color: lightgray;
-    flex-grow: 1;
-}
+
+

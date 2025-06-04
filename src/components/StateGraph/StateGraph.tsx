@@ -21,24 +21,24 @@ const steps = [
 const StateGraph = ({step}: StateGraphProps) => {
     return (
         <section className='state-graph'>
-            {
-                steps.map((s, i) => {
-                    const isActive = i < step;
-                    const isCurrent = i === step;
+  <div className='graph-track' />
+  <div className='graph-progress' style={{ width: `${(step / (steps.length - 1)) * 100}%` }} />
+  {steps.map((s, i) => {
+    const isActive = i < step;
+    const isCurrent = i === step;
 
-                    return (
-                        <div key={i} className={`state-step`}>
-                            <div className={`step-circle ${isActive ? 'active' : ''} ${isCurrent ? 'current' : ''}`}>
-                                {isCurrent && <FaCircle size={8} color='#A6BD49'/>}
-                                {isActive && <FaCheck size={16} color='white'/>}
-                                
-                            </div>
-                            <Text variant='inputLabel'>{s}</Text>
-                        </div>
-                    )
-                })
-            }
-        </section>
+    return (
+      <div key={i} className='state-step'>
+        <div className={`step-circle ${isActive ? 'active' : ''} ${isCurrent ? 'current' : ''}`}>
+          {isCurrent && <FaCircle size={8} color='#A6BD49' />}
+          {isActive && <FaCheck size={16} color='white' />}
+        </div>
+        <Text variant='inputLabel'>{s}</Text>
+      </div>
+    );
+  })}
+</section>
+
     )
 }
 
