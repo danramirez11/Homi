@@ -15,7 +15,9 @@ const Dashboard: React.FC = () => {
       </div>
     
       <div className="main-content">
+        <div className="nav-bar">
         <NavBar />
+        </div>
 
         <div className="dashboard-body">
           <div className="dashboard-left">
