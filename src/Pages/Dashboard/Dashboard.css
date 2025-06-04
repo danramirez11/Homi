@@ -8,6 +8,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin-left: 240px;
 }
 
 .dashboard-body {
@@ -30,5 +31,8 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+.side-bar{
+  position: fixed;
 }
 

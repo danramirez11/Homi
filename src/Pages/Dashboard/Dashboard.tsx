@@ -10,7 +10,9 @@ import './Dashboard.css';
 const Dashboard: React.FC = () => {
   return (
     <div className="dashboard-container">
+      <div className="side-bar">
       <SideBar />
+      </div>
     
       <div className="main-content">
         <NavBar />
