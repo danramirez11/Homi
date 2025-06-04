@@ -1,30 +1,43 @@
+import "./pagos.css";
 import { Text } from "../../theme/styledcomponents";
+import ProjectHeader from "./Components/ProjectHeader/ProjectHeader";
+import CuotaItem from "./Components/CuotaITem/CuotaItem"; // asegúrate que el nombre esté bien
+
+const cuotas = [
+  { numero: 1, fecha: "2025-06-01", estado: "Vencido" as const, saldo: "$100.000" },
+  { numero: 2, fecha: "2025-07-01", estado: "Disponible" as const, saldo: "$100.000" },
+  { numero: 3, fecha: "2025-08-01", estado: "No emitido" as const, saldo: "$100.000" },
+  { numero: 4, fecha: "2025-09-01", estado: "Disponible" as const, saldo: "$100.000" },
+  { numero: 5, fecha: "2025-10-01", estado: "Vencido" as const, saldo: "$100.000" },
+];
 
 const Pagos = () => {
   return (
-    <div style={{ display: 'flex', height: '100vh', width: '100vw' }}>
-      {/* Rectángulo gris como placeholder para nav izquierda */}
-      <div style={{ width: '247px', backgroundColor: '#ccc' }} />
-      {/* Sección principal con nav superior y contenido */}
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-        {/* Rectángulo gris como placeholder para nav superior */}
-        <div style={{ height: '60px', backgroundColor: '#ddd' }} />
+    <div className="layoutContainer">
+      <div className="leftPlaceholder" />
 
-        {/* Contenido de la vista */}
-        <section className="PagosContainer" style={{ padding: '40px' }}>
-          <Text variant="sectionTitle">Gestión de pagos</Text>
+      <div className="mainContent">
+        <div className="topStickyHeader">
+          <section className="PagosContainer">
+            <Text variant="sectionTitle">Gestión de pagos</Text>
 
-          {/* Tabs fijos debajo del título */}
-          <div style={{ display: 'flex', gap: '40px', marginTop: '36px', marginLeft: '10px' }}>
-            {/* Tab activo */}
-            <div style={{ color: '#FF6B35', fontWeight: 400, borderBottom: '2px solid #FF6B35', paddingBottom: '2px' }}>
-              Apartamentos Campestres
+            <div className="tabs">
+              <div className="tabActive">Apartamentos Campestres</div>
+              <div className="tabInactive">Ciudad Guabinas</div>
             </div>
-            {/* Tab inactivo */}
-            <div style={{ color: '#333', fontWeight: 400 }}>
-              Ciudad Guabinas
-            </div>
-          </div>
+          </section>
+
+          <ProjectHeader
+            title="Apartamentos Campestres"
+            subtitle="Apartamento 303 - Torre 3"
+            imageUrl="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/proyectos//PremiumF(portada).webp"
+          />
+        </div>
+
+        <section className="cuotasListContainer">
+          {cuotas.map((cuota) => (
+            <CuotaItem key={cuota.numero} cuota={cuota} />
+          ))}
         </section>
       </div>
     </div>
@@ -32,3 +45,4 @@ const Pagos = () => {
 };
 
 export default Pagos;
+

@@ -1,0 +1,24 @@
+.estado-tag {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Estados con color */
+.estado-tag.vencido {
+  background-color: #ffe5e5;
+  color: #cc0000;
+}
+
+.estado-tag.disponible {
+  background-color: #e0f0ff;
+  color: #0077cc;
+}
+
+.estado-tag.no-emitido {
+  background-color: #f2f2f2;
+  color: #999999;
+}

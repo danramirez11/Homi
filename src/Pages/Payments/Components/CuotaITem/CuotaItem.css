@@ -1,0 +1,35 @@
+.cuota-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background-color: #f4f4f4;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  width: 890px;
+}
+
+.cuota-checkbox {
+  margin: 0;
+}
+
+.cuota-numero,
+.cuota-fecha,
+.cuota-saldo {
+  font-size: 14px;
+  color: #333;
+  min-width: 80px;
+}
+
+.cuota-recibo {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.cuota-recibo:hover {
+  color: #007bff;
+}
+
