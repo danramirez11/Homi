@@ -9,6 +9,7 @@ import Home from "../Pages/Home/Home";
 import Onboard from "../Pages/Onboard/Onboard";
 import Form from "../Pages/Form/Form";
 import SplashScreen from "../Pages/Splash/Splash";
+import Pagos from "../Pages/Payments/Pagos";
 
 const routes = createHashRouter([
     {
@@ -51,7 +52,12 @@ const routes = createHashRouter([
      path: "/home",   
      element: <Home/>,
     },
-    
+    {
+       path: "/pagos",
+        element: <Pagos/>
+     
+    },
+        
     ])
 
 export default routes;
