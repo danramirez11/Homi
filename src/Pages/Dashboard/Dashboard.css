@@ -34,7 +34,7 @@
   flex-direction: column;
   gap: 15px;
   position: fixed;
-  right: 0;
+  right: 10px;
 }
 .side-bar{
   position: fixed;
