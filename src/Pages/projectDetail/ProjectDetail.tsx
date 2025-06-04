@@ -13,20 +13,26 @@ const ProjectDetail = () => {
 
     return (
         <div className="dashboard-container">
-      <SideBar />
+            <div className="side-bar"><SideBar /></div>
+      
 
-      <div className="main-content">
+      <div className="main-content" style={{ marginRight: '0',}}>
+        <div className="nav-bar">
         <NavBar />
+        </div>
 
         <div className="project-content">
             <section className="project-left">
             <Text variant='inputText' color="gray">Mis proyectos / Apartamentos Campestres</Text>
             <ProBanner/>
+            <span>
             <span className="project-location">
                 <IoLocationOutline color="black" size={20}/>
                 <Text variant='bodyRegular'>Pance</Text>
             </span>
             <Text variant='display'>Apartamentos Campestres</Text>
+            </span>
+
             <Text variant='cardSubtitle'>Estado de la obra</Text>
             <StateGraph step={4}/>
             <ProNews/>

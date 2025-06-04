@@ -1,23 +1,24 @@
 .project-content{
     display: flex;
-    gap: 10px;
-    padding: 20px;
+    gap: 24px;
+    padding: 32px;
+    width: 100%;
 }
 
 .project-left{
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 24px;
     width: 75%;
-    padding: 20px;
+    padding: 0;
 }
 
 .project-right{
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 24px;
     width: 25%;
-    padding: 20px;
+    padding: 0;
 }
 
 .project-location{
