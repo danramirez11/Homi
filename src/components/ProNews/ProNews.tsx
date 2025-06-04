@@ -5,12 +5,12 @@ const news = [
     {
         tittle: 'Pruebas de funcionamiento',
         time: 'Hace 2 semanas',
-        photo: 'https://i.pinimg.com/736x/fc/d4/11/fcd411c4990e19941a7780ef5e794e21.jpg'
+        photo: 'https://i.pinimg.com/736x/f6/2f/a8/f62fa84d75c7a0a5cb4e2473b4d42199.jpg'
     },
     {
         tittle: 'Instalación electrica',
         time: 'Hace 4 semanas',
-        photo: 'https://i.pinimg.com/736x/fc/d4/11/fcd411c4990e19941a7780ef5e794e21.jpg'
+        photo: 'https://i.pinimg.com/736x/39/8d/56/398d56167d054d8e75992a45311c5e95.jpg'
     },
     {
         tittle: 'Revisión estructural de la obra',
@@ -20,7 +20,7 @@ const news = [
     {
         tittle: 'Levantamiento de muros',
         time: 'Hace 3 meses',
-        photo: 'https://i.pinimg.com/736x/fc/d4/11/fcd411c4990e19941a7780ef5e794e21.jpg'
+        photo: 'https://i.pinimg.com/736x/3d/a7/28/3da728439c6e21d0eae754aeb0203431.jpg'
     },
     {
         tittle: 'Terreno preparado',
