@@ -1,6 +1,6 @@
 import { Input, Text } from "../../../../theme/styledcomponents"
 
-const InputsSimul = ({label,id}: {label: string, id: string}) => {
+const InputsSimul = ({label,id }: {label: string, id: string}) => {
     return(
         <>
         <Text variant='bodyRegular'>{label}</Text>

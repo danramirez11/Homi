@@ -12,16 +12,25 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center; 
-    
+    padding: 12px;
     
 }
 .formSimulv2{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding-right: 30px;
+    border: 1px solid #919191 ;
+    border-radius: 24px;
+}
+.formSimulv2 img{
+    height: 120px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 24px 24px 0 0;
     
 }
-.formHeader{
-    background-image: url("https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/proyectos//PremiumF(portada).webp");
+.inputscontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 12px;
 }
