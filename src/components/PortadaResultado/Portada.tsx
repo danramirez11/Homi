@@ -2,12 +2,13 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import './Portada.css'
 import { Text } from "../../theme/styledcomponents";
 import BotonAtras from "../BotonAtras/BotonAtras";
-
+import { useNavigate } from "react-router-dom";
 import type { Proyecto } from "../../types/Proyectos";
 
 const Portada = ({ Proyectodata }: { Proyectodata: Proyecto }) => {
 
 console.log(Proyectodata.img_portada);
+const navigate = useNavigate();
 
 return (
     <section
@@ -19,7 +20,7 @@ return (
             backgroundRepeat: 'no-repeat',
         }}
     >
-        <BotonAtras />
+        <BotonAtras color="#EFEFEF" onClick={() => navigate(-1)}></BotonAtras>
         <div className='infoDetalle'>
             <div className='izquierdaInfo'>
                 <div className='proyectoInfo'>

@@ -44,11 +44,12 @@
     position: absolute;
     bottom: 24px;
     right: 24px;
+    cursor: pointer;
 }
 
 .containerDatos{
     display: flex;
-    width: 120%;
+    width: 140%;
     justify-content: space-between;
     align-items: center;
 }

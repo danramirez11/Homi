@@ -1,11 +1,12 @@
 .spinner {
   border: 6px solid #f3f3f3;
-  border-top: 6px solid #f00;
+  border-top: 6px solid #2C2B2B;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 3vw;
+  height: 3vw;
   animation: spin 1s linear infinite;
-  margin: 0.5rem 0; 
+  margin: 0.5rem 0.5rem; 
+
 }
 
 

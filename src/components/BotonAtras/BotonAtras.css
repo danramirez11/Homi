@@ -1,7 +1,6 @@
 .botonAtras{
     display: flex;
     align-items: center;
-    gap: 1%;
-    cursor: pointer;
+    gap: 20px;
     margin-bottom: 20px;
 }
