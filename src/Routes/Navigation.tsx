@@ -1,5 +1,4 @@
 import { createHashRouter } from "react-router-dom";
-import Results from "../Pages/Results/Results";
 import Simulv2 from "../Pages/Simulv2/Simulv2";
 import Detalle from "../Pages/Detalle/Detalle";
 import Simul from "../Pages/Simul/Simul";
@@ -9,6 +8,7 @@ import Home from "../Pages/Home/Home";
 import Onboard from "../Pages/Onboard/Onboard";
 import Form from "../Pages/Form/Form";
 import SplashScreen from "../Pages/Splash/Splash";
+import Results from "../Pages/Results/Results";
 
 const routes = createHashRouter([
     {
@@ -33,7 +33,7 @@ const routes = createHashRouter([
         },
     {
         path: "/results",
-        element: <Results></Results>,
+        element: <Results/>,
     },
     {
         path: "/detail",
