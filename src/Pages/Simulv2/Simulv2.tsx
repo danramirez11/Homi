@@ -5,14 +5,51 @@ import InputsSimul from "./Components/InputsSimul/InputsSimul";
 import { useState } from "react";
 import proyect from "./data/data";
 import Navjm from "../../components/Navjm/Nav";
+import { useNavigate } from "react-router-dom";
 const Simulv2 = ()=>{
 
-
+    // Get all input and select values from the form using DOM by id
+    
+        const proyectmodelinput = (document.getElementById("proyectModel") as HTMLSelectElement)?.value
+        const initialMonthsinput = (document.getElementById("initialMonths") as HTMLSelectElement)?.value
+        const yearsFinalinput = (document.getElementById("yearsFinal") as HTMLSelectElement)?.value
+        const cesantiasinput = (document.getElementById("cesantias") as HTMLInputElement)?.value
+        const incomeSinput = (document.getElementById("incomes") as HTMLInputElement)?.value
+        const expensesinput = (document.getElementById("expenses") as HTMLInputElement)?.value
+        const payvalueinput = (document.getElementById("payValue") as HTMLInputElement)?.value
+     
 const [cardSelected, setCardSelected] = useState(0)
 const [proyectseleced, setproyectSelected] = useState(0)
 const [simulationData, setSimulationData]  = useState({
-
+    proyectModel: "",
+    initialMonths: 0,
+    yearsFinal: 0,
+    cesantias: 0,
+    incomes: 0,
+    expenses: 0,
+    payValue: 0
 })
+const navigate = useNavigate()
+
+const handleSubmit = ()=>{
+    const newData = {
+        proyectModel: proyectmodelinput,
+        initialMonths: Number(initialMonthsinput),
+        yearsFinal: Number(yearsFinalinput),
+        cesantias: Number(cesantiasinput),
+        incomes: Number(incomeSinput),
+        expenses: Number(expensesinput),
+        payValue: Number(payvalueinput)
+    };
+    setSimulationData(newData);
+    console.log("Datos de la simulación:", newData);
+    navigate("/simresults", {
+        state:{
+            proyectData: proyect,
+            simulationData: newData
+        }
+    })
+}
 
 const handlechange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedType = proyect.Types.findIndex(type => type.type === e.target.value);
@@ -52,7 +89,7 @@ const handleselected = (event: React.MouseEvent<HTMLDivElement>) => {
                 <InputsSimul type="number" label="¿Tienes ahorros o cesantías que quieras usar?" id="cesantias"></InputsSimul>  
 
                 <Text variant="bodyRegular">Plazo para pagar el valor restante</Text>                                
-                <select name="yearsFinal" id="yearsFinal">
+                <select name="yearsFinal" onChange={enablesubmit} id="yearsFinal">
                 {(() => {
                     const minYears = 5
                     const maxYears = 20
@@ -92,7 +129,7 @@ const handleselected = (event: React.MouseEvent<HTMLDivElement>) => {
             </select>
                 <InputsSimul type="number" label="¿Tienes ahorros o cesantías que quieras usar?" id="cesantias"></InputsSimul>
                 <Text variant="bodyRegular">Plazo para pagar el valor restante</Text>                                
-                <select name="yearsFinal" id="yearsFinal">
+                <select name="yearsFinal" onChange={enablesubmit} id="yearsFinal">
                 {(() => {
                     const minYears = 5
                     const maxYears = 20
@@ -132,7 +169,7 @@ const handleselected = (event: React.MouseEvent<HTMLDivElement>) => {
             </select>
             <InputsSimul type="number" label="¿Tienes ahorros o cesantías que quieras usar?" id="cesantias"></InputsSimul>                               
             <Text variant="bodyRegular">Plazo para pagar el valor restante</Text>                                
-                <select name="yearsFinal" id="yearsFinal">
+                <select name="yearsFinal" onChange={enablesubmit} id="yearsFinal">
                 {(() => {
                     const minYears = 5
                     const maxYears = 20
@@ -145,8 +182,21 @@ const handleselected = (event: React.MouseEvent<HTMLDivElement>) => {
             </>)
         }
     }
+    // Use the correct ButtonVariant type values, e.g., "light" or "dark"
+const [buttonState, setButtonState] = useState<"light" | "dark">("light");
+const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
-    return (
+const enablesubmit = () => {
+    const yearsFinal = (document.getElementById("yearsFinal") as HTMLSelectElement);
+    if (yearsFinal && yearsFinal.value !== "none") {
+        setButtonState("dark");
+        setIsButtonDisabled(false);
+    } else {
+        setButtonState("light");
+        setIsButtonDisabled(true);
+    }
+};
+return (
     <>
     <Navjm></Navjm>
         <section className="Simulcontainerv2">
@@ -162,9 +212,11 @@ const handleselected = (event: React.MouseEvent<HTMLDivElement>) => {
 
             <Text variant="sectionTitle">Datos de tu simulación</Text>
             {handleform()}   
-            <Button variant='light' disabled={true} size='large'>Submit</Button>
+
+           
+            <Button variant={buttonState} size='medium' id="submitbutton" disabled={isButtonDisabled} onClick={handleSubmit}>Submit</Button>
             </div>
-        </div> 
+        </div>
         </section>
     </>
     );
