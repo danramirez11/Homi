@@ -14,10 +14,10 @@
     height: 100%;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
-    background-image: linear-gradient(to right, rgba(0,0,0,0.8), transparent), url("https://cdn.sanity.io/images/v48q37k7/production/d09208183125ab47493d5de2f8710b6faa27d7cc-3000x2000.jpg?auto=format&fit=max&q=90&w=1500");
-    background-size:auto;
-    background-position: 'center';
-    background-repeat: 'no-repeat';
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.464), transparent), url("https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/proyectos//PremiumF(vista3D).jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .news-content{
