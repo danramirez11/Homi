@@ -22,7 +22,7 @@ const SplashScreen: React.FC = () => {
       <Spinner />
       <div className='splash-homi'>
         <p className='splash_p'>Power by Homi</p>
-         <img src="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/splash//LogoHomi.webp" alt="Logo Homi" className="Splash_logoh" />
+        <img src="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/splash//LogoHomi.webp" alt="Logo Homi" className="Splash_logoh" />
       </div>
      
     </div>
