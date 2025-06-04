@@ -10,14 +10,10 @@ import './Dashboard.css';
 const Dashboard: React.FC = () => {
   return (
     <div className="dashboard-container">
-      <div className="sidebar">
-        <SideBar />
-      </div>
-
+      <SideBar />
+    
       <div className="main-content">
-        <div className="navbar">
-          <NavBar />
-        </div>
+        <NavBar />
 
         <div className="dashboard-body">
           <div className="dashboard-left">
@@ -25,7 +21,7 @@ const Dashboard: React.FC = () => {
 
             <ProjectCard
               backgroundImage="https://www.jaramillomora.com/wp-content/uploads/2025/01/origen-galeria-9-scaled.webp"
-              logo="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/sign/proyectos/CompactoF(logo).png?..."
+              logo="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/sign/proyectos/CompactoF(logo).png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2Q2NzhmZDkzLTg1ZjgtNDEzOS1hMTcyLTFiN2ZiNjQ3ZTYzNyJ9.eyJ1cmwiOiJwcm95ZWN0b3MvQ29tcGFjdG9GKGxvZ28pLnBuZyIsImlhdCI6MTc0ODcwMzk4MywiZXhwIjoxNzgwMjM5OTgzfQ.pbu-0RTCyYL5zM8ed8lSJ9gsWdPNEIq_RFO53RzNyqY"
               location="Pance"
               stage="Etapa III"
               name="Apartamentos Campestres"
@@ -35,16 +31,15 @@ const Dashboard: React.FC = () => {
 
             <ProjectCard
               backgroundImage="https://storage.googleapis.com/bucket-jm-web/wp-content/uploads/2024/08/zona-picinic-tamarindo.webp"
-              logo="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/sign/proyectos/CompactoF(logo).png?..."
+              logo="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/sign/proyectos/CompactoF(logo).png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2Q2NzhmZDkzLTg1ZjgtNDEzOS1hMTcyLTFiN2ZiNjQ3ZTYzNyJ9.eyJ1cmwiOiJwcm95ZWN0b3MvQ29tcGFjdG9GKGxvZ28pLnBuZyIsImlhdCI6MTc0ODcwMzk4MywiZXhwIjoxNzgwMjM5OTgzfQ.pbu-0RTCyYL5zM8ed8lSJ9gsWdPNEIq_RFO53RzNyqY"
               location="Yumbo"
               stage="Etapa I"
               name="Ciudad Guabinas"
               tower="Torre 1 - 204"
             />
-
             <ProjectCard
               backgroundImage="https://storage.googleapis.com/bucket-jm-web/wp-content/uploads/2024/10/galeria-titanio-piscina.webp"
-              logo="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/sign/proyectos/CompactoF(logo).png?..."
+              logo="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/sign/proyectos/CompactoF(logo).png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2Q2NzhmZDkzLTg1ZjgtNDEzOS1hMTcyLTFiN2ZiNjQ3ZTYzNyJ9.eyJ1cmwiOiJwcm95ZWN0b3MvQ29tcGFjdG9GKGxvZ28pLnBuZyIsImlhdCI6MTc0ODcwMzk4MywiZXhwIjoxNzgwMjM5OTgzfQ.pbu-0RTCyYL5zM8ed8lSJ9gsWdPNEIq_RFO53RzNyqY"
               location="Sur de Cali"
               stage="Etapa II"
               name="Titanio Apartamentos"
