@@ -32,7 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="card-left">
           <div className="card-tags">
             <div className="tag">
-              <MdLocationOn size={16} />
+              <MdLocationOn size={16} color="#FFFFFF"/>
               <Text variant="captionRegular" color="#FFFFFF">
                 {location}
               </Text>
