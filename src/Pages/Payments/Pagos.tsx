@@ -7,6 +7,7 @@ import EncargoLabel from "./Components/BancoLabel/BancoLabel";
 import Warning from "./Components/Warnings/Warning";
 import PaymentCard from "./Components/CardPago/CardPago";
 import { useState } from "react";
+import SideBar from "../../components/SideBar/SideBar";
 
 
 
@@ -30,16 +31,20 @@ const Pagos = () => {
   const tieneIntereses = true;
 
   return (
-    <div className="layoutContainer">
-      <div className="leftPlaceholder" />
+    <div className='perfilContainer'>
+        <div className="side-bar">
+          <SideBar />
+          </div>
+    
+    <div className="layoutContainer" style={{ marginLeft: '250px' }}>
       <div className="mainContent">
-        <div className="topPlaceholder" />
         <section className="PagosContainer">
           <Text variant="sectionTitle">Gestión de pagos</Text>
 
           <div className="tabs">
             <div className="tabActive">Apartamentos Campestres</div>
-            <div className="tabInactive">Ciudad Guabinas</div>
+            <div className="tabInactive">Reserva Kachipay</div>
+            <div className="tabInactive">Olivo Apartamentos</div>
           </div>
         </section>
 
@@ -71,6 +76,7 @@ const Pagos = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

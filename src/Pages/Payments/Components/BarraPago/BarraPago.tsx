@@ -13,6 +13,7 @@ const PagoBar = ({ cuotasSeleccionadas, total, tieneIntereses }: PagoBarProps) =
   const handleClick = () => {
     if (cuotasSeleccionadas > 0) {
       navigate("/factura");
+      window.scrollTo(0, 0);
     }
   };
 

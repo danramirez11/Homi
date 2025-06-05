@@ -45,7 +45,9 @@ const SideBar: React.FC = () => {
 
       <ul className="nav-list">
         {navItems.map((item) => {
-          const isActive = location.pathname === item.path;
+          const currentFirstSegment = location.pathname.split('/')[1];
+          const itemFirstSegment = item.path.split('/')[1];
+          const isActive = currentFirstSegment === itemFirstSegment;
 
           return (
             <li key={item.path} className={`nav-item ${isActive ? 'active' : ''}`}>

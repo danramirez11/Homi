@@ -96,7 +96,7 @@ const routes = createHashRouter([
         element: <Checked/>
     },
 
-    { path: "/paydone",
+    { path: "/pagos/paydone",
         element: <PayDone/>
     }
     ])

@@ -17,7 +17,7 @@ const Checked = () => {
   return (
     <div className="mainContent">
       <div className="header">
-        <div className="header-atras" onClick={() => navigate("/paydone")}>
+        <div className="header-atras" onClick={() => navigate("/pagos/paydone")}>
           <img src="src/assets/CaretCircleLeft.svg" className="button-atras" width={50} />
           <p>Volver al portal</p>
         </div>
