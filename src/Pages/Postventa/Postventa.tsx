@@ -24,20 +24,26 @@ const PostVenta: React.FC = () => {
   
 
   if (loading) return <p>Cargando...</p>;
+  const dataReciente = [...data]
+  .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+  .slice(0, 5);
+  
 
   return (
+    
+
     <div className="postventa-container">
       <Text variant='sectionTitle' className='titlePostVenta'>Postventa</Text>
       <HeaderPostVenta />
       
       <div className="contenidoPostventa">
-        {/* 📦 Contenido central: bloques grises oscuros */}
         <div className="bloque-central">
-          <EstadoObraList data={data} />
+        <EstadoObraList data={dataReciente} />
+
+
           <AlertaPostVenta />
         </div>
 
-        {/* 📦 Lateral derecho: Actualizaciones */}
         <div className="bloque-lateral">
           <Actualizaciones />
         </div>

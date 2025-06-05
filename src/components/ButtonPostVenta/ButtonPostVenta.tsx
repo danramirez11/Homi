@@ -2,12 +2,19 @@ import React from 'react';
 import { Button } from '../../theme/styledcomponents'; 
 import { Text } from '../../theme/styledcomponents';
 import "./ButtonPostVenta.css"
+import { useNavigate } from 'react-router-dom';
+
 
 const HeaderPostVenta: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/postventaform'); 
+  };
   return (
     <div className="header-postventa">
         <Text variant="cardSubtitle">Estado de la obra</Text>
-        <Button onClick={() => console.log('Nuevo registro')} variant="dark" size="large" weight="regular">
+        <Button  className='button_gpost' onClick={handleClick} variant="dark" size="large" weight="regular">
         <Text variant="captionRegular">
           Generar reporte
         </Text>

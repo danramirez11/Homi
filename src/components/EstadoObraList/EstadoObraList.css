@@ -79,3 +79,23 @@
 tbody {
   background-color: transparent; 
 }
+
+.descripcion-exanpost {
+ 
+  overflow-wrap: break-word; 
+  max-width: 100%;             
+}
+
+.tabla-estado td.estado-td {
+  position: relative;
+}
+
+
+.estado-arrow {
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.estado-arrow.rotated {
+  transform: translateY(-50%) rotate(180deg);
+}

@@ -1,41 +1,73 @@
 .postventa-container {
   display: flex;
   flex-direction: column;
-  padding: 40px 80px;
+  padding: 2.5rem 5vw; /* padding responsivo */
   background-color: #fff;
+  max-width: 100%;
 }
 
 .titlePostVenta {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
-/* 🧠 Header con subtítulo y botón */
 .postventa-container > :nth-child(2) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
-/* 🧱 Cuerpo principal */
 .contenidoPostventa {
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   gap: 3.5rem;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-/* 📦 Columna izquierda */
 .bloque-central {
   flex: 2;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.5rem;
   min-width: 0;
+  width: 100%;
+  max-width: 65%;
 }
 
-/* 📦 Lateral derecho */
 .bloque-lateral {
   flex: 1;
-  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: flex-start; 
+  gap: 1.5rem;
+  margin-top: -12%; 
+  max-width: 30%;
+  width: 100%;
+}
+
+
+.bloque-lateral .actualizaciones {
+  margin-top: 0;
+}
+
+
+@media (max-width: 768px) {
+  .contenidoPostventa {
+    flex-direction: column;
+  }
+
+  .bloque-central,
+  .bloque-lateral {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .postventa-container {
+    padding: 2rem 1rem;
+  }
 }

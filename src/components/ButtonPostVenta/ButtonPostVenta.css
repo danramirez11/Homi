@@ -3,10 +3,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 61%;
+    width: 63%;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
-    margin-left: 4.5rem;
-    padding: 0 1rem;
+  }
+
+  .button_gpost{
+    width: 11rem !important;
   }
   

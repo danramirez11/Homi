@@ -1,29 +1,33 @@
 .alertaPostVenta {
-  background-color: #ffccd3;
-  border-radius: 12px;
-  padding: 16px 20px;
-  border: 1px solid #ffccd3;
-  width: 65%;
-  font-family: 'Inter', sans-serif; /* si aplica */
+  background-color: #FCDFE1;
+  display: flex;
+  padding: 0.625rem 0.8125rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8125rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  max-width: 650px; /* Controla el ancho máximo */
+  box-sizing: border-box;
 }
 
-/* 🔴 Título de la alerta */
 .alertaTitulo {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 8px;
 }
 
-.alertaTitulo span {
-  font-size: 14px;         /* ← menor tamaño */
-  font-weight: 600;
-  color: #D32F2F;          /* Rojo fuerte */
+.title_alert {
+  color: #FD7D46 !important;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.4;
+  margin: 0;
 }
 
-/* 📜 Texto de cuerpo */
-.alertaPostVenta span {
-  font-size: 9px;         /* ← más pequeño */
-  color: #c92e2b;          /* Gris oscuro tirando a vino */
-  line-height: 1.5;
+.text_alert {
+  color: #FD7D46 !important;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  margin: 0;
 }

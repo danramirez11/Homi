@@ -6,6 +6,8 @@ import Results from "../Pages/Results/Results";
 import PostVenta from "../Pages/Postventa/Postventa";
 import Detalle from "../Pages/Detalle/Detalle";
 import Simul from "../Pages/Simul/Simul";
+import PostVentaform from "../Pages/Postventa_form/Postventa";
+
 
 const routes = createHashRouter([
     {
@@ -33,8 +35,12 @@ const routes = createHashRouter([
      element: <Simul></Simul>,
     },
     {
-        path: "/postventa",   
-        element: <PostVenta></PostVenta>,
+     path: "/postventa",   
+     element: <PostVenta></PostVenta>,
+    },
+    {
+        path: "/postventaform",   
+        element: <PostVentaform></PostVentaform>,
        },
     
     ])
