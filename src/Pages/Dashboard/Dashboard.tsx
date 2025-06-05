@@ -6,8 +6,11 @@ import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import CalendarWidget from '../../components/CalendarWidget/CalendarWidget';
 import Reminders from '../../components/Reminders/Reminders';
 import './Dashboard.css';
+import { useNavigate } from 'react-router-dom';
 
 const Dashboard: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="dashboard-container">
       <div className="side-bar">
@@ -30,7 +33,7 @@ const Dashboard: React.FC = () => {
               stage="Etapa III"
               name="Apartamentos Campestres"
               tower="Torre 3 - 201"
-              onClick={() => console.log('Clicked')}
+              onClick={() => navigate('/dashboard/project')}
             />
 
             <ProjectCard
