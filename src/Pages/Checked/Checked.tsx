@@ -1,35 +1,27 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import ProjectHeader from "../Payments/Components/ProjectHeader/ProjectHeader";
-import PaymentPendingNotification from "./Components/PendingNot/PendingNot";
-import BancoLarge from "./Components/BancoLarge/BancoLarge";
-import InfoPagoCard from "./Components/InfoPago/InfoPago";
-import "./Factura.css"; // Asegúrate de tener este archivo CSS para los estilos
-import ResumenPagoCard from "./Components/Resumen/Resumen";
-import SecurityConsejo from "./Components/SecureRec/SecureRec";
+import BancoLarge from "../Factura/Components/BancoLarge/BancoLarge";
+import InfoPagoCard from "../Factura/Components/InfoPago/InfoPago";
+import "./Checked.css"; // Asegúrate de tener este archivo CSS para los estilos
+import PayChecked from "./Components/PayChecked/PayChecked";
+import CardChecked from "./Components/CardChecked/CardChecked";
 
-const Factura = () => {
+const Checked = () => {
   const navigate = useNavigate();
-  const [confirmado, setConfirmado] = useState(false);
 
-  const handleCheckboxChange = () => {
-    setConfirmado(!confirmado);
-  };
-
-  const handlePagoClick = () => {
-    if (confirmado) {
-      navigate("/checked");
-    }
+  const handleDownload = () => {
+    // Aquí puedes implementar la lógica real de descarga del comprobante
+    alert("Descargando comprobante...");
   };
 
   return (
     <div className="mainContent">
       <div className="header">
-        <div className="header-atras" onClick={() => navigate("/pagos")}>
+        <div className="header-atras" onClick={() => navigate("/paydone")}>
           <img src="src/assets/CaretCircleLeft.svg" className="button-atras" width={50} />
-          <p>Volver</p>
+          <p>Volver al portal</p>
         </div>
-        <h1>Revisa tu información de pago</h1>
+        <h1>Descarga tu comprobante </h1>
       </div>
 
       <div className="organization-info-factura">
@@ -39,7 +31,7 @@ const Factura = () => {
             subtitle="Apartamento 303 - Torre 3"
             imageUrl="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/proyectos//PremiumF(portada).webp"
           />
-          <PaymentPendingNotification />
+            <PayChecked />
           <BancoLarge />
 
           <div className="info-pago-container">
@@ -77,26 +69,10 @@ const Factura = () => {
         </div>
 
         <div className="Info-right-factura">
-          <SecurityConsejo />
-          <ResumenPagoCard />
-
+            <CardChecked />
           <div className="checkout-button">
-            <label className="checkbox-container">
-              <input
-                type="checkbox"
-                checked={confirmado}
-                onChange={handleCheckboxChange}
-              />
-              <span className="custom-checkbox"></span>
-              <span className="texto-pequeno">He confirmado los datos y son correctos</span>
-            </label>
-
-            <button
-              className="btn-realizar-pago"
-              disabled={!confirmado}
-              onClick={handlePagoClick}
-            >
-              Realizar pago
+            <button className="btn-realizar-pago" onClick={handleDownload}>
+              Descargar comprobante
             </button>
           </div>
         </div>
@@ -105,4 +81,4 @@ const Factura = () => {
   );
 };
 
-export default Factura;
+export default Checked;

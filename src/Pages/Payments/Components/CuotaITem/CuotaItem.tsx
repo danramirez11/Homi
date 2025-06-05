@@ -4,7 +4,7 @@ import "./CuotaItem.css";
 type Cuota = {
   numero: number;
   fecha: string;
-  estado: "Vencido" | "Disponible" | "No emitido";
+  estado: "Vencido" | "Disponible" | "No emitido" | "Pagado";
   saldo: string;
 };
 

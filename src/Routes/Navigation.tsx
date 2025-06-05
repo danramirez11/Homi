@@ -11,6 +11,8 @@ import Form from "../Pages/Form/Form";
 import SplashScreen from "../Pages/Splash/Splash";
 import Pagos from "../Pages/Payments/Pagos";
 import Factura from "../Pages/Factura/Factura";
+import Checked from "../Pages/Checked/Checked";
+import PayDone from "../Pages/Pagos2/Pagos2";
 
 const routes = createHashRouter([
     {
@@ -62,8 +64,15 @@ const routes = createHashRouter([
     {
         path: "/factura",
         element: <Factura/>
+    },
+    
+    { path: "/checked",
+        element: <Checked/>
+    },
+
+    { path: "/paydone",
+        element: <PayDone/>
     }
-        
     ])
 
 export default routes;

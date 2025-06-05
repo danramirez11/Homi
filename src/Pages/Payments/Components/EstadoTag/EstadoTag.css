@@ -26,3 +26,9 @@
    font-weight: 400;
    color: rgb(91, 91, 91);
 }
+
+.estado-pagado {
+  background-color: #e6f7e6; /* azul */
+   font-weight: 400;
+   color: #4CAF50;
+}

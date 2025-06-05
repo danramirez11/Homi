@@ -1,0 +1,84 @@
+/* Estructura base del card, igual a resumen-card */
+.checked-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 24px;
+  width: fit-content;
+  max-width: 320px;
+  font-family: archivo, sans-serif;
+  background-color: #fff;
+}
+
+/* NUEVO: Sección de mensaje de éxito */
+.checked-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checked-icon-success {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 8px;
+}
+
+.checked-success-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #3D5C00;
+  text-align: center;
+}
+
+/* Reutilización de estilos de Resumen */
+.checked-title {
+  font-size: 18px;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.checked-factura,
+.checked-fecha,
+.checked-descripcion {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.checked-separator {
+  margin: 16px 0;
+  border: none;
+  border-top: 1px dashed #ccc;
+}
+
+.checked-section {
+  margin-bottom: 12px;
+}
+
+.checked-label {
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #333;
+}
+
+.checked-amount {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.checked-intereses {
+  font-size: 14px;
+  color: #d32f2f;
+  margin-top: 8px;
+}
+
+.checked-mora {
+  font-weight: bold;
+}
+
+.checked-total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}

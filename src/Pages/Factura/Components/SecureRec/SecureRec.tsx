@@ -5,7 +5,7 @@ const SecurityConsejo: React.FC = () => {
   return (
     <div className="security-container">
       <div className="icon">
-        <img src="src/assets/time2.svg" alt="Icono de seguridad" />
+        <img src="src\assets\Info.svg" alt="Icono de seguridad" />
       </div>
       <div className="security-content">
         <h3 className="security-title">Consejo de seguridad</h3>
