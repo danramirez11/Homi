@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import FormGrid from '../../components/FormPostVenta/FormPostVenta';
 import CaptchaSection from '../../components/FormPostVenta/Catcha';
 import { usePostVentaForm } from '../../hooks/usepostventa';
-import './PostVentaform.css';
+import './Postventaform.css';
 
 const PostVentaform: React.FC = () => {
   const navigate = useNavigate();
