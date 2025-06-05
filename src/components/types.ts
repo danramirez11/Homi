@@ -50,3 +50,20 @@ export interface ButtonOnbProps {
   children: React.ReactNode;
   className?: string;
 }
+
+export interface EstadoObraItem {
+  id: string; 
+  user_id: string; 
+  created_at: string; 
+  updated_at:string;
+  proyecto: string;
+  inmueble:string;
+  fecha: string;
+  espacio: string;
+  descripcion:string;
+  estado: 'Recibido' | 'Resuelto' | 'Rechazado';
+}
+
+export interface EstadoObraListProps {
+  data: EstadoObraItem[];
+}

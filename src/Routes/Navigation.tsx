@@ -12,6 +12,8 @@ import Results from "../Pages/Results/Results";
 import ProjectDetail from "../Pages/projectDetail/ProjectDetail";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Perfil from "../Pages/perfil/perfil";
+import PostVenta from "../Pages/Postventa/Postventa";
+import PostVentaform from "../Pages/Postventa_form/Postventa";
 
 const routes = createHashRouter([
     {
@@ -49,7 +51,15 @@ const routes = createHashRouter([
     {
      path: "/simulation",   
      element: <Simul></Simul>,
-    },{
+    },
+    {
+     path: "/postventa",   
+     element: <PostVenta></PostVenta>,
+    },
+    {
+        path: "/postventaform",   
+        element: <PostVentaform></PostVentaform>,
+       },{
         path: "/simulv2",
         element: <Simulv2></Simulv2>,
     }

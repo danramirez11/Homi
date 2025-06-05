@@ -1,0 +1,21 @@
+.postventa-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .formpo-title {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .sub-title-postf {
+    padding-top: 2rem;
+  }
+  
+  .formpo-description {
+    padding-bottom: 1.5rem;
+    color: #919191 !important;
+  }
+  
+  
+  
