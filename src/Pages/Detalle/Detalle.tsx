@@ -15,7 +15,7 @@ const Detalle = () => {
   
   return (
     <div>
-      <NewNav onLoginClick={() => {}}/>
+      <NewNav/>
       <Portada Proyectodata={Proyectoinfo}/>
       <Explicacion Proyectodata={Proyectoinfo}/>
       <Slogan Proyectodata={Proyectoinfo}/>

@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       style={{ backgroundImage: `url(${backgroundImage})` }}
       onClick={onClick}
     >
-      <div className="overlay">
+      <div className="overlay-card">
         <div className="card-left">
           <div className="card-tags">
             <div className="tag">

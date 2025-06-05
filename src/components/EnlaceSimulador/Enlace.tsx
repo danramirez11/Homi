@@ -19,7 +19,7 @@ const navigate = useNavigate()
             <div className='SectionEnlaceInfo'>
                 <Text variant="sectionTitle" color="#EFEFEF">En Jaramillo Mora, te ayudamos  a hacerlo realidad</Text>
                 <Text variant="subtitle" color="#EFEFEF">Simula tu crédito y descubre lo cerca que estás</Text>
-                <Button variant='light' size='medium' onClick={() => navigate('/Simulation', { state: { Proyectodata } })} >Me interesa</Button>
+                <Button variant='light' size='medium' onClick={() => navigate('/simulv2', { state: { Proyectodata } })} >Me interesa</Button>
             </div>
         </div>
         
