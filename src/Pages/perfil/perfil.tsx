@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { Button, Text } from '../../theme/styledcomponents';
 import supabase from '../../Services/Supabase';
 import './perfil.css';
+import SideBar from '../../components/SideBar/SideBar';
+import Spinner from '../../components/Spinner/Spiner';
 
 const Perfil = () => {
   const [userData, setUserData] = useState<any>(null);
@@ -29,11 +31,21 @@ const Perfil = () => {
     fetchUserData();
   }, []);
 
-  if (loading) return <p>Cargando...</p>;
-  if (!userData) return <p>No se encontró la información del usuario.</p>;
 
   return (
+    <div className='perfilContainer'>
+    <SideBar />
+    
    <div id='profileWrapper'>
+    {
+      loading ? (
+        <>
+        <Spinner/>
+        </>
+      ) : !userData ? (
+        <Text variant="bodyRegular">No se encontraron datos de usuario.</Text>
+      ) : 
+    
         <div id='profileContainer' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
             <div id="imgBanner" style={{
                 backgroundColor: '#ccc',
@@ -72,6 +84,9 @@ const Perfil = () => {
           </div>
         </section>
       </div>
+    }
+    </div>
+
     </div>
   );
 };

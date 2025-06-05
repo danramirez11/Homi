@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './LoginForm.css';
 import { Button, Text } from '../../theme/styledcomponents';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
-import supabase from '../../Services/supabase';
+import supabase from '../../Services/Supabase';
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -61,7 +61,7 @@ const LoginForm = () => {
   if (authError) {
     setError('Contraseña incorrecta o error al iniciar sesión.');
   } else {
-    navigate('/home');
+    navigate('/dashboard');
   }
 };
 
