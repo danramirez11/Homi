@@ -1,0 +1,23 @@
+.OnboarScreen{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-bottom: 3vw;
+}
+
+.OnboardInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.OnboardSub{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 5%;
+}

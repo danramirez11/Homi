@@ -23,7 +23,9 @@ const Results = () => {
             }
     
             setMain(mainProject[0]);
-            setOther(otherResults);
+            // Select two random projects from otherResults
+            const shuffled = otherResults.sort(() => 0.5 - Math.random());
+            setOther(shuffled.slice(0, 2));
         };
     
         fetchResults();
