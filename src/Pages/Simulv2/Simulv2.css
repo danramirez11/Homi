@@ -34,3 +34,47 @@
     gap: 20px;
     padding: 12px;
 }
+
+.inputscontainer select {
+  width: 100%;
+  border-radius: 30px;
+  border: 1.5px solid #ccc;
+  background: #ffffff;
+  font-family: 'Archivo', sans-serif;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  /* Remove default arrow */
+  
+}
+
+.inputscontainer select:hover {
+  border: 1.5px solid #86B7FE;
+  box-shadow: 0px 0px 0px 1.5px rgba(134, 183, 254, 0.3);
+}
+
+.inputscontainer select:focus {
+  border: 1.5px solid #86B7FE;
+  box-shadow: 0px 0px 0px 3px rgba(134, 183, 254, 0.3);}
+
+  .upperimage{
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+    align-items: end;
+   
+    padding: 10px;
+    background-image: linear-gradient(rgb(0,0,0,0.3), rgb(0,0,0,0.3)), url('https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/proyectos//PremiumF(portada).webp');
+    background-size: cover;
+    border-radius: 24px 24px 0 0;
+    background-position: center;
+  }
+  .leftsidetop{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .infoContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }

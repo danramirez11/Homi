@@ -1,0 +1,91 @@
+.slider {
+  width: auto;
+  height: 8px;
+  background: transparent;
+  outline: none;
+}
+
+/* Chrome, Safari, Edge */
+.slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 5px;
+  background: linear-gradient(
+    to right,
+    #ffb39b 0%,
+    #ffb39b calc(var(--val, 0) * 1%),
+    #fcf4c5 calc(var(--val, 0) * 1%),
+    #fcf4c5 100%
+  );
+
+}
+.rightsideresults{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40px;
+}
+.leftsideresults{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: end;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.208)), url("https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/proyectos//PremiumF(portada).webp");
+    background-size: cover;
+    background-position: bottom;
+    height: 284px;
+    width: 424px;
+    border-radius: 0 20px 20px 0 ;
+}
+.asesorcontainer{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.infocontainer{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.infobottomcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Resumecontainer{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    justify-content: space-between;
+    
+}
+.reulstcardcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+.simresultscontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+   
+}
+/* Thumb */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffb39b;
+  box-shadow: 0 0 2px #ccc;
+  margin-top: -5px;
+  cursor: pointer;
+  border: none;
+  display: none;
+}

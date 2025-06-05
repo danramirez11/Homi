@@ -5,13 +5,13 @@
     display: flex;
     align-items: center;
     gap: 26px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 .headerSimul{
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/proyectos//PremiumF(portada).webp");
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
     background-position: center ;
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,3 +20,14 @@
     padding-top: 15px;
     padding-bottom: 15px;
     }
+    .simulleftheader{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+.simulrigthheader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}

@@ -47,6 +47,7 @@ const buttonSizes = {
     fontSize: '18px',
     gap: '11px',
   },
+
 };
 
 export const Button = styled.button<{
@@ -193,7 +194,7 @@ export const Text = styled.p<{ variant: TextVariant }>`
 //Inputs
 // SE USA EN EL COMPONENTE DE ESTA MANERA: <Input size="small" status="default" />
 
-type InputSize = 'small' | 'medium' | 'large';
+type InputSize = 'small' | 'medium' | 'large' | 'filled';
 type InputStatus = 'default' | 'success' | 'error';
 
 const inputSizes = {
@@ -215,6 +216,12 @@ const inputSizes = {
     padding: '10px 18px',
     gap: '25px',
   },
+  filled: {
+    width: '100%',
+    height: '15px',
+    padding: '10px 18px',
+    gap: '25px',
+  }
 };
 
 const inputStatusColors = {
