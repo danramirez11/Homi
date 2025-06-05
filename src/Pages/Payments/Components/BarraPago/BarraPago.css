@@ -1,0 +1,74 @@
+.pago-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  font-family: sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 24px;
+}
+
+.pago-bar.inactivo {
+  background-color: #f4f4f4;
+}
+
+.pago-bar.activo {
+  background-color: #f4f4f4;
+  box-shadow: 0 0 0 2px #333 inset;
+}
+
+.pago-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.total-label {
+  font-weight: bold;
+  color: #333;
+  margin-top: 4px;
+}
+
+.intereses {
+  color: #d33;
+  margin-left: 4px;
+}
+
+.pago-accion {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.valor {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  white-space: nowrap;
+}
+
+.boton {
+  background-color: #ccc;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 14px;
+  color: white;
+  cursor: not-allowed;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pago-bar.activo .boton {
+  background-color: #222;
+  cursor: pointer;
+}
+
+.boton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

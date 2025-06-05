@@ -1,0 +1,21 @@
+.warning-message {
+  color: var(--color-warning);
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 1rem;
+  color: #EB5247;
+  background-color: #F7CAB2;
+  width: 290px;
+    padding: 10px;
+    border-radius: 12px;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+.mini-message{
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    color: #EB5247;
+}

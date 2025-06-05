@@ -4,9 +4,31 @@
   width: 100vw;
 }
 
+.organization-info{
+    display: flex;
+    flex-direction: row;
+}
+.Info-left{
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+
+    width: 940px;
+    align-items: center;
+}
+
+.Info-right{
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    width: 300px;
+    gap: 4px;
+}
+
 .leftPlaceholder {
   width: 247px;
   background-color: #ccc;
+  height: 1065px
 }
 
 .mainContent {
@@ -17,11 +39,14 @@
 
 .topPlaceholder {
   height: 60px;
+  min-height: 60px;
   background-color: #ddd;
+  position: sticky;
+  z-index: 100;
 }
 
 .PagosContainer {
-  padding: 40px;
+  padding: 30px;
 }
 
 .tabs {
@@ -41,4 +66,16 @@
 .tabInactive {
   color: #333;
   font-weight: 400;
+}
+
+.mostrar-mas{
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #EB5247;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
 }

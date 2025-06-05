@@ -1,7 +1,12 @@
+// EstadoTag.tsx
+import "./EstadoTag.css";
 
+type Estado = "Vencido" | "Disponible" | "No emitido";
 
-export default function EstadoTag({ estado }: { estado: "Vencido" | "Disponible" | "No emitido" }) {
-  const estadoClass = estado.toLowerCase().replace(" ", "-"); // "vencido", "disponible", "no-emitido"
-  return <span className={`estado-tag ${estadoClass}`}>{estado}</span>;
+export default function EstadoTag({ estado }: { estado: Estado }) {
+  return (
+    <span className={`estado-tag estado-${estado.toLowerCase().replace(" ", "-")}`}>
+      {estado}
+    </span>
+  );
 }
-

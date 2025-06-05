@@ -10,6 +10,7 @@ import Onboard from "../Pages/Onboard/Onboard";
 import Form from "../Pages/Form/Form";
 import SplashScreen from "../Pages/Splash/Splash";
 import Pagos from "../Pages/Payments/Pagos";
+import Factura from "../Pages/Factura/Factura";
 
 const routes = createHashRouter([
     {
@@ -57,6 +58,11 @@ const routes = createHashRouter([
         element: <Pagos/>
      
     },
+
+    {
+        path: "/factura",
+        element: <Factura/>
+    }
         
     ])
 

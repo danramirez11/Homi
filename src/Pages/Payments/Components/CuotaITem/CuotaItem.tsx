@@ -11,12 +11,16 @@ type Cuota = {
 export default function CuotaItem({ cuota }: { cuota: Cuota }) {
   return (
     <div className="cuota-item">
-      <input type="checkbox" className="cuota-checkbox" />
-      <span className="cuota-numero">#{cuota.numero}</span>
+      <label className="custom-checkbox">
+        <input type="checkbox" />
+        <span className="checkbox-style"></span>
+      </label>
+
+      <span className="cuota-numero">{cuota.numero}</span>
       <span className="cuota-fecha">{cuota.fecha}</span>
       <EstadoTag estado={cuota.estado} />
       <span className="cuota-saldo">{cuota.saldo}</span>
-      <button className="cuota-recibo" title="Ver recibo">🧾</button>
+      <img className= "cuota-recibo" src="src\assets\descargar-gris.svg" alt="" />
     </div>
   );
 }

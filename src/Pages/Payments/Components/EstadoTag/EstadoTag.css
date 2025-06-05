@@ -1,24 +1,28 @@
 .estado-tag {
   padding: 4px 8px;
-  border-radius: 12px;
-  font-size: 14px;
+  border-radius: 8px;
   font-weight: bold;
+  font-size: 12px;
   display: inline-block;
-  text-align: center;
+  width: 75px;
+    text-align: center;
 }
 
-/* Estados con color */
-.estado-tag.vencido {
-  background-color: #ffe5e5;
-  color: #cc0000;
+/* Estilos según estado */
+.estado-vencido {
+  background-color: #FCDFE1; /* rojo */
+  font-weight: 400;
+  color: #FF0000;
 }
 
-.estado-tag.disponible {
-  background-color: #e0f0ff;
-  color: #0077cc;
+.estado-disponible {
+  background-color: #deeaf9; /* verde */
+   font-weight: 400;
+   color: #599EFF;
 }
 
-.estado-tag.no-emitido {
-  background-color: #f2f2f2;
-  color: #999999;
+.estado-no-emitido {
+  background-color: #e6e5e5; /* naranja */
+   font-weight: 400;
+   color: rgb(91, 91, 91);
 }
