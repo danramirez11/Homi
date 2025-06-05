@@ -1,11 +1,12 @@
 import './CardChecked.css';
+import svg from "./../../../../assets/CheckCircle.svg"
 
 
 const CardChecked = () => {
   return (
     <div className="checked-card">
       <div className="checked-header">
-        <img src="src\assets\CheckCircle.svg" alt="Éxito" className="checked-icon-success" />
+        <img src={svg} alt="Éxito" className="checked-icon-success" />
         <h2 className="checked-success-text">¡Tu pago fue realizado con éxito!</h2>
       </div>
 

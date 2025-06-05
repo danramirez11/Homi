@@ -51,7 +51,7 @@ const Perfil = () => {
         <div id='profileContainer' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
             <div id="imgBanner" style={{
                 backgroundColor: '#ccc',
-                backgroundImage: 'https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/proyectos//PremiumF(portada).webp',
+                backgroundImage: "url('https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/proyectos//PremiumF(portada).webp')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}></div>

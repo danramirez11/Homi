@@ -1,11 +1,12 @@
 import React from 'react';
 import './PayChecked.css';
+import svg from './../../../../assets/CheckCircle.svg'
 
 const PayChecked: React.FC = () => {
   return (
     <div className="checked-notification-container">
       <div className="checked-icon">
-        <img src="src\assets\CheckCircle.svg" alt="" />
+        <img src={svg} alt="" />
       </div>
       <div className="checked-notification-content">
         <h3 className="checked-notification-title">Transacción exitosa</h3>
