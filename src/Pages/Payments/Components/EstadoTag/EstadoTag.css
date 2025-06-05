@@ -1,0 +1,34 @@
+.estado-tag {
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 12px;
+  display: inline-block;
+  width: 75px;
+    text-align: center;
+}
+
+/* Estilos según estado */
+.estado-vencido {
+  background-color: #FCDFE1; /* rojo */
+  font-weight: 400;
+  color: #FF0000;
+}
+
+.estado-disponible {
+  background-color: #deeaf9; /* verde */
+   font-weight: 400;
+   color: #599EFF;
+}
+
+.estado-no-emitido {
+  background-color: #e6e5e5; /* naranja */
+   font-weight: 400;
+   color: rgb(91, 91, 91);
+}
+
+.estado-pagado {
+  background-color: #e6f7e6; /* azul */
+   font-weight: 400;
+   color: #4CAF50;
+}

@@ -14,6 +14,10 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import Perfil from "../Pages/perfil/perfil";
 import PostVenta from "../Pages/Postventa/Postventa";
 import PostVentaform from "../Pages/Postventa_form/Postventa";
+import Pagos from "../Pages/Payments/Pagos";
+import Factura from "../Pages/Factura/Factura";
+import Checked from "../Pages/Checked/Checked";
+import PayDone from "../Pages/Pagos2/Pagos2";
 
 const routes = createHashRouter([
     {
@@ -77,7 +81,24 @@ const routes = createHashRouter([
     element: <Dashboard/>,
     },
     
+    {
+       path: "/pagos",
+        element: <Pagos/>
+     
+    },
+
+    {
+        path: "/factura",
+        element: <Factura/>
+    },
     
+    { path: "/checked",
+        element: <Checked/>
+    },
+
+    { path: "/paydone",
+        element: <PayDone/>
+    }
     ])
 
 export default routes;

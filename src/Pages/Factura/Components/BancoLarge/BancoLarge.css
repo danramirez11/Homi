@@ -1,0 +1,24 @@
+.banco-large-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 16px;
+  width: 870px;
+  margin-top: 20px;
+}
+
+.banco-large-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.banco-large-info-right p{
+    
+    font-size: 14px;
+    color: #6c757d;
+    margin: 10px 0;
+}

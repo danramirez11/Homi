@@ -1,0 +1,59 @@
+.resumen-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 24px;
+  width: fit-content;
+  max-width: 320px;
+  font-family: archivo,sans-serif;
+  background-color: #fff;
+}
+
+.resumen-title {
+  font-size: 18px;
+  margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.no-factura, .fecha-pago, .descripcion-pago{
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.resumen-separator {
+  margin: 16px 0;
+  border: none;
+  border-top: 1px dashed #ccc;
+}
+
+.resumen-section {
+  margin-bottom: 12px;
+}
+
+.resumen-label {
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #333;
+}
+
+.resumen-amount {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.resumen-intereses {
+  font-size: 14px;
+  color: #d32f2f;
+  margin-top: 8px;
+}
+
+.resumen-mora {
+  font-weight: bold;
+}
+
+.resumen-total {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
