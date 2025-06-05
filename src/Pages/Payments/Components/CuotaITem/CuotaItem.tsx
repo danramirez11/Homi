@@ -8,11 +8,20 @@ type Cuota = {
   saldo: string;
 };
 
-export default function CuotaItem({ cuota }: { cuota: Cuota }) {
+type Props = {
+  cuota: Cuota;
+  onSeleccionar: (checked: boolean) => void;
+};
+
+export default function CuotaItem({ cuota, onSeleccionar }: Props) {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onSeleccionar(e.target.checked);
+  };
+
   return (
     <div className="cuota-item">
       <label className="custom-checkbox">
-        <input type="checkbox" />
+        <input type="checkbox" onChange={handleChange} />
         <span className="checkbox-style"></span>
       </label>
 
@@ -20,8 +29,7 @@ export default function CuotaItem({ cuota }: { cuota: Cuota }) {
       <span className="cuota-fecha">{cuota.fecha}</span>
       <EstadoTag estado={cuota.estado} />
       <span className="cuota-saldo">{cuota.saldo}</span>
-      <img className= "cuota-recibo" src="src\assets\descargar-gris.svg" alt="" />
+      <img className="cuota-recibo" src="src/assets/descargar-gris.svg" alt="" />
     </div>
   );
 }
-
