@@ -23,7 +23,7 @@ const PaymentPendingNotification: React.FC = () => {
 
   return (
     <div className="notification-container">
-      <div className="icon">⏳</div>
+      <div className="icon"><img src="src\assets\time2.svg" alt="" /></div>
       <div className="notification-content">
         <h3 className="notification-title">Transacción pendiente de pago</h3>
         <p className="notification-message">

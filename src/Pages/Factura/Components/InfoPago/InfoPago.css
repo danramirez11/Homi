@@ -1,0 +1,23 @@
+.info-pago-card {
+  border-radius: 12px;
+  padding: 1rem;
+  font-family:archivo,sans-serif;
+  width: 450px;
+
+}
+
+.info-header {
+  background: #efefef;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 12px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-size: 15px;
+}
+
+.info-content p {
+  margin: 0.5rem 0;
+  font-size: 14px;
+  color: #666666;
+}

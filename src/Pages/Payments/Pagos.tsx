@@ -8,6 +8,8 @@ import Warning from "./Components/Warnings/Warning";
 import PaymentCard from "./Components/CardPago/CardPago";
 import { useState } from "react";
 
+
+
 const cuotas = [
   { numero: 1, fecha: "2025-06-01", estado: "Vencido" as const, saldo: "$12,375,222" },
   { numero: 2, fecha: "2025-07-01", estado: "Disponible" as const, saldo: "$12,375,222" },
@@ -24,7 +26,7 @@ const Pagos = () => {
     setCuotasSeleccionadas(checked ? 1 : 0);
   };
 
-  const total = 150000;
+  const total = cuotasSeleccionadas > 0 ? 12400222 : 0;
   const tieneIntereses = true;
 
   return (
@@ -56,10 +58,10 @@ const Pagos = () => {
             <p className="mostrar-mas">Mostrar más(19)</p>
 
             <PagoBar
-              cuotasSeleccionadas={cuotasSeleccionadas}
-              total={total}
-              tieneIntereses={tieneIntereses}
-            />
+  cuotasSeleccionadas={cuotasSeleccionadas}
+  total={total}
+  tieneIntereses={tieneIntereses}
+/>
           </div>
 
           <div className="Info-right">

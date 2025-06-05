@@ -5,19 +5,23 @@
   padding: 16px 24px;
   border-radius: 12px;
   transition: background-color 0.3s ease;
-  font-family: sans-serif;
-  width: 100%;
+  font-family: Archivo,sans-serif;
+  width: 860px;
   box-sizing: border-box;
   margin-top: 24px;
 }
 
+.intereses {
+  color: #f25c54; /* Puedes poner el color que quieras */
+  font-weight: 500;
+}
 .pago-bar.inactivo {
   background-color: #f4f4f4;
 }
 
 .pago-bar.activo {
-  background-color: #f4f4f4;
-  box-shadow: 0 0 0 2px #333 inset;
+  background-color: #f1f7ff;
+  
 }
 
 .pago-info p {
@@ -61,11 +65,17 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  font-family: Archivo, sans-serif;
+  font-weight: 700;
 }
 
 .pago-bar.activo .boton {
   background-color: #222;
   cursor: pointer;
+}
+
+.pago-bar.activo .boton:hover {
+  background-color: #444;
 }
 
 .boton:disabled {
