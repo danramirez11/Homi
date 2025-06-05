@@ -1,4 +1,4 @@
-import "./pagos.css";
+import "./Pagos.css";
 import { Text } from "../../theme/styledcomponents";
 import ProjectHeader from "./Components/ProjectHeader/ProjectHeader";
 import CuotaRow from "./Components/CuotaITem/CuotaItem";
