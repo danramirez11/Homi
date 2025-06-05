@@ -20,7 +20,7 @@
   height: 150px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  background-image: url('/ruta-a-tu-imagen.jpg');
+  background-image: url('./../../utils/Img/perfilBaner.png');
   background-size: cover;
   background-position: center;
   margin-bottom: -60px;
@@ -47,7 +47,8 @@
   border: 5px solid white; /* este es el reborde blanco */
   position: absolute;
   z-index: 2;
-  background-color: #ccc;
+  background-image: url('./../../utils/Img/perfil.png');
+  background-size: cover;
   margin-top: -5%;
 }
 
@@ -78,7 +79,7 @@
 
 /* Segunda sección con la info detallada */
 #Info2 {
-  width: 80%;
+  width: 90%;
   background: #f9f9f9;
   border-radius: 15px;
   padding: 30px;
