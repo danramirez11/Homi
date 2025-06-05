@@ -1,17 +1,17 @@
 import { createHashRouter } from "react-router-dom";
-import Onboarding from "../screens/Onboarding/Onboarding";
-//import SplashScreen from "../screens/Splash/Splash";
-import Form from "../Pages/Form/Form";
-import Results from "../Pages/Results/Results";
-
+import Simulv2 from "../Pages/Simulv2/Simulv2";
 import Detalle from "../Pages/Detalle/Detalle";
 import Simul from "../Pages/Simul/Simul";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
-import Dashboard from "../Pages/Dashboard/Dashboard";
-import ProjectDetail from "../Pages/projectDetail/ProjectDetail";
-import Perfil from "../Pages/perfil/perfil";
+import Home from "../Pages/Home/Home";
+import Onboard from "../Pages/Onboard/Onboard";
+import Form from "../Pages/Form/Form";
 import SplashScreen from "../Pages/Splash/Splash";
+import Results from "../Pages/Results/Results";
+import ProjectDetail from "../Pages/projectDetail/ProjectDetail";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import Perfil from "../Pages/perfil/perfil";
 
 const routes = createHashRouter([
     {
@@ -28,7 +28,7 @@ const routes = createHashRouter([
     },
     {
         path: "/onboarding",
-        element: <Onboarding/>,
+        element: <Onboard/>,
     },
     {
         path: "/form",
@@ -36,7 +36,7 @@ const routes = createHashRouter([
         },
     {
         path: "/results",
-        element: <Results></Results>,
+        element: <Results/>,
     },
     {
         path: "/profile",
@@ -49,6 +49,14 @@ const routes = createHashRouter([
     {
      path: "/simulation",   
      element: <Simul></Simul>,
+    },{
+        path: "/simulv2",
+        element: <Simulv2></Simulv2>,
+    }
+    
+    ,{
+     path: "/home",   
+     element: <Home/>,
     },
     {
     path: "/dashboard/project",

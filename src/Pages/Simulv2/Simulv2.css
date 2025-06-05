@@ -10,7 +10,7 @@
 .Simulcontainerv2{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center; 
     padding: 12px;
     

@@ -5,16 +5,14 @@ import { FaCircleChevronLeft } from "react-icons/fa6";
 import { Button, Text } from "../../theme/styledcomponents";
 import BotonRespuesta from "../../components/respuestasBotton/respuestaboton";
 import './Form.css';
-import { useNavigate } from 'react-router-dom';
 
 const Form = () => {
 
     const { goNextQuestion, goPreviousQuestion, selectOption, page, selectedOptions } = useForm();
-    const navigate = useNavigate();
 
     return (
         <section className="FormSect">
-            <Navjm onLoginClick={() => navigate('/login')}/>
+            <Navjm/>
             <div className='FormQuestions'>
                 <div className="FormProgress">
                     {preguntasFormulario.map((_, index) => (

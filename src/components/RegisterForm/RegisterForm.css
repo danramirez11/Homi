@@ -73,3 +73,27 @@
 .RegisterEnlaceText{
     cursor: pointer;
 }
+
+.inputPasswordWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.inputPasswordWrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.togglePassword {
+  position: absolute;
+  top: 60%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666666;
+  font-size: 1.2rem;
+}
+
+.togglePassword:hover {
+  color: #2C2B2B;
+}

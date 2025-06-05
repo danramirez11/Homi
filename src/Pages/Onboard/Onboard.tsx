@@ -16,7 +16,7 @@ const Onboard = () => {
         backgroundRepeat: 'no-repeat',
     }}
     >
-        <Navjm onLoginClick={() => navigate('/login')}/>
+        <Navjm/>
         <div className="OnboardInfo">
             <Text variant="display" color="white">¡Bienvenido!</Text>
             <div>

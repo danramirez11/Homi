@@ -1,13 +1,15 @@
-
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./Navjs.css";
 import { Button } from '../../theme/styledcomponents';
 
-export interface NavjmProps {
-  onLoginClick: () => void;
-}
+const Navjm: React.FC = () => {
+  const navigate = useNavigate();
 
-const Navjm: React.FC<NavjmProps> = ({ onLoginClick }) => {
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
+
   return (
     <nav className="Nav_jm">
       <div className="logo-container">
@@ -21,7 +23,12 @@ const Navjm: React.FC<NavjmProps> = ({ onLoginClick }) => {
       <div className="Info_container">
         <p className="Nav_text">Línea de servicio al cliente: (602) 3989898</p>
 
-        <Button variant='light' size='small' onClick={onLoginClick} className="Login_button">
+        <Button
+          variant='light'
+          size='small'
+          onClick={handleLoginClick}
+          className="Login_button"
+        >
           Iniciar sesión
         </Button>
 
@@ -54,7 +61,6 @@ const Navjm: React.FC<NavjmProps> = ({ onLoginClick }) => {
             d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z"
           />
         </svg>
-
       </div>
     </nav>
   );
