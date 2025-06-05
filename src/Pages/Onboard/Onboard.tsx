@@ -10,7 +10,7 @@ const Onboard = () => {
     return (
     <div className="OnboarScreen"
     style={{
-        backgroundImage: `url('/public/assets/OnboardingImg.webp')`,
+        backgroundImage: `url('https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/splash//OnboardingImg.webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'top',
         backgroundRepeat: 'no-repeat',

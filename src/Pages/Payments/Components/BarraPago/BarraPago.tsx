@@ -1,5 +1,6 @@
 import "./BarraPago.css";
 import { useNavigate } from "react-router-dom";
+import credit from './../../../../assets/CreditCard.svg'
 
 type PagoBarProps = {
   cuotasSeleccionadas: number;
@@ -43,7 +44,7 @@ const PagoBar = ({ cuotasSeleccionadas, total, tieneIntereses }: PagoBarProps) =
           disabled={cuotasSeleccionadas === 0}
           onClick={handleClick}
         >
-          <img src="src/assets/CreditCard.svg" alt="" />
+          <img src={credit} alt="" />
           Pagar
         </button>
       </div>

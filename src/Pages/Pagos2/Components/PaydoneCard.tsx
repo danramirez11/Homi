@@ -1,4 +1,5 @@
 import React from 'react';
+import svg from "./../../../assets/descargar-white.svg"
 
 
 const PaydoneCard: React.FC = () => {
@@ -53,7 +54,7 @@ const PaydoneCard: React.FC = () => {
       <h3 className='fecha-proxima'>{dueDate}</h3>
 
       <button className="account-button">
-        <img src="src/assets/descargar-white.svg" alt="" />
+        <img src={svg} alt="" />
         Estado de cuenta
       </button>
     </div>

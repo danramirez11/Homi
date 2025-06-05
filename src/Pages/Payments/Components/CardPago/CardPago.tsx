@@ -1,5 +1,6 @@
 import React from 'react';
 import './CardPago.css'; // Ensure this path is correct
+import svg from "./../../../../assets/descargar-white.svg"
 
 const PaymentCard: React.FC = () => {
   // Static Data
@@ -50,7 +51,7 @@ const PaymentCard: React.FC = () => {
       <h3 className='fecha-proxima'>{dueDate}</h3>
       
       <button className="account-button">
-        <img src="src\assets\descargar-white.svg" alt="" />Estado de cuenta</button>
+        <img src={svg} alt="" />Estado de cuenta</button>
     </div>
   );
 };

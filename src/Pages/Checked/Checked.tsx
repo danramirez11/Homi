@@ -5,6 +5,8 @@ import InfoPagoCard from "../Factura/Components/InfoPago/InfoPago";
 import "./Checked.css"; // Asegúrate de tener este archivo CSS para los estilos
 import PayChecked from "./Components/PayChecked/PayChecked";
 import CardChecked from "./Components/CardChecked/CardChecked";
+import svg from "./../../assets/CaretCircleLeft.svg"
+import svg2 from "./../../assets/ChatCircleDots.svg"
 
 const Checked = () => {
   const navigate = useNavigate();
@@ -18,7 +20,7 @@ const Checked = () => {
     <div className="mainContent">
       <div className="header">
         <div className="header-atras" onClick={() => navigate("/pagos/paydone")}>
-          <img src="src/assets/CaretCircleLeft.svg" className="button-atras" width={50} />
+          <img src={svg} className="button-atras" width={50} />
           <p>Volver al portal</p>
         </div>
         <h1>Descarga tu comprobante </h1>
@@ -49,7 +51,7 @@ const Checked = () => {
             <InfoPagoCard
               titulo="Información del Pagador"
               datos={[
-                { label: "Nombre", valor: "Valentina Ramírez López" },
+                { label: "Nombre", valor: "Melissa Ramírez López" },
                 { label: "Cédula", valor: "1.025.784.392" },
                 { label: "Email", valor: "valentina.ramirez@gmail.com" },
                 { label: "Teléfono", valor: "(602) 489 8000" },
@@ -58,7 +60,7 @@ const Checked = () => {
           </div>
 
           <div className="recommendation">
-            <img src="src/assets/ChatCircleDots.svg" alt="" />
+            <img src={svg2} alt="" />
             <p>
               Si tienes alguna inquietud sobre el proceso o tu estado de cuenta,
               por favor comunícate directamente con Jaramillo Mora a través del correo

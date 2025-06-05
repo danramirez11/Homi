@@ -2,6 +2,7 @@
 
 import React from "react";
 import "./ProjectHeader.css"; // Asegúrate que esta ruta sea correcta
+import { MdLocationOn } from "react-icons/md";
 
 interface ProjectHeaderProps {
   title: string;
@@ -16,7 +17,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ title, subtitle, imageUrl
       <div className="overlay"></div>
       <div className="text-container">
         <div className="location-proyecto">
-        <img src="src/assets/Map-Point.svg" alt="" width={16} height={16}/>
+        <MdLocationOn size={16} color="white"/>
         <p>Pance</p>
         </div>
         <h2>{title}</h2>

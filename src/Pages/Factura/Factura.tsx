@@ -7,6 +7,8 @@ import InfoPagoCard from "./Components/InfoPago/InfoPago";
 import "./Factura.css"; // Asegúrate de tener este archivo CSS para los estilos
 import ResumenPagoCard from "./Components/Resumen/Resumen";
 import SecurityConsejo from "./Components/SecureRec/SecureRec";
+import svg from "./../../assets/CaretCircleLeft.svg"
+import svg2 from "./../../assets/ChatCircleDots.svg"
 
 const Factura = () => {
   const navigate = useNavigate();
@@ -26,7 +28,7 @@ const Factura = () => {
     <div className="mainContent">
       <div className="header">
         <div className="header-atras" onClick={() => navigate("/pagos")}>
-          <img src="src/assets/CaretCircleLeft.svg" className="button-atras" width={50} />
+          <img src={svg} className="button-atras" width={50} />
           <p>Volver</p>
         </div>
         <h1>Revisa tu información de pago</h1>
@@ -57,7 +59,7 @@ const Factura = () => {
             <InfoPagoCard
               titulo="Información del Pagador"
               datos={[
-                { label: "Nombre", valor: "Valentina Ramírez López" },
+                { label: "Nombre", valor: "Melissa Ramírez López" },
                 { label: "Cédula", valor: "1.025.784.392" },
                 { label: "Email", valor: "valentina.ramirez@gmail.com" },
                 { label: "Teléfono", valor: "(602) 489 8000" },
@@ -66,7 +68,7 @@ const Factura = () => {
           </div>
 
           <div className="recommendation">
-            <img src="src/assets/ChatCircleDots.svg" alt="" />
+            <img src={svg2} alt="" />
             <p>
               Si tienes alguna inquietud sobre el proceso o tu estado de cuenta,
               por favor comunícate directamente con Jaramillo Mora a través del correo

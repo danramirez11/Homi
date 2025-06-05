@@ -1,5 +1,6 @@
 import EstadoTag from "../EstadoTag/EstadoTag";
 import "./CuotaItem.css";
+import svg from "./../../../../assets/descargar-gris.svg"
 
 type Cuota = {
   numero: number;
@@ -29,7 +30,7 @@ export default function CuotaItem({ cuota, onSeleccionar }: Props) {
       <span className="cuota-fecha">{cuota.fecha}</span>
       <EstadoTag estado={cuota.estado} />
       <span className="cuota-saldo">{cuota.saldo}</span>
-      <img className="cuota-recibo" src="src/assets/descargar-gris.svg" alt="" />
+      <img className="cuota-recibo" src={svg} alt="" />
     </div>
   );
 }

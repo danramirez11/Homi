@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './PendingNot.css';
+import svg from "./../../../../assets/time2.svg"
 
 const PaymentPendingNotification: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState(25 * 60); // 25 minutos en segundos
@@ -23,7 +24,7 @@ const PaymentPendingNotification: React.FC = () => {
 
   return (
     <div className="notification-container">
-      <div className="icon"><img src="src\assets\time2.svg" alt="" /></div>
+      <div className="icon"><img src={svg} alt="" /></div>
       <div className="notification-content">
         <h3 className="notification-title">Transacción pendiente de pago</h3>
         <p className="notification-message">
