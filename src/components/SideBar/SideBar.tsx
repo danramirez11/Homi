@@ -17,7 +17,7 @@ const SideBar: React.FC = () => {
       label: 'Mis proyectos',
     },
     {
-      path: '/perfil',
+      path: '/profile',
       icon: <FaUserAlt size={20} />,
       label: 'Perfil',
     },

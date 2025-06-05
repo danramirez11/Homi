@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react';
 import { Button, Text } from '../../theme/styledcomponents';
-import supabase from '../../Services/supabase';
+import supabase from '../../Services/Supabase';
 import './perfil.css';
 
 const Perfil = () => {
