@@ -1,0 +1,30 @@
+
+.infocontainer{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.infobottomcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.resultcardleft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 604px;
+    height: 100%;
+    gap: 20px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    
+}
+.topinfo1{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

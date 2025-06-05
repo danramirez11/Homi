@@ -1,0 +1,32 @@
+.alertaPostVenta {
+  display: flex;
+  padding: 0.625rem 0.8125rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8125rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  max-width: 650px; /* Controla el ancho máximo */
+  box-sizing: border-box;
+}
+
+.alertaTitulo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title_alert {
+
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.text_alert {
+
+  font-size: 0.875rem;
+  line-height: 1.3;
+  margin: 0;
+}

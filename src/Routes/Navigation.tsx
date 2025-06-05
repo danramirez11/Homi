@@ -1,7 +1,6 @@
 import { createHashRouter } from "react-router-dom";
 import Simulv2 from "../Pages/Simulv2/Simulv2";
 import Detalle from "../Pages/Detalle/Detalle";
-import Simul from "../Pages/Simul/Simul";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Home from "../Pages/Home/Home";
@@ -18,6 +17,7 @@ import Pagos from "../Pages/Payments/Pagos";
 import Factura from "../Pages/Factura/Factura";
 import Checked from "../Pages/Checked/Checked";
 import PayDone from "../Pages/Pagos2/Pagos2";
+import Simresults from "../Pages/Simresults/Simresults";
 
 const routes = createHashRouter([
     {
@@ -54,7 +54,7 @@ const routes = createHashRouter([
     },
     {
      path: "/simulation",   
-     element: <Simul></Simul>,
+     element: <Simulv2></Simulv2>,
     },
     {
      path: "/postventa",   
@@ -63,10 +63,7 @@ const routes = createHashRouter([
     {
         path: "/postventaform",   
         element: <PostVentaform></PostVentaform>,
-       },{
-        path: "/simulv2",
-        element: <Simulv2></Simulv2>,
-    }
+       }
     
     ,{
      path: "/home",   

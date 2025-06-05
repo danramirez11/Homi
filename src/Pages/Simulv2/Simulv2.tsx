@@ -2,14 +2,16 @@ import CardSimul from "./Components/CardSimul/CardSimul";
 import { Button, Text } from "../../theme/styledcomponents";
 import "./Simulv2.css"
 import InputsSimul from "./Components/InputsSimul/InputsSimul";
-import { useState } from "react";
+import { createElement, useState } from "react";
 import proyect from "./data/data";
 import Navjm from "../../components/Navjm/Nav";
 import { useNavigate } from "react-router-dom";
+import Disclaimer from "./Components/Disclaimer/Discalimer";
+import Headersimul from "./Components/Headersimul/Headersimul";
 const Simulv2 = ()=>{
 
     // Get all input and select values from the form using DOM by id
-    
+        const inputscontainer = document.getElementById("inputscontainer")
         const proyectmodelinput = (document.getElementById("proyectModel") as HTMLSelectElement)?.value
         const initialMonthsinput = (document.getElementById("initialMonths") as HTMLSelectElement)?.value
         const yearsFinalinput = (document.getElementById("yearsFinal") as HTMLSelectElement)?.value
@@ -27,19 +29,32 @@ const [simulationData, setSimulationData]  = useState({
     cesantias: 0,
     incomes: 0,
     expenses: 0,
-    payValue: 0
+    payValue: 0,
+    price: 0,
 })
 const navigate = useNavigate()
 
+const [showErrorDisclaimer, setShowErrorDisclaimer] = useState(false);
+
 const handleSubmit = ()=>{
-    const newData = {
+
+    const budgetaviable = Number(incomeSinput) - Number(expensesinput);
+    const Initialvalue = proyect.Types[proyectseleced].price * 0.2;
+    const monthpaymentinitial = Initialvalue / Number(initialMonthsinput);
+    if (budgetaviable < monthpaymentinitial || Number(payvalueinput) < monthpaymentinitial) {
+        setShowErrorDisclaimer(true);
+       
+    } else {
+        setShowErrorDisclaimer(false);
+        const newData = {
         proyectModel: proyectmodelinput,
         initialMonths: Number(initialMonthsinput),
         yearsFinal: Number(yearsFinalinput),
         cesantias: Number(cesantiasinput),
         incomes: Number(incomeSinput),
         expenses: Number(expensesinput),
-        payValue: Number(payvalueinput)
+        payValue: Number(payvalueinput),
+        price: proyect.Types[proyectseleced].price
     };
     setSimulationData(newData);
     console.log("Datos de la simulación:", newData);
@@ -49,6 +64,7 @@ const handleSubmit = ()=>{
             simulationData: newData
         }
     })
+    }
 }
 
 const handlechange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -71,7 +87,7 @@ const handleselected = (event: React.MouseEvent<HTMLDivElement>) => {
                 ))}
                 </select>
             <Text variant="bodyRegular">Valor del inmueble</Text>
-            { proyect.Types[proyectseleced] && <Text variant="sectionTitle">{proyect.Types[proyectseleced].price}</Text> }
+            { proyect.Types[proyectseleced] && <Text variant="sectionTitle">{new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(proyect.Types[proyectseleced].price)}</Text> }
                 <Text variant="bodyRegular">Plazo para pagar la cuota inicial</Text>
                 <select name="initialMonths" id="initialMonths">
 
@@ -80,7 +96,7 @@ const handleselected = (event: React.MouseEvent<HTMLDivElement>) => {
                     const entrega = new Date(proyect.fecha_entrega);
                     const months =
                         (entrega.getFullYear() - today.getFullYear()) * 12 +
-                        (entrega.getMonth() - today.getMonth());
+                        (entrega.getMonth() - today.getMonth()) + 1;
                     return Array.from({ length: months > 0 ? months : 0 }, (_, i) => (
                         <option key={i + 1} value={i + 1}>{i + 1} meses</option>
                     ));
@@ -111,7 +127,7 @@ const handleselected = (event: React.MouseEvent<HTMLDivElement>) => {
                 ))}
                 </select>
             <Text variant="bodyRegular">Valor del inmueble</Text>
-           { proyect.Types[proyectseleced] && <Text variant="sectionTitle">{proyect.Types[proyectseleced].price}</Text> }
+           { proyect.Types[proyectseleced] && <Text variant="sectionTitle">{new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(proyect.Types[proyectseleced].price)}</Text> }
                 <InputsSimul type="number" label="Ingresos mensuales" id="incomes"></InputsSimul>
                 <InputsSimul type="number" label="Gastos mensuales" id="expenses"></InputsSimul>
                 <Text variant="bodyRegular">Plazo para pagar la cuota inicial</Text>
@@ -121,7 +137,7 @@ const handleselected = (event: React.MouseEvent<HTMLDivElement>) => {
                     const entrega = new Date(proyect.fecha_entrega);
                     const months =
                         (entrega.getFullYear() - today.getFullYear()) * 12 +
-                        (entrega.getMonth() - today.getMonth());
+                        (entrega.getMonth() - today.getMonth()) + 1;
                     return Array.from({ length: months > 0 ? months : 0 }, (_, i) => (
                         <option key={i + 1} value={i + 1}>{i + 1} meses</option>
                     ));
@@ -151,17 +167,17 @@ const handleselected = (event: React.MouseEvent<HTMLDivElement>) => {
                 ))}
                 </select>
             <Text variant="bodyRegular">Valor del inmueble</Text>
-            { proyect.Types[proyectseleced] && <Text variant="sectionTitle">{proyect.Types[proyectseleced].price}</Text> }
+            { proyect.Types[proyectseleced] && <Text variant="sectionTitle">{new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(proyect.Types[proyectseleced].price)}</Text> }
             
             <InputsSimul type="number" label="¿Cuánto podrías pagar al mes?" id="payValue"></InputsSimul>
             <Text variant="bodyRegular">Plazo para pagar la cuota inicial</Text>
             <select name="initialMonths" id="initialMonths">
-                {proyect.Types[proyectseleced] && (() => {
+               {proyect.Types[proyectseleced] && (() => {
                     const today = new Date();
                     const entrega = new Date(proyect.fecha_entrega);
                     const months =
                         (entrega.getFullYear() - today.getFullYear()) * 12 +
-                        (entrega.getMonth() - today.getMonth());
+                        (entrega.getMonth() - today.getMonth()) + 1;
                     return Array.from({ length: months > 0 ? months : 0 }, (_, i) => (
                         <option key={i + 1} value={i + 1}>{i + 1} meses</option>
                     ));
@@ -185,12 +201,16 @@ const handleselected = (event: React.MouseEvent<HTMLDivElement>) => {
     // Use the correct ButtonVariant type values, e.g., "light" or "dark"
 const [buttonState, setButtonState] = useState<"light" | "dark">("light");
 const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-
+const disclaimers = document.getElementById("disclaimer")
 const enablesubmit = () => {
     const yearsFinal = (document.getElementById("yearsFinal") as HTMLSelectElement);
     if (yearsFinal && yearsFinal.value !== "none") {
         setButtonState("dark");
         setIsButtonDisabled(false);
+        if (disclaimers) {
+            disclaimers.style.display = "block";
+        }
+        
     } else {
         setButtonState("light");
         setIsButtonDisabled(true);
@@ -198,23 +218,43 @@ const enablesubmit = () => {
 };
 return (
     <>
-    <Navjm></Navjm>
+    <Headersimul></Headersimul>
         <section className="Simulcontainerv2">
         <div className="CardSimulContainer">
         <Text variant="sectionTitle">Elige cómo quieres hacer tu simulacion</Text>
-        <CardSimul functionclicked={(e) => handleselected(e)} Cardbody="Calcula tu cuota según tus ingresos individuales o con tu grupo familiar" Cardtitle="Valor del inmueble" cardId="0"></CardSimul>
-        <CardSimul functionclicked={(e) => handleselected(e)} Cardbody="Calcula tu cuota según el valor que puedas pagar mensualmente" Cardtitle="Valor a tu medida" cardId="1"></CardSimul>
-        <CardSimul functionclicked={(e) => handleselected(e)} Cardbody="Calcula tu cuota según tus ingresos individuales o con tu grupo familiar" Cardtitle="Valor del inmueble" cardId="2"></CardSimul>
+        <CardSimul functionclicked={(e) => handleselected(e)} Cardbody="Mira cómo se ajusta este proyecto a tu presupuesto." Cardtitle="Valor del inmueble" cardId="0"></CardSimul>
+        <CardSimul functionclicked={(e) => handleselected(e)} Cardbody="Calcula una cuota estimada según tus ingresos al mes." Cardtitle="Tus ingresos" cardId="1"></CardSimul>
+        <CardSimul functionclicked={(e) => handleselected(e)} Cardbody="Simula un plan según lo que puedes pagar al mes." Cardtitle="Valor de la cuota" cardId="2"></CardSimul>
         </div>
         <div className="formSimulv2">
-        <img src="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/proyectos//PremiumF(portada).webp" alt="" />
-            <div className="inputscontainer">
+        <div className="upperimage">
+            <div className="leftsidetop">
+            <div className="infoContainer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: "8px", verticalAlign: "middle" }}> <path d="M21 10.5c0 7-9 12-9 12s-9-5-9-12a9 9 0 1 1 18 0z" />
+                <circle cx="12" cy="10.5" r="3" />
+            </svg>
+            <Text variant='inputText'color="#FFFFFF">{proyect.ubicacion}</Text>
+            </div>
+            
+            <Text variant='cardSubtitle' color="#FFFFFF">{proyect.nombre}</Text>
+            </div>
+            <div className="rightsidetop">
+            <img src="https://ahtgnfecribejsxwcqqv.supabase.co/storage/v1/object/public/proyectos//PremiumF(logo).webp" alt="" />    
+            </div>
+        </div>  
+            <div className="inputscontainer" id="inputscontainer">
 
             <Text variant="sectionTitle">Datos de tu simulación</Text>
             {handleform()}   
 
            
-            <Button variant={buttonState} size='medium' id="submitbutton" disabled={isButtonDisabled} onClick={handleSubmit}>Submit</Button>
+            <Button variant={buttonState} size='medium' id="submitbutton" disabled={isButtonDisabled} onClick={handleSubmit}>Submit</Button>          
+            <Disclaimer bgcolor="#E9F1FC" color="#102491" title="Esta es una simulación referencial" 
+            description="Este simulador no representa una cotización real ni reemplaza un estudio de crédito. Las cifras mostradas son estimaciones y no incluyen tasas de interés anuales, gastos notariales, de registro ni otros costos asociados a un crédito hipotecario."></Disclaimer>
+            {showErrorDisclaimer === true && (
+                <Disclaimer bgcolor="#FDEDED" color="#B00020" title="Ups, por ahora tu capacidad de endeudamiento no alcanza para este proyecto." 
+                description="Lo sentimos, no cumples con la capacidad de endeudamiento mínima para este proyecto.Pero no te preocupes, aún tienes opciones: Puedes sumar tus ingresos con los de tu grupo familiar, o también podemos ayudarte a encontrar un proyecto que se ajuste mejor a tu capacidad de pago."></Disclaimer>
+            )}
             </div>
         </div>
         </section>
@@ -222,4 +262,4 @@ return (
     );
 }
 
-export default Simulv2;
+export default Simulv2
