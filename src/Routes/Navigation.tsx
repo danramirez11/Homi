@@ -10,11 +10,13 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import ProjectDetail from "../Pages/projectDetail/ProjectDetail";
+import Perfil from "../Pages/perfil/perfil";
+import SplashScreen from "../Pages/Splash/Splash";
 
 const routes = createHashRouter([
     {
         path: "/",
-        element: <Dashboard/>,
+        element: <SplashScreen/>,
     },
     {
         path: "/login",
@@ -35,6 +37,10 @@ const routes = createHashRouter([
     {
         path: "/results",
         element: <Results></Results>,
+    },
+    {
+        path: "/profile",
+        element: <Perfil></Perfil>,
     },
     {
         path: "/detail",

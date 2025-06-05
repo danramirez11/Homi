@@ -1,0 +1,15 @@
+.CardSimul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 413px;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid #102491;
+}
+.CardSimul img{
+    filter: invert(1);
+    width: 40px;
+    
+}

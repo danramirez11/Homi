@@ -1,7 +1,12 @@
-import supabase from "./supabase";
+import supabase from "./Supabase";
 
 export const getProjects = async (homeType: string) => {
-    try {
+  if (!supabase) {
+    console.warn("❌ Supabase no disponible: getProjects cancelado.");
+    return [];
+  }
+
+  try {
     const { data, error } = await supabase
         .from('proyectos')
         .select('*')
@@ -11,26 +16,33 @@ export const getProjects = async (homeType: string) => {
             return [];
         }
 
-        return data;
-    } catch (error) {
-        console.error("Error fetching projects:", error);
-    }
-}
+    return data;
+  } catch (error) {
+    console.error("Error fetching projects:", error);
+    return [];
+  }
+};
 
 export const getResults = async (homeType: string) => {
-    try {
-        const { data, error } = await supabase
-        .from('resultados')
-        .select('*')
-        .eq('tipo_vivienda', homeType);
-        if (error) {
-            console.error("Error fetching results:", error);
-            return [];
-        }
+  if (!supabase) {
+    console.warn("❌ Supabase no disponible: getResults cancelado.");
+    return [];
+  }
 
-        return data;
-    } catch (error) {
-        console.error("Error fetching results:", error);
-        
+  try {
+    const { data, error } = await supabase
+      .from("resultados")
+      .select("*")
+      .eq("tipo_vivienda", homeType);
+
+    if (error) {
+      console.error("Error fetching results:", error);
+      return [];
     }
-}
+
+    return data;
+  } catch (error) {
+    console.error("Error fetching results:", error);
+    return [];
+  }
+};

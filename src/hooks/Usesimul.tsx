@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import { useLocation, useSearchParams } from "react-router-dom";
-import supabase from "../Services/supabase";
+import supabase from "../Services/Supabase";
 
  export const Usesimul = ()=>{
     const titleproyect = document.getElementById("title")

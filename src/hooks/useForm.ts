@@ -67,8 +67,14 @@ const useForm = () => {
         }
     }
 
+    const goPreviousQuestion = () => {
+        if (page > 0) {
+            setPage((prev) => prev - 1);
+        }
+    }
 
-    return { goNextQuestion, selectOption, page, selectedOptions}
+
+    return { goNextQuestion, selectOption, page, selectedOptions, goPreviousQuestion}
 }
 
 export default useForm;

@@ -14,7 +14,7 @@ const Simul = ()=> {
     const navigate = useNavigate()
     return (
         <div>
-            <Navjm onLoginClick={() =>{}}></Navjm>
+            <Navjm onLoginClick={() => navigate('/login')}></Navjm>
             <section className='upper_section'>
             <div className='Simul_title'>
                 <div className='button_back'>
