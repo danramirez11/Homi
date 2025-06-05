@@ -3,6 +3,7 @@ import { Text, Input } from '../../theme/styledcomponents';
 import "./FormPostVenta.css"
 
 interface Props {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   formValues: any;
   handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }

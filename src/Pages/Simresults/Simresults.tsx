@@ -5,7 +5,6 @@ import { BsCircleFill } from "react-icons/bs"
 import Navjm from "../../components/Navjm/Nav"
 import ResultCard from "./Components/CardResult"
 import { useEffect, useState } from "react"
-import Headersimul from "../Simulv2/Components/Headersimul/Headersimul"
 interface SimulData {
     budget: number;
     proyectModel: string;
@@ -86,7 +85,7 @@ const Simresults = () =>{
 
     return ( 
         <>
-        <Headersimul></Headersimul>
+        <Navjm></Navjm>
         <section className="simresultscontainer">
         <Text variant='bodyRegular'>Resultados de tu simulacion</Text>
         <div className="Resumecontainer">

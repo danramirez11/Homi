@@ -2,16 +2,14 @@ import CardSimul from "./Components/CardSimul/CardSimul";
 import { Button, Text } from "../../theme/styledcomponents";
 import "./Simulv2.css"
 import InputsSimul from "./Components/InputsSimul/InputsSimul";
-import { createElement, useState } from "react";
+import { useState } from "react";
 import proyect from "./data/data";
 import Navjm from "../../components/Navjm/Nav";
 import { useNavigate } from "react-router-dom";
 import Disclaimer from "./Components/Disclaimer/Discalimer";
-import Headersimul from "./Components/Headersimul/Headersimul";
 const Simulv2 = ()=>{
 
     // Get all input and select values from the form using DOM by id
-        const inputscontainer = document.getElementById("inputscontainer")
         const proyectmodelinput = (document.getElementById("proyectModel") as HTMLSelectElement)?.value
         const initialMonthsinput = (document.getElementById("initialMonths") as HTMLSelectElement)?.value
         const yearsFinalinput = (document.getElementById("yearsFinal") as HTMLSelectElement)?.value
@@ -22,6 +20,7 @@ const Simulv2 = ()=>{
      
 const [cardSelected, setCardSelected] = useState(0)
 const [proyectseleced, setproyectSelected] = useState(0)
+ 
 const [simulationData, setSimulationData]  = useState({
     proyectModel: "",
     initialMonths: 0,
@@ -33,6 +32,8 @@ const [simulationData, setSimulationData]  = useState({
     price: 0,
 })
 const navigate = useNavigate()
+
+console.log("Datos del proyecto:", simulationData);
 
 const [showErrorDisclaimer, setShowErrorDisclaimer] = useState(false);
 
@@ -64,6 +65,7 @@ const handleSubmit = ()=>{
             simulationData: newData
         }
     })
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 }
 
@@ -218,7 +220,7 @@ const enablesubmit = () => {
 };
 return (
     <>
-    <Headersimul></Headersimul>
+    <Navjm></Navjm>
         <section className="Simulcontainerv2">
         <div className="CardSimulContainer">
         <Text variant="sectionTitle">Elige cómo quieres hacer tu simulacion</Text>

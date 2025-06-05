@@ -57,6 +57,10 @@ const routes = createHashRouter([
      element: <Simulv2></Simulv2>,
     },
     {
+        path: "/simresults",
+        element: <Simresults></Simresults>
+    },
+    {
      path: "/postventa",   
      element: <PostVenta></PostVenta>,
     },

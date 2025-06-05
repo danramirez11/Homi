@@ -23,7 +23,7 @@ const CaptchaSection: React.FC<Props> = ({ captchaValue, handleChange, onSubmit 
 
       <Text variant="inputText" className="legal-text">
       Autorizo de manera voluntaria, previa, expresa e informada a Jaramillo Mora Constructora S.A. para registrar los datos que he suministrado, con fines comerciales, mercadeo de los productos y/o servicios, o gestionar cualquier petición, queja o reclamo. En consecuencia declaro: i.Que esta información será tratada de acuerdo a lo dispuesto en la Ley 1581 de 2012 relativa a la protección de datos personales, ii.Que puedo ejercer en cualquier momento los derechos que tengo de acceso, rectificación, supresión y prueba de autorización sobre el tratamiento que se ha dado a mis datos personales.
-      Para conocer más sobre nuestra política de tratamiento de la información personal dar  <a href="#">Clic Aquí</a>.
+      Para conocer más sobre nuestra política de tratamiento de la información personal dar <a href="#">Clic Aquí</a>.
       </Text>
       <Button variant="dark" size="medium" weight="regular" className="submit-button" onClick={onSubmit} >
         Enviar

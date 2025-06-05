@@ -57,6 +57,7 @@ export const usePostVentaForm = () => {
       navigate(-1);
     } catch (error) {
       setMensaje('Error al enviar el formulario. Intenta más tarde.');
+      console.error('Error al enviar el formulario:', error);
     }
   };
 
