@@ -7,6 +7,8 @@ import { Text } from '../../theme/styledcomponents';
 import AlertaPostVenta from '../../components/AlertaPostVenta/AlertaPostVenta';
 import Actualizaciones from '../../components/Actualizaciones/Actualizaciones';
 import "./Postventa.css";
+import SideBar from '../../components/SideBar/SideBar';
+import Spinner from '../../components/Spinner/Spiner';
 
 const PostVenta: React.FC = () => {
   const [data, setData] = useState<EstadoObraItem[]>([]);
@@ -23,16 +25,26 @@ const PostVenta: React.FC = () => {
   }, []);
   
 
-  if (loading) return <p>Cargando...</p>;
   const dataReciente = [...data]
   .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
   .slice(0, 5);
   
 
   return (
-    
+    <div className='perfilContainer'> 
+    <div className="side-bar">
+      <SideBar />
+      </div>
 
-    <div className="postventa-container">
+      
+
+    <div className="postventa-container" style={{ marginLeft: '250px' }}>
+      {
+        loading ? 
+        <div className='loadingSpinner-postventa'>
+        <Spinner/>
+        </div> : 
+        <>
       <Text variant='sectionTitle' className='titlePostVenta'>Postventa</Text>
       <HeaderPostVenta />
       
@@ -48,6 +60,11 @@ const PostVenta: React.FC = () => {
           <Actualizaciones />
         </div>
       </div>
+      </>
+      }
+
+    </div>
+    
     </div>
   );
 };

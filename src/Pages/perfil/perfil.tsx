@@ -34,9 +34,11 @@ const Perfil = () => {
 
   return (
     <div className='perfilContainer'>
-    <SideBar />
+    <div className="side-bar">
+      <SideBar />
+      </div>
     
-   <div id='profileWrapper'>
+   <div id='profileWrapper' style={{ marginLeft: '250px' }}>
     {
       loading ? (
         <>
@@ -56,7 +58,7 @@ const Perfil = () => {
 
 
         <section id='info'>
-           <img id="PerfilPhoto" src="./../../utils/Img/perfil.png" alt="" />
+           <img id="PerfilPhoto" src="https://i.pinimg.com/736x/2b/68/81/2b68814f41c568b4136df73ff674062b.jpg" alt="" />
           <div>
             <Text  id='nombre' variant="sectionTitle">{userData.full_name}</Text>
             <Text  id='Identification' variant="bodyRegular">cc. {userData.document_id}</Text>
