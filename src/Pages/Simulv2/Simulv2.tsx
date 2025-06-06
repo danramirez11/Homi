@@ -37,17 +37,29 @@ console.log("Datos del proyecto:", simulationData);
 
 const [showErrorDisclaimer, setShowErrorDisclaimer] = useState(false);
 
-const handleSubmit = ()=>{
+const handleSubmit = () => {
+    
+    const parseNumber = (value: string | undefined | null) => {
+        if (!value || value.trim() === "") return 0;
+        const cleaned = value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); 
+        return Number(cleaned) || 0;
+    };
 
-    const budgetaviable = Number(incomeSinput) - Number(expensesinput);
+    const budgetaviable = parseNumber(incomeSinput) - parseNumber(expensesinput);
     const Initialvalue = proyect.Types[proyectseleced].price * 0.2;
-    const monthpaymentinitial = Initialvalue / Number(initialMonthsinput);
-    if (budgetaviable < monthpaymentinitial || Number(payvalueinput) < monthpaymentinitial) {
+    const monthpaymentinitial = Initialvalue / parseNumber(initialMonthsinput);
+
+    if (
+        cardSelected !== 0 &&
+        ((budgetaviable < monthpaymentinitial || Number(payvalueinput) < monthpaymentinitial)
+        && !showErrorDisclaimer)
+    ) {
         setShowErrorDisclaimer(true);
-       
-    } else {
-        setShowErrorDisclaimer(false);
-        const newData = {
+        return;
+    }
+
+    setShowErrorDisclaimer(false);
+    const newData = {
         proyectModel: proyectmodelinput,
         initialMonths: Number(initialMonthsinput),
         yearsFinal: Number(yearsFinalinput),
@@ -60,14 +72,13 @@ const handleSubmit = ()=>{
     setSimulationData(newData);
     console.log("Datos de la simulación:", newData);
     navigate("/simresults", {
-        state:{
+        state: {
             proyectData: proyect,
             simulationData: newData
         }
-    })
+    });
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-}
+};
 
 const handlechange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedType = proyect.Types.findIndex(type => type.type === e.target.value);
@@ -251,10 +262,10 @@ return (
 
            
             <Button variant={buttonState} size='medium' id="submitbutton" disabled={isButtonDisabled} onClick={handleSubmit}>Submit</Button>          
-            <Disclaimer bgcolor="#E9F1FC" color="#102491" title="Esta es una simulación referencial" 
+            <Disclaimer bgcolor="#E9F1FC" colorText="#0000F1" title="Esta es una simulación referencial" 
             description="Este simulador no representa una cotización real ni reemplaza un estudio de crédito. Las cifras mostradas son estimaciones y no incluyen tasas de interés anuales, gastos notariales, de registro ni otros costos asociados a un crédito hipotecario."></Disclaimer>
             {showErrorDisclaimer === true && (
-                <Disclaimer bgcolor="#FDEDED" color="#B00020" title="Ups, por ahora tu capacidad de endeudamiento no alcanza para este proyecto." 
+                <Disclaimer bgcolor="#FDEDED" colorText="#B00020" title="Ups, por ahora tu capacidad de endeudamiento no alcanza para este proyecto." 
                 description="Lo sentimos, no cumples con la capacidad de endeudamiento mínima para este proyecto.Pero no te preocupes, aún tienes opciones: Puedes sumar tus ingresos con los de tu grupo familiar, o también podemos ayudarte a encontrar un proyecto que se ajuste mejor a tu capacidad de pago."></Disclaimer>
             )}
             </div>
