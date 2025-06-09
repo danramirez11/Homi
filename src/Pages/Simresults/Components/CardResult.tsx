@@ -32,7 +32,7 @@ const ResultCard = ({leftcolor, value, months, years, fee,percent} : {leftcolor:
                             <Text variant='captionRegular'>Sin interes</Text>
                         </div>
                     </div>
-                    <Disclaimer bgcolor="#E9F1FC" color="#102491" title="Proyección estimada" 
+                    <Disclaimer bgcolor="#E9F1FC" colorText="#102491" title="Proyección estimada" 
             description="Este simulador no representa una cotización real ni reemplaza un estudio de crédito. Las cifras mostradas son estimaciones y no incluyen tasas de interés anuales, gastos notariales, de registro ni otros costos asociados a un crédito hipotecario. Para conocer el valor real de las cuotas y condiciones del financiamiento, debes hacer el trámite directamente con una entidad financiera."></Disclaimer>
                     </div>
         
