@@ -57,7 +57,7 @@ const Form = () => {
                 </div>
             </div>
             <div className="OnboardSub">
-                <Text variant="captionRegular" color="#2C2B2B">Power by Homi</Text>
+                <Text variant="captionRegular" color="#2C2B2B">Powered by Homi</Text>
             </div>
         </section>
     );

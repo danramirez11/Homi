@@ -8,7 +8,6 @@
 .reminder-box {
   display: flex;
   gap: 15px;
-  background-color: #E9E9E9;
   padding: 10px;
   border-radius: 12px;
   align-items: center;

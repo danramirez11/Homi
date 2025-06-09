@@ -261,7 +261,7 @@ return (
             {handleform()}   
 
            
-            <Button variant={buttonState} size='medium' id="submitbutton" disabled={isButtonDisabled} onClick={handleSubmit}>Submit</Button>          
+            <Button variant={buttonState} size='medium' id="submitbutton" disabled={isButtonDisabled} onClick={handleSubmit}>Confirmar</Button>          
             <Disclaimer bgcolor="#E9F1FC" colorText="#0000F1" title="Esta es una simulación referencial" 
             description="Este simulador no representa una cotización real ni reemplaza un estudio de crédito. Las cifras mostradas son estimaciones y no incluyen tasas de interés anuales, gastos notariales, de registro ni otros costos asociados a un crédito hipotecario."></Disclaimer>
             {showErrorDisclaimer === true && (

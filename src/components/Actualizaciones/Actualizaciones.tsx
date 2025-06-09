@@ -63,7 +63,7 @@ const proyectosActualizados = proyectos.filter(item =>
                 >
                   Proyecto {item.proyecto}
                 </Text>
-                <Text className="noti_fecha" variant="captionRegular">
+                <Text className="noti_fecha" variant="captionRegular" color='gray'>
                   {new Date(item.updated_at).toLocaleDateString('es-ES', {
                     year: 'numeric',
                     month: 'short',
