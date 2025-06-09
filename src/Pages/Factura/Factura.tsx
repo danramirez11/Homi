@@ -9,10 +9,13 @@ import ResumenPagoCard from "./Components/Resumen/Resumen";
 import SecurityConsejo from "./Components/SecureRec/SecureRec";
 import svg from "./../../assets/CaretCircleLeft.svg"
 import svg2 from "./../../assets/ChatCircleDots.svg"
+import { useSelector } from "react-redux";
+import type { storeType } from "../../store/store";
 
 const Factura = () => {
   const navigate = useNavigate();
   const [confirmado, setConfirmado] = useState(false);
+  const user = useSelector((state: storeType) => state.user.user)
 
   const handleCheckboxChange = () => {
     setConfirmado(!confirmado);
@@ -59,10 +62,10 @@ const Factura = () => {
             <InfoPagoCard
               titulo="Información del Pagador"
               datos={[
-                { label: "Nombre", valor: "Melissa Ramírez López" },
-                { label: "Cédula", valor: "1.025.784.392" },
-                { label: "Email", valor: "valentina.ramirez@gmail.com" },
-                { label: "Teléfono", valor: "(602) 489 8000" },
+                { label: "Nombre", valor: user.full_name },
+                { label: "Cédula", valor: user.document_id.toString() },
+                { label: "Email", valor: user.email },
+                { label: "Teléfono", valor: "No disponible" },
               ]}
             />
           </div>

@@ -4,19 +4,23 @@ import { Text } from '../../theme/styledcomponents';
 import { FiSearch } from 'react-icons/fi';
 import { FiSettings, FiBell } from 'react-icons/fi';
 import './NavBar.css';
+import { useSelector } from 'react-redux';
+import type { storeType } from '../../store/store';
 
 const NavBar: React.FC = () => {
   const location = useLocation();
   const showGreeting = location.pathname === '/dashboard';
+  const user = useSelector((state: storeType) => state.user.user);
 
-  const userName = 'Melissa'; // Temporalmente
+
+  const userName = user.full_name; 
 
   return (
     <div className="navbar">
       <div className="navbar-left">
         {showGreeting && (
           <Text variant="headlineBold" color="#2C2C2C">
-            Bienvenida de nuevo, {userName}
+            Te damos la bienvenida, {userName}
           </Text>
         )}
       </div>
@@ -37,7 +41,7 @@ const NavBar: React.FC = () => {
           <FiBell size={20} />
         </div>
         <img
-          src="https://i.pinimg.com/736x/2b/68/81/2b68814f41c568b4136df73ff674062b.jpg"
+          src="https://i.pinimg.com/1200x/29/b8/d2/29b8d250380266eb04be05fe21ef19a7.jpg"
           alt="User"
           className="user-avatar"
         />

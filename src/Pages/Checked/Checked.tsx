@@ -7,9 +7,12 @@ import PayChecked from "./Components/PayChecked/PayChecked";
 import CardChecked from "./Components/CardChecked/CardChecked";
 import svg from "./../../assets/CaretCircleLeft.svg"
 import svg2 from "./../../assets/ChatCircleDots.svg"
+import { useSelector } from "react-redux";
+import type { storeType } from "../../store/store";
 
 const Checked = () => {
   const navigate = useNavigate();
+  const user = useSelector((state: storeType) => state.user.user);
 
   const handleDownload = () => {
     // Aquí puedes implementar la lógica real de descarga del comprobante
@@ -51,10 +54,10 @@ const Checked = () => {
             <InfoPagoCard
               titulo="Información del Pagador"
               datos={[
-                { label: "Nombre", valor: "Melissa Ramírez López" },
-                { label: "Cédula", valor: "1.025.784.392" },
-                { label: "Email", valor: "valentina.ramirez@gmail.com" },
-                { label: "Teléfono", valor: "(602) 489 8000" },
+                { label: "Nombre", valor: user.full_name },
+                { label: "Cédula", valor: user.document_id.toString() },
+                { label: "Email", valor: user.email},
+                { label: "Teléfono", valor: "No disponible" },
               ]}
             />
           </div>

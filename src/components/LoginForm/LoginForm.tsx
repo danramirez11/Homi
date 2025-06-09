@@ -4,9 +4,12 @@ import './LoginForm.css';
 import { Button, Text } from '../../theme/styledcomponents';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
 import supabase from '../../Services/Supabase';
+import { getUser } from '../../store/userSlice';
+import { useAppDispatch } from '../../store/store';
 
 const LoginForm = () => {
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     document: '',
@@ -61,6 +64,7 @@ const LoginForm = () => {
   if (authError) {
     setError('Contraseña incorrecta o error al iniciar sesión.');
   } else {
+    dispatch(getUser());
     navigate('/dashboard');
   }
 };

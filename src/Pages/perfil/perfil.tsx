@@ -58,7 +58,7 @@ const Perfil = () => {
 
 
         <section id='info'>
-           <img id="PerfilPhoto" src="https://i.pinimg.com/736x/2b/68/81/2b68814f41c568b4136df73ff674062b.jpg" alt="" />
+           <img id="PerfilPhoto" src="https://i.pinimg.com/1200x/29/b8/d2/29b8d250380266eb04be05fe21ef19a7.jpg" alt="" />
           <div>
             <Text  id='nombre' variant="sectionTitle">{userData.full_name}</Text>
             <Text  id='Identification' variant="bodyRegular">cc. {userData.document_id}</Text>
@@ -69,7 +69,7 @@ const Perfil = () => {
         <section id='Info2'>
           <div id='UserName'>
             <Text id='nombre' variant="bodyBold">Nombre de usuario</Text>
-            <Text id='nombre' variant="bodyRegular">{userData.username || 'No definido'}</Text>
+            <Text id='nombre' variant="bodyRegular">{userData.full_name || 'No definido'}</Text>
           </div>
           <div id='Email'>
             <Text id='nombre' variant="bodyBold">Correo electrónico</Text>
